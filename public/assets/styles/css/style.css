@@ -13,7 +13,7 @@ html body .body-background {
   height: 100vh;
   position: absolute;
   z-index: 0;
-  background-image: url("../../../../assets/medias/images/backgrounds/body-background2.png");
+  background-image: url("/public/assets/medias/images/backgrounds/body-background2.png");
   background-size: contain;
   background-position: center;
 }
@@ -162,7 +162,7 @@ html body main p {
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 62.5vw;
-  background-image: url("../../../../../assets/medias/images/backgrounds/developer-homepage.webp");
+  background-image: url("/public/assets/medias/images/backgrounds/developer-homepage.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
