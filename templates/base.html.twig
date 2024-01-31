@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
-
-        {% block javascripts %}
-{% block importmap %}{{ importmap('app') }}{% endblock %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}C.K DevWeb{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+{#    <link href="{{ asset('assets/images/Logo-CKdevweb.ico') }}" rel="icon">#}
+{#    <link href="{{ asset('assets/styles/css/style.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/fontawesome/css/fontawesome.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/fontawesome/css/brands.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/fontawesome/css/regular.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
+{#    <link href="{{ asset('assets/TemplateData/style.css') }}" rel="stylesheet">#}
+</head>
+<body>
+{% include "mains/header.html.twig" %}
+<div id="top-view"></div>
+{% block body %}
+    <div class="contact-side-btn">
+        <a href="/app-contact">Contactez-moi</a>
+    </div>
+{% endblock %}
+{% include "mains/footer.html.twig" %}
+</body>
 </html>
