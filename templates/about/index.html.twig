@@ -1,20 +1,57 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AboutController!{% endblock %}
+{% block title %}C.K DevWeb - À propos{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <main id="about-main-container">
+        <header class="main-header">
+            <h1>À propos</h1>
+        </header>
+        <section>
+            <h2>Mon parcours</h2>
+            <p>
+                Mon cheminement dans le domaine du développement web est marqué par une exploration variée et
+                approfondie de multiples langages informatiques et la création de diverses applications. Cette
+                exploration, menée avec curiosité et détermination, m'a permis de forger un socle solide de compétences
+                techniques et de créativité. Aujourd'hui, en tant que professionnel du web, je canalise cette riche
+                expérience pour me spécialiser dans la création de solutions web innovantes et sur mesure, répondant aux
+                besoins spécifiques de chaque projet.
+            </p>
+            <p>
+                Diplômé full-stack de niveau 5, j'ai affiné mes compétences en développement web avec une certaine
+                facilité, acquérant une solide maîtrise des langages clés comme HTML, CSS, PHP, JavaScript, ainsi que la
+                gestion des bases de données avec SQL. Cette formation m'a également permis de développer une
+                compréhension approfondie des aspects techniques et créatifs du développement web, tout en renforçant
+                mes compétences en responsive design et en création d'APIs.
+            </p>
+            <p>
+                De plus, pour mon examen de fin de formation, j'ai créé un site professionnel fictif intégrant la
+                gestion de base de données et des aspects de sécurité, illustrant ainsi ma capacité à gérer des projets
+                complexes et à assurer leur fonctionnement optimal sur divers appareils et plateformes.
+            </p>
+            <p>
+                Un exemple concret de mon travail est la refonte du site de la naturopathe Émilie Morel, accessible ici
+                : <a href="https://emiliemorelnaturopathe.fr">www.emiliemorelnaturopathe.fr</a>. Ce projet a impliqué la
+                migration du site depuis WordPress.com vers WordPress.org, l'amélioration de l'expérience utilisateur
+                (UX) et de l'interface utilisateur (UI), l'optimisation du référencement, ainsi que l'ajout de
+                fonctionnalités pour faciliter la prise de rendez-vous et le contact. Ce fut une expérience
+                enrichissante qui a renforcé ma capacité à transformer les besoins des clients en solutions web
+                efficaces et élégantes.
+            </p>
+            <p>
+                En somme, mon parcours est celui d'un développeur web dévoué, toujours en quête de nouvelles façons
+                d'innover et de répondre aux défis technologiques actuels. Ma mission est de fournir des solutions web
+                qui ne sont pas seulement fonctionnelles, mais aussi esthétiquement plaisantes et intuitives pour
+                l'utilisateur final.
+            </p>
+        </section>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+        <section id="reviews-section">
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/Users/kcorv/Dashboard_KodingCore/Repos/Wamp/ckdevwebrefound/src/Controller/AboutController.php'|file_link(0) }}">src/Controller/AboutController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/Users/kcorv/Dashboard_KodingCore/Repos/Wamp/ckdevwebrefound/templates/about/index.html.twig'|file_link(0) }}">templates/about/index.html.twig</a></code></li>
-    </ul>
-</div>
+        </section>
+
+        <section id="make-review-section">
+
+        </section>
+    </main>
 {% endblock %}

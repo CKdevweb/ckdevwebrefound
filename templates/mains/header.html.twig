@@ -2,13 +2,13 @@
     <!-- Navigation -->
     <a href="/">
         <div class="mark">
-            <img width="64" height="64" alt="Logo de CKdevweb avec des motifs de vagues stylisées en bleu et blanc évoquant un thème aquatique" src="{{ asset('assets/medias/images/logos/CKdevweb-Logo.webp') }}" class="logo"/>
-            <span class="compagny-name">devweb</span>
+            <img width="64" height="80" alt="Logo de C.K DevWeb avec des motifs de vagues stylisées en bleu et blanc évoquant un thème aquatique" src="{{ asset('assets/medias/images/logos/CKDevWeb-logo-shaded.png') }}" class="logo"/>
+            <span class="compagny-name">DevWeb</span>
         </div>
     </a>
-    <button id="burger-button">Menu</button>
+    <button id="button-burger">Menu</button>
     <nav>
-        <ul id="burger-menu" class="hidden">
+        <ul id="menu-burger" class="scaleY-down">
             <li><a href="{{ path('app_homepage') }}">Accueil</a></li>
             <li><a href="{{ path('app_services') }}">Services</a></li>
             <li><a href="{{ path('app_prices') }}">Tarifs</a></li>
@@ -20,4 +20,4 @@
     </nav>
 </header>
 
-{#<script type="module" src="{{ asset('assets/js/header.js') }}"></script>#}
+<script type="module" src="{{ asset('assets/js/mains/header.js') }}"></script>}

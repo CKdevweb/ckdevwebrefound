@@ -1,0 +1,18 @@
+@import '../mains/vars';
+
+html
+{
+    body
+    {
+        main
+        {
+            p
+            {
+                font-family: $font-text2;
+                font-weight: bold;
+                text-align: center;
+                line-height: 1.40rem;
+            }
+        }
+    }
+}

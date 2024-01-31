@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>{% block title %}C.K DevWeb{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-{#    <link href="{{ asset('assets/images/Logo-CKdevweb.ico') }}" rel="icon">#}
-{#    <link href="{{ asset('assets/styles/css/style.css') }}" rel="stylesheet">#}
+    <link href="{{ asset('assets/medias/images/logos/Logo-CKdevweb.ico') }}" rel="icon">
+    <link href="{{ asset('assets/styles/css/reset.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/styles/css/style.css') }}" rel="stylesheet">
 {#    <link href="{{ asset('assets/fontawesome/css/fontawesome.css') }}" rel="stylesheet">#}
 {#    <link href="{{ asset('assets/fontawesome/css/brands.css') }}" rel="stylesheet">#}
 {#    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
@@ -16,7 +17,9 @@
 <body>
 {% include "mains/header.html.twig" %}
 <div id="top-view"></div>
+<div class="body-background"></div>
 {% block body %}
+
     <div class="contact-side-btn">
         <a href="/app-contact">Contactez-moi</a>
     </div>
