@@ -6,10 +6,53 @@ html
     {
         main
         {
+            h1
+            {
+                margin: 9rem auto 2rem auto;
+                text-align: center;
+                color: $secondary-color;
+                font-size: 2.5rem;
+                font-weight: bold;
+                font-family: $font-text;
+            }
+            h2
+            {
+                margin: 2rem auto;
+                text-align: center;
+                color: $primary-color;
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: $font-text;
+            }
+            h3
+            {
+                margin: 0.75rem auto;
+                text-align: start;
+                color: $secondary-color;
+                font-size: 1.25rem;
+                font-weight: bold;
+                font-family: $font-text;
+            }
+            label
+            {
+                margin-left: 5px;
+                font-family: $font-text2;
+                color: $primary-color;
+                font-size: 1.15rem;
+            }
+            a
+            {
+                font-family: $font-text2;
+                color: $primary-color;
+                font-weight: bold;
+            }
+            a:active
+            {
+                color: $alt-color;
+            }
             p
             {
                 font-family: $font-text2;
-                font-weight: bold;
                 text-align: center;
                 line-height: 1.40rem;
             }

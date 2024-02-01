@@ -5,8 +5,6 @@ export function burgerMenu()
     const button = document.querySelector("#button-burger");
     const main = document.querySelector("main");
 
-    let isButonClicked = false;
-
     button.addEventListener("click", function(){
         if(menu.classList.contains("scaleY-down"))
         {
@@ -19,8 +17,6 @@ export function burgerMenu()
             menu.classList.add("close-burger");
             menu.classList.remove("scaleY-up");
         }
-
-        isButonClicked = true;
     })
 
     header.addEventListener("click", function(){
@@ -54,3 +50,4 @@ export function burgerMenu()
         }
     })
 }
+

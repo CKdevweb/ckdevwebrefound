@@ -7,6 +7,7 @@
     <link href="{{ asset('assets/medias/images/logos/Logo-CKdevweb.ico') }}" rel="icon">
     <link href="{{ asset('assets/styles/css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/styles/css/style.css') }}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a2be3c71ec.js" crossorigin="anonymous"></script>
 {#    <link href="{{ asset('assets/fontawesome/css/fontawesome.css') }}" rel="stylesheet">#}
 {#    <link href="{{ asset('assets/fontawesome/css/brands.css') }}" rel="stylesheet">#}
 {#    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
@@ -15,11 +16,21 @@
 {#    <link href="{{ asset('assets/TemplateData/style.css') }}" rel="stylesheet">#}
 </head>
 <body>
+<div id="top-view"></div>
 {% include "mains/header.html.twig" %}
 <div id="top-view"></div>
-<div class="body-background"></div>
+<div class="contacts-container">
+    <a href="https://github.com/CKdevweb" target="_blank">
+        <i class="fa-brands fa-github" style="color: #26274F; font-size: 1.5rem;"></i>
+    </a>
+    <a href="https://www.linkedin.com/in/k%C3%A9vin-corvaisier-1140b1205/" target="_blank">
+        <i class="fa-brands fa-linkedin" style="color: #26274F; font-size: 1.5rem;"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61556127747077" target="_blank">
+        <i class="fa-brands fa-facebook" style="color: #26274F; font-size: 1.5rem;"></i>
+    </a>
+</div>
 {% block body %}
-
     <div class="contact-side-btn">
         <a href="/app-contact">Contactez-moi</a>
     </div>

@@ -8,7 +8,7 @@ main#homepage-main-container
         {
             width: 100vw;
             height: calc(100vw * 10 / 16);
-            background-image: url("/public/assets/medias/images/backgrounds/developer-homepage.webp");
+            background-image: url("../../../../assets/medias/images/backgrounds/developer-homepage.webp");
             background-size: contain;
             background-repeat: no-repeat;
             display: flex;
@@ -58,20 +58,25 @@ main#homepage-main-container
             a
             {
                 margin: 1rem;
-                button
-                {
-                    width: 30vw;
-                    height: 30vw;
-                    font-weight: bold;
-                    border-radius: 50%;
-                    border-bottom: 2px $secondary-color;
-                    border-left: 2px $secondary-color;
-                    border-right: 2px $secondary-color;
-                    color: $primary-color;
-                    box-shadow: 0 10px 10px rgba($primary-color, 0.5);
-                    background-color: $background-color;
-                }
+                text-align: center;
+                font-size: 1.25rem;
             }
+        }
+    }
+
+    section#make-review-section
+    {
+        header
+        {
+
+        }
+        p
+        {
+
+        }
+        div#review-form-container
+        {
+
         }
     }
 }

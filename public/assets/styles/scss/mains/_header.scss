@@ -41,7 +41,7 @@ body > header
         border-radius: 50%;
         border: solid 2px $secondary-color;
         background-color: $background-color;
-        box-shadow: 0.5px 0.5px 2px 2px $primary-color;
+        box-shadow: 1px 1px 2px 2px $primary-color;
         color: $primary-color;
         width: 50px;
         height: 50px;
@@ -59,6 +59,7 @@ body > header
     }
     nav
     {
+        height: 0;
         grid-row: 2/3;
         grid-column: 3/5;
         ul
@@ -98,6 +99,7 @@ body > header
             transform: scaleY(0);
         }
     }
+
 }
 
 .open-burger

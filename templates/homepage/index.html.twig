@@ -25,25 +25,38 @@
         </p>
 
         <div id="presentation-links">
-            <a href="{{ path("app_contact") }}">
-                <button>Contactez-moi</button>
-            </a>
+            <a href="{{ path("app_contact") }}">Contactez-moi</a>
 {#            <a href="#reviews-section">#}
 {#                <button>Voir les commentaires des autres clients</button>#}
 {#            </a>#}
-            <a href="#make-review-section">
-                <button>Laissez un commentaire</button>
-            </a>
-
+            <a href="#make-review-section">Laissez un commentaire</a>
         </div>
     </section>
     <div class="separator"></div>
-    <section id="reviews-section">
+    {% if reviews is defined %}
+        {% if reviews|length > 0 %}
+            <section id="reviews-section">
 
-    </section>
-    <div class="separator"></div>
+            </section>
+            <div class="separator"></div>
+        {%  endif %}
+    {%  endif %}
+
+
     <section id="make-review-section">
-
+        <header>
+            <h2>Laissez un commentaire</h2>
+        </header>
+        <p>
+            Votre avis compte ! Partagez vos commentaires pour m'aider à améliorer mes
+            services.<br>
+            Je suis impatient de connaître votre opinion.
+        </p>
+        <div id="review-form-container">
+            {% include 'partials/review-form.html.twig' %}
+        </div>
     </section>
 </main>
+    <script type="module" src="{{ asset('assets/js/views/homepage.js') }}"></script>
+
 {% endblock %}

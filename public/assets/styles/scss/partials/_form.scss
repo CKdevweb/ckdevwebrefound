@@ -1,0 +1,79 @@
+@import '../mains/vars';
+
+form
+{
+    margin: 2rem auto;
+    padding: 0 1rem;
+    border-left: 2px solid $secondary-color;
+    border-right: 2px solid $secondary-color;
+    fieldset
+    {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+        label
+        {
+            margin-bottom: 0.5rem;
+        }
+        input, textarea
+        {
+            outline: 3px solid $secondary-color;
+            border: none;
+            border-radius: 9px;
+        }
+        input:focus, textarea:focus
+        {
+            outline: 3px solid $alt-color;
+            border-radius: 7px;
+        }
+
+        button
+        {
+            outline: 3px solid $secondary-color;
+            border-radius: 9px;
+            min-width: 150px;
+            max-width: 250px;
+            color: $primary-color;
+            font-weight: bold;
+            margin: auto;
+        }
+        p
+        {
+            margin-top: 0.75rem;
+            font-size: 0.75rem;
+            line-height: 0.75rem !important;
+            a
+            {
+                font-size: 0.75rem;
+            }
+        }
+    }
+    div.notation
+    {
+        margin-left: 5px;
+        margin-bottom: 1rem;
+        display: flex;
+        i:hover
+        {
+            animation: 0.5s stars-shake forwards;
+        }
+    }
+    div.notation:hover
+    {
+        cursor: pointer;
+    }
+}
+
+@keyframes stars-shake
+{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}
