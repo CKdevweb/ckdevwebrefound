@@ -1486,28 +1486,40 @@ main#gnu-main-container section p {
 main#gnu-main-container ul {
   margin-left: 4rem;
 }
-html body .body-background {
-  width: 100vw;
-  height: 100vh;
+html body > div.contacts-container {
+  width: 6rem;
+  z-index: 2;
   position: absolute;
-  z-index: 0;
-  background-image: url("/public/assets/medias/images/backgrounds/body-background2.png");
-  background-size: contain;
-  background-position: center;
+  top: 100px;
+  display: flex;
+  justify-content: space-evenly;
 }
-html body main header {
+html body > div.contacts-container a:hover, html body > div.contacts-container i:hover {
+  color: rgb(220, 110, 0);
+  transform: scale(1.1);
+}
+html body > div.contacts-container a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+html body main > header {
   margin: calc(80px + 1rem) 0 2rem 0;
 }
-html body main section {
+html body main > section {
   margin: 2rem 0 0 0;
   padding: 0 10% 2rem 10%;
   text-align: justify;
   background-color: rgb(255, 255, 255);
 }
-html body main div.separator {
+html body main > section article {
+  margin: 2rem auto;
+}
+html body main > div.separator {
   height: 12.5vw;
-  box-shadow: 0.5px 0.5px 2px 2px rgb(38, 39, 79);
-  background-color: transparent;
+  box-shadow: 1px 1px 2px 2px rgb(88, 0, 34);
+  background-image: url("../../../../assets/medias/images/backgrounds/separator-sections.png");
+  background-size: cover;
+  background-position: center;
 }
 html body .hidden {
   display: none;
@@ -1557,7 +1569,7 @@ body > header button {
   border-radius: 50%;
   border: solid 2px rgb(88, 0, 34);
   background-color: rgb(255, 255, 255);
-  box-shadow: 0.5px 0.5px 2px 2px rgb(38, 39, 79);
+  box-shadow: 1px 1px 2px 2px rgb(38, 39, 79);
   color: rgb(38, 39, 79);
   width: 50px;
   height: 50px;
@@ -1573,6 +1585,7 @@ body > header button:active {
   box-shadow: none;
 }
 body > header nav {
+  height: 0;
   grid-row: 2/3;
   grid-column: 3/5;
 }
@@ -1630,17 +1643,162 @@ body > header nav ul.scaleY-down {
     transform: scaleY(0);
   }
 }
+html body > footer {
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 40%, rgb(88, 0, 34) 60%, rgb(88, 0, 34) 110%);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+html body > footer div#contacts-footer {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+html body > footer div#contacts-footer div.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+html body > footer div.scroll-up-button {
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
+html body > footer div.scroll-up-button div {
+  text-align: center;
+}
+html body > footer div.scroll-up-button div a {
+  color: rgb(38, 39, 79);
+  text-decoration: none;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body > footer div#footer-text {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  text-align: center;
+  margin: 1rem auto;
+}
+html body > footer div#footer-text a {
+  color: white;
+  margin: 1rem auto;
+}
+html body > footer div#footer-text p {
+  font-size: 1rem;
+  color: white;
+}
+
+html body main h1 {
+  margin: 9rem auto 2rem auto;
+  text-align: center;
+  color: rgb(88, 0, 34);
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main h2 {
+  margin: 2rem auto;
+  text-align: center;
+  color: rgb(38, 39, 79);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main h3 {
+  margin: 0.75rem auto;
+  text-align: start;
+  color: rgb(88, 0, 34);
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main label {
+  margin-left: 5px;
+  font-family: "Lato", sans-serif;
+  color: rgb(38, 39, 79);
+  font-size: 1.15rem;
+}
+html body main a {
+  font-family: "Lato", sans-serif;
+  color: rgb(38, 39, 79);
+  font-weight: bold;
+}
+html body main a:active {
+  color: rgb(220, 110, 0);
+}
 html body main p {
   font-family: "Lato", sans-serif;
-  font-weight: bold;
   text-align: center;
   line-height: 1.4rem;
 }
 
+form {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  border-left: 2px solid rgb(88, 0, 34);
+  border-right: 2px solid rgb(88, 0, 34);
+}
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+form fieldset label {
+  margin-bottom: 0.5rem;
+}
+form fieldset input, form fieldset textarea {
+  outline: 3px solid rgb(88, 0, 34);
+  border: none;
+  border-radius: 9px;
+}
+form fieldset input:focus, form fieldset textarea:focus {
+  outline: 3px solid rgb(220, 110, 0);
+  border-radius: 7px;
+}
+form fieldset button {
+  outline: 3px solid rgb(88, 0, 34);
+  border-radius: 9px;
+  min-width: 150px;
+  max-width: 250px;
+  color: rgb(38, 39, 79);
+  font-weight: bold;
+  margin: auto;
+}
+form fieldset p {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem !important;
+}
+form fieldset p a {
+  font-size: 0.75rem;
+}
+form div.notation {
+  margin-left: 5px;
+  margin-bottom: 1rem;
+  display: flex;
+}
+form div.notation i:hover {
+  animation: 0.5s stars-shake forwards;
+}
+form div.notation:hover {
+  cursor: pointer;
+}
+
+@keyframes stars-shake {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 62.5vw;
-  background-image: url("/public/assets/medias/images/backgrounds/developer-homepage.webp");
+  background-image: url("../../../../assets/medias/images/backgrounds/developer-homepage.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -1677,20 +1835,9 @@ main#homepage-main-container section#home-presentation-section div#presentation-
 }
 main#homepage-main-container section#home-presentation-section div#presentation-links a {
   margin: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
 }
-main#homepage-main-container section#home-presentation-section div#presentation-links a button {
-  width: 30vw;
-  height: 30vw;
-  font-weight: bold;
-  border-radius: 50%;
-  border-bottom: 2px rgb(88, 0, 34);
-  border-left: 2px rgb(88, 0, 34);
-  border-right: 2px rgb(88, 0, 34);
-  color: rgb(38, 39, 79);
-  box-shadow: 0 10px 10px rgba(38, 39, 79, 0.5);
-  background-color: rgb(255, 255, 255);
-}
-
 @keyframes textSlideAnim {
   0% {
     text-shadow: none;
