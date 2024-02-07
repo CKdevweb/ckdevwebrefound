@@ -2,6 +2,18 @@
 
 html
 {
+    a:hover
+    {
+        transform: scale(1.1) !important;
+        color: $alt-color !important;
+        i
+        {
+
+            transform: scale(1.1) !important;
+            color: $alt-color !important;
+        }
+
+    }
     font-size: 16px;
     scroll-behavior: smooth;
     margin: 0;
@@ -16,7 +28,7 @@ html
             width: 6rem;
             z-index: 2;
             position: absolute;
-            top: $header-height + 20px;
+            top: calc($header-height + 2rem);
             display: flex;
             justify-content: space-evenly;
             a:hover
@@ -49,6 +61,10 @@ html
                 align-items: center;
                 margin: 0;
             }
+            div.left-side-sprite, div.right-side-sprite
+            {
+                display: none;
+            }
             >section
             {
                 margin: 0;
@@ -66,7 +82,8 @@ html
 
                 article , >div.includes
                 {
-                    margin: 2rem auto;
+                    margin: 1rem auto 0 auto;
+                    padding-bottom: 1rem;
                     max-width: 800px;
                 }
                 ul
@@ -81,6 +98,7 @@ html
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-position: center;
+                opacity: 0.9;
             }
         }
         main:not(#homepage-main-container)
@@ -165,6 +183,7 @@ html
     {
         display: grid;
         grid-template-columns: 25vw 50vw 25vw;
+
         >header
         {
             grid-column: 1/4;
@@ -173,9 +192,34 @@ html
         {
             grid-column: 1/4;
         }
-        section
+        div.left-side-sprite, div.right-side-sprite
+        {
+            display: block;
+            background-image: url("../../../../assets/medias/images/sprites/side-effect.webp");
+            background-size: contain;
+            background-position: center;
+            background-repeat: repeat-y;
+            margin: 30%;
+            width: 40%;
+            opacity: 30%;
+        }
+        div.left-side-sprite
+        {
+            grid-column: 1/2;
+        }
+        div.right-side-sprite
+        {
+            grid-column: 3/4;
+            transform: rotateZ(180deg);
+        }
+        >section
         {
             grid-column: 2/3;
+            article , >div.includes
+            {
+                margin: 2rem auto 0 auto;
+                padding-bottom: 2rem;
+            }
         }
     }
 }

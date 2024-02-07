@@ -16,3 +16,14 @@ main#about-main-container
         }
     }
 }
+
+@media (min-width: 1024px)
+{
+    main#about-main-container
+    {
+        section>img, section>article>img
+        {
+            width: calc(20vw - 4rem);
+        }
+    }
+}

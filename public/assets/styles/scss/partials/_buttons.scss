@@ -1,5 +1,11 @@
 @import '../mains/vars';
 
+
+button
+{
+    cursor: pointer;
+}
+
 form>fieldset>button
 {
     border: none;
@@ -11,6 +17,18 @@ form>fieldset>button
     color: $primary-color;
     font-weight: bold;
     margin: 1rem auto;
+}
+
+form>fieldset>button:hover
+{
+    background-color: rgba($primary-color, 0.45);
+}
+
+form>fieldset>button:active
+{
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
 }
 
 body>header
