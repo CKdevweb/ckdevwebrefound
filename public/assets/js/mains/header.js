@@ -8,7 +8,7 @@
  *
  *  N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
  *
- *  Merci de choisir C.K devweb pour votre projet numérique.
+ *  Merci de choisir C.K DevWeb pour votre projet numérique.
  */
 
 import { burgerMenu } from "../components/burgerMenu.js";

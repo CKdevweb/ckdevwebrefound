@@ -28,7 +28,7 @@ body>header>button
     grid-column: 4/5;
 }
 
-body>header>button:active
+body>header>button:active, body>header>button:hover
 {
     width: 45px;
     height: 45px;

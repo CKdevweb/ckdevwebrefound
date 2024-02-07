@@ -1,0 +1,7 @@
+main#about-main-container
+{
+    section>img, section>article>img
+    {
+        width: calc(70vw - 4rem);
+    }
+}

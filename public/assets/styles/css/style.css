@@ -9,7 +9,7 @@ html body {
   padding: 0;
   background: rgb(0, 11, 16);
 }
-html body > div.contacts-container {
+html body > div.contacts-container, html body footer > div.contacts-footer {
   width: 6rem;
   z-index: 2;
   position: absolute;
@@ -17,11 +17,11 @@ html body > div.contacts-container {
   display: flex;
   justify-content: space-evenly;
 }
-html body > div.contacts-container a:hover, html body > div.contacts-container i:hover {
+html body > div.contacts-container a:hover, html body > div.contacts-container i:hover, html body footer > div.contacts-footer a:hover, html body footer > div.contacts-footer i:hover {
   color: rgb(200, 100, 16);
   transform: scale(1.1);
 }
-html body > div.contacts-container a {
+html body > div.contacts-container a, html body footer > div.contacts-footer a {
   margin-left: 0.5rem;
   text-decoration: none;
 }
@@ -283,7 +283,7 @@ html body main a {
   text-shadow: 1px 1px 1px #C45A10;
   font-weight: bold;
 }
-html body main a:active {
+html body main a:active, html body main a:hover {
   color: rgb(200, 100, 16);
 }
 html body main p {
@@ -383,7 +383,7 @@ body > header > button {
   grid-column: 4/5;
 }
 
-body > header > button:active {
+body > header > button:active, body > header > button:hover {
   width: 45px;
   height: 45px;
   font-size: 0.6rem;
@@ -477,6 +477,10 @@ main#prices-main-container section ul.list-depends, main#services-main-container
 main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
   color: rgb(48, 141, 177);
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+main#about-main-container section > img, main#about-main-container section > article > img {
+  width: calc(70vw - 4rem);
 }
 
 /*# sourceMappingURL=style.css.map */
