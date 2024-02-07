@@ -5,3 +5,14 @@ main#about-main-container
         width: calc(70vw - 4rem);
     }
 }
+
+@media (min-width: 425px)
+{
+    main#about-main-container
+    {
+        section>img, section>article>img
+        {
+            width: calc(40vw - 4rem);
+        }
+    }
+}

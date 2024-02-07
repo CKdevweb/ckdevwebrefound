@@ -9,7 +9,7 @@ html body {
   padding: 0;
   background: rgb(0, 11, 16);
 }
-html body > div.contacts-container, html body footer > div.contacts-footer {
+html body > div.contacts-container {
   width: 6rem;
   z-index: 2;
   position: absolute;
@@ -17,11 +17,11 @@ html body > div.contacts-container, html body footer > div.contacts-footer {
   display: flex;
   justify-content: space-evenly;
 }
-html body > div.contacts-container a:hover, html body > div.contacts-container i:hover, html body footer > div.contacts-footer a:hover, html body footer > div.contacts-footer i:hover {
-  color: rgb(200, 100, 16);
+html body > div.contacts-container a:hover i {
   transform: scale(1.1);
+  color: rgb(200, 100, 16);
 }
-html body > div.contacts-container a, html body footer > div.contacts-footer a {
+html body > div.contacts-container a {
   margin-left: 0.5rem;
   text-decoration: none;
 }
@@ -46,8 +46,9 @@ html body main > section img.title-underline {
   width: 80%;
   max-width: 370px;
 }
-html body main > section article {
+html body main > section article, html body main > section > div.includes {
   margin: 2rem auto;
+  max-width: 800px;
 }
 html body main > section ul {
   margin: 1.5rem auto;
@@ -68,7 +69,7 @@ html body main:not(#homepage-main-container) .main-header {
   height: 57.1428571429vw;
 }
 html body li {
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   text-align: start;
 }
 html body .hidden {
@@ -82,6 +83,43 @@ html body .opacity-mask {
   opacity: 0.5;
 }
 
+@media (min-width: 425px) {
+  html {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+  html body a:hover, html body i:hover {
+    color: rgb(200, 100, 16);
+  }
+  html body main:not(#homepage-main-container) .main-header {
+    background-size: cover;
+    height: 16.6666666667vw;
+  }
+  html body main > div.separator {
+    height: 10vw;
+    background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+    background-repeat: repeat-x;
+  }
+}
+@media (min-width: 1024px) {
+  html > body > main {
+    display: grid;
+    grid-template-columns: 25vw 50vw 25vw;
+  }
+  html > body > main > header {
+    grid-column: 1/4;
+  }
+  html > body > main div.separator {
+    grid-column: 1/4;
+  }
+  html > body > main section {
+    grid-column: 2/3;
+  }
+}
 body > header {
   width: calc(100vw - 1rem);
   height: 80px;
@@ -107,7 +145,7 @@ body > header > a div.mark span {
   position: relative;
   top: calc(50px - 0.5rem);
   height: 1.5rem;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   font-weight: bold;
   font-size: 1.25rem;
 }
@@ -128,7 +166,7 @@ body > header nav ul li {
   text-align: center;
 }
 body > header nav ul li a {
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
@@ -155,6 +193,28 @@ body > header nav ul.scaleY-down {
   animation: 0.5s close-burger 0s forwards;
 }
 
+@media (min-width: 768px) {
+  body > header {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 80px;
+  }
+  body > header > nav {
+    grid-row: 1/2;
+    grid-column: 2/5;
+  }
+  body > header > nav > ul.scaleY-down {
+    transform: scaleY(1);
+    display: flex;
+    background-color: inherit;
+    border: none;
+  }
+  body > header > nav > ul.scaleY-down li {
+    margin: 1rem 0 0 5vw;
+  }
+  body > header > nav > ul.scaleY-down li:first-of-type {
+    padding: 0;
+  }
+}
 @keyframes open-burger {
   from {
     transform: scaleY(0);
@@ -175,11 +235,12 @@ html body > footer {
   background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgb(48, 141, 177) 60%, rgb(48, 141, 177) 110%);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 html body > footer div#contacts-footer {
   grid-row: 1/2;
   grid-column: 1/2;
+  width: 6rem;
   display: flex;
   justify-content: space-evenly;
   flex-direction: column;
@@ -187,6 +248,17 @@ html body > footer div#contacts-footer {
 html body > footer div#contacts-footer div.contacts-container {
   display: flex;
   justify-content: space-evenly;
+  width: 6rem;
+  z-index: 2;
+  top: 100px;
+}
+html body > footer div#contacts-footer div.contacts-container a:hover i {
+  transform: scale(1.1);
+  color: rgb(200, 100, 16);
+}
+html body > footer div#contacts-footer div.contacts-container a {
+  margin-left: 0.5rem;
+  text-decoration: none;
 }
 html body > footer div.scroll-up-button {
   grid-row: 1/2;
@@ -200,7 +272,7 @@ html body > footer div.scroll-up-button div {
   animation: 2s up-down 2s infinite;
 }
 html body > footer div.scroll-up-button div a {
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   text-decoration: none;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -208,7 +280,7 @@ html body > footer div.scroll-up-button div a {
 }
 html body > footer div#footer-text {
   grid-row: 2/3;
-  grid-column: 1/3;
+  grid-column: 1/4;
   text-align: center;
   margin: 1rem auto;
 }
@@ -240,7 +312,7 @@ html body > footer div#footer-text p {
 }
 html body main h1 {
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -248,7 +320,7 @@ html body main h1 {
 html body main h2 {
   margin: 2rem auto 0 auto;
   text-align: center;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   font-size: 2rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -274,12 +346,12 @@ html body main h4 {
 html body main label {
   margin-left: 5px;
   font-family: "Lato", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   font-size: 1.15rem;
 }
 html body main a {
   font-family: "Lato", sans-serif;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   text-shadow: 1px 1px 1px #C45A10;
   font-weight: bold;
 }
@@ -290,13 +362,13 @@ html body main p {
   font-family: "Lato", sans-serif;
   text-align: center;
   line-height: 1.4rem;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
 }
 html body main ul > li {
   font-family: "Lato", sans-serif;
   text-align: start;
   line-height: 1.4rem;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
 }
 
 form {
@@ -304,6 +376,7 @@ form {
   padding: 0 1rem;
   border-left: 2px solid rgb(48, 141, 177);
   border-right: 2px solid rgb(48, 141, 177);
+  max-width: 600px;
 }
 form fieldset {
   display: flex;
@@ -317,10 +390,10 @@ form fieldset label {
 form fieldset input, form fieldset textarea {
   padding: 0.15rem;
   border: none;
-  border-bottom: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(240, 240, 240);
   border-radius: 9px;
-  background-color: rgba(255, 255, 255, 0.1);
-  color: rgb(255, 255, 255);
+  background-color: rgba(240, 240, 240, 0.1);
+  color: rgb(240, 240, 240);
 }
 form fieldset input:focus, form fieldset textarea:focus {
   border: 2px solid rgb(200, 100, 16);
@@ -360,21 +433,21 @@ form div.notation:hover {
 form > fieldset > button {
   border: none;
   border-bottom: 2px solid rgb(48, 141, 177);
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(240, 240, 240, 0.15);
   border-radius: 9px;
   min-width: 150px;
   max-width: 250px;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   font-weight: bold;
   margin: 1rem auto;
 }
 
 body > header > button {
   border-radius: 50%;
-  border: solid 2px rgb(255, 255, 255);
+  border: solid 2px rgb(240, 240, 240);
   background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(48, 141, 177), rgb(48, 141, 177));
   box-shadow: 1px 1px 2px 2px grey;
-  color: rgb(255, 255, 255);
+  color: rgb(240, 240, 240);
   width: 50px;
   height: 50px;
   margin: auto;
@@ -382,7 +455,6 @@ body > header > button {
   font-size: 0.75rem;
   grid-column: 4/5;
 }
-
 body > header > button:active, body > header > button:hover {
   width: 45px;
   height: 45px;
@@ -390,9 +462,14 @@ body > header > button:active, body > header > button:hover {
   box-shadow: none;
 }
 
+@media (min-width: 768px) {
+  body > header > button {
+    display: none;
+  }
+}
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
-  height: 62.5vw;
+  height: 58.8235294118vw;
   background-image: url("../../../../assets/medias/images/backgrounds/back4.webp");
   background-size: contain;
   background-repeat: no-repeat;
@@ -419,13 +496,13 @@ main#homepage-main-container header div#homepage-slide-background div.text-slide
   opacity: 0;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span:first-child {
-  animation: 2s textSlideAnim 6s forwards;
+  animation: 2s textSlideAnim 4.9s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
-  animation: 2s textSlideAnim 0s forwards;
+  animation: 8s textSlideAnimRemake 0s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
-  animation: 2s textSlideAnim 3s forwards;
+  animation: 8s textSlideAnimRemake 0s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background svg {
   position: absolute;
@@ -447,15 +524,69 @@ main#homepage-main-container section#home-presentation-section div#presentation-
 main#homepage-main-container section#reviews-section {
   display: none;
 }
+@media (min-width: 768px) {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p {
+    font-size: 2.75rem;
+    line-height: 2.75rem;
+  }
+}
+@media (min-width: 1024px) {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p {
+    font-size: 3.75rem;
+    line-height: 3.75rem;
+  }
+}
 @keyframes textSlideAnim {
   0% {
     text-shadow: none;
     color: black;
     opacity: 0;
   }
-  33% {
-    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+  50% {
+    text-shadow: 2px 2px 2px rgb(240, 240, 240);
     color: rgb(48, 141, 177);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: white;
+    opacity: 1;
+  }
+}
+@keyframes textSlideAnimRemake {
+  0% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  15% {
+    text-shadow: 2px 2px 2px rgb(240, 240, 240);
+    color: rgb(48, 141, 177);
+    opacity: 1;
+  }
+  30% {
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: white;
+    opacity: 1;
+  }
+  45% {
+    text-shadow: 2px 2px 2px rgb(240, 240, 240);
+    color: rgb(48, 141, 177);
+    opacity: 1;
+  }
+  60% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  72% {
+    text-shadow: 2px 2px 2px rgb(240, 240, 240);
+    color: rgb(48, 141, 177);
+    opacity: 1;
+  }
+  92% {
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: white;
     opacity: 1;
   }
   100% {
@@ -466,7 +597,7 @@ main#homepage-main-container section#reviews-section {
 }
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {
   color: rgb(200, 100, 16);
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
 }
 main#prices-main-container section ul.list-checks, main#services-main-container section ul.list-checks {
   list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
@@ -476,11 +607,17 @@ main#prices-main-container section ul.list-depends, main#services-main-container
 }
 main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
   color: rgb(48, 141, 177);
-  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
 }
 
 main#about-main-container section > img, main#about-main-container section > article > img {
   width: calc(70vw - 4rem);
+}
+
+@media (min-width: 425px) {
+  main#about-main-container section > img, main#about-main-container section > article > img {
+    width: calc(40vw - 4rem);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,7 +11,7 @@ html
         margin: 0;
         padding: 0;
         background: $background-color;
-        >div.contacts-container, footer>div.contacts-footer
+        >div.contacts-container
         {
             width: 6rem;
             z-index: 2;
@@ -19,10 +19,15 @@ html
             top: $header-height + 20px;
             display: flex;
             justify-content: space-evenly;
-            a:hover , i:hover
+            a:hover
             {
-                color: $alt-color;
-                transform: scale(1.1);
+                i
+                {
+
+                    transform: scale(1.1);
+                    color: $alt-color;
+                }
+
             }
             a
             {
@@ -59,9 +64,10 @@ html
                     max-width: 370px;
                 }
 
-                article
+                article , >div.includes
                 {
                     margin: 2rem auto;
+                    max-width: 800px;
                 }
                 ul
                 {
@@ -108,6 +114,68 @@ html
             height: 100%;
             background-color: $background-color;
             opacity: 0.5;
+        }
+    }
+}
+
+@media (min-width: 425px)
+{
+    html
+    {
+        font-size: 18px;
+
+    }
+}
+
+@media (min-width: 768px)
+{
+    html
+    {
+        font-size: 20px;
+        body
+        {
+            a:hover, i:hover
+            {
+                color: $alt-color;
+            }
+            main:not(#homepage-main-container)
+            {
+                .main-header
+                {
+                    background-size: cover;
+                    height: calc(100vw / 6);
+                }
+            }
+            main
+            {
+                >div.separator
+                {
+                    height: 10vw;
+                    background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+                    background-repeat: repeat-x;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px)
+{
+    html>body>main
+    {
+        display: grid;
+        grid-template-columns: 25vw 50vw 25vw;
+        >header
+        {
+            grid-column: 1/4;
+        }
+        div.separator
+        {
+            grid-column: 1/4;
+        }
+        section
+        {
+            grid-column: 2/3;
         }
     }
 }
