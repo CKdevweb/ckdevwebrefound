@@ -54,7 +54,7 @@ html
         margin: 0;
         padding: 0;
         background: $background-color;
-        >div.contacts-container
+        >div.contacts-container, footer>div.contacts-footer
         {
             width: 6rem;
             z-index: 2;
