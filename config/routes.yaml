@@ -7,9 +7,6 @@ app_services:
 app_prices:
     path: /prices
     controller: App\Controller\PricesController::index
-app_techfocus:
-    path: /techfocus
-    controller: App\Controller\TechfocusController::index
 app_contact:
     path: /contact
     controller: App\Controller\ContactController::index

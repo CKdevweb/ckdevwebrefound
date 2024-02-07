@@ -2,16 +2,14 @@
 
 body > header
 {
-    position: fixed;
-    top: 0;
-    left: 0;
     width: calc(100vw - $padding-header * 2);
     height: $header-height;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr 50vh;
     padding: $padding-header;
-    background: linear-gradient($secondary-color -10%, $background-color 50%, $background-color 90%, rgba($background-color, 0.1) 100%);
+    //background: rgb(11,10,3);
+    background-color: black;
     z-index: 3;
     >a
     {
@@ -32,41 +30,20 @@ body > header
                 color: $primary-color;
                 font-weight:bold;
                 font-size: 1.25rem;
-                text-shadow: 5px 5px rgba($primary-color, 0.3);
             }
         }
-    }
-    button
-    {
-        border-radius: 50%;
-        border: solid 2px $secondary-color;
-        background-color: $background-color;
-        box-shadow: 1px 1px 2px 2px $primary-color;
-        color: $primary-color;
-        width: 50px;
-        height: 50px;
-        margin: auto;
-        font-weight: bold;
-        font-size: 0.75rem;
-        grid-column: 4/5;
-    }
-    button:active
-    {
-        width: 45px;
-        height: 45px;
-        font-size: 0.60rem;
-        box-shadow: none;
     }
     nav
     {
         height: 0;
         grid-row: 2/3;
         grid-column: 3/5;
+        z-index: 2;
         ul
         {
             list-style-type: none;
             height: fit-content;
-            background-color: white;
+            background-color: $background-color;
             border-left: 2px solid $secondary-color;
             li
             {

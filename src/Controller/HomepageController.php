@@ -17,7 +17,7 @@ use Symfony\Component\Security\Csrf\CsrfTokenManagerInterface;
 
 class HomepageController extends AbstractController
 {
-
+    private Route $route;
     private CsrfTokenManagerInterface $csrfTokenManager;
     private ReviewsRepository $reviewsRepository;
     private RateLimiterFactory $submissionReviewLimiter;
@@ -29,7 +29,6 @@ class HomepageController extends AbstractController
         $this->submissionReviewLimiter = $submissionReviewLimiter;
     }
 
-    #[Route('/homepage', name: 'app_homepage')]
     public function index(): Response
     {
         $csrfToken = $this->csrfTokenManager->getToken('review-submit')->getValue();
@@ -47,7 +46,6 @@ class HomepageController extends AbstractController
     /**
      * @throws Exception
      */
-    #[Route("/app_submitReview", name: "app_submitReview", methods: "POST")]
     public function submitReview(Request $request, EntityManagerInterface $entityManager): Response
     {
         //TOKEN CSRF

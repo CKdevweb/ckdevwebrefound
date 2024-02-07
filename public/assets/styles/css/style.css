@@ -7,6 +7,7 @@ html {
 html body {
   margin: 0;
   padding: 0;
+  background: rgb(0, 11, 16);
 }
 html body > div.contacts-container {
   width: 6rem;
@@ -17,31 +18,58 @@ html body > div.contacts-container {
   justify-content: space-evenly;
 }
 html body > div.contacts-container a:hover, html body > div.contacts-container i:hover {
-  color: rgb(220, 110, 0);
+  color: rgb(200, 100, 16);
   transform: scale(1.1);
 }
 html body > div.contacts-container a {
   margin-left: 0.5rem;
   text-decoration: none;
 }
-html body main > header {
-  margin: calc(80px + 1rem) 0 2rem 0;
+html body main p {
+  margin: 0 1rem;
+}
+html body main .main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
 html body main > section {
-  margin: 2rem 0 0 0;
-  padding: 0 10% 2rem 10%;
-  text-align: justify;
-  background-color: rgb(255, 255, 255);
+  margin: 0;
+  padding: 2rem 10% 2rem 10%;
+  text-align: center;
+}
+html body main > section header {
+  margin-bottom: 1.5rem;
+}
+html body main > section img.title-underline {
+  width: 80%;
+  max-width: 370px;
 }
 html body main > section article {
   margin: 2rem auto;
 }
+html body main > section ul {
+  margin: 1.5rem auto;
+}
 html body main > div.separator {
-  height: 12.5vw;
-  box-shadow: 1px 1px 2px 2px rgb(88, 0, 34);
-  background-image: url("../../../../assets/medias/images/backgrounds/separator-sections.png");
-  background-size: cover;
+  height: 20vw;
+  background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
   background-position: center;
+}
+html body main:not(#homepage-main-container) .main-header {
+  background-image: url("../../../../assets/medias/images/horizontal-header.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 57.1428571429vw;
+}
+html body li {
+  color: rgb(255, 255, 255);
+  text-align: start;
 }
 html body .hidden {
   display: none;
@@ -50,21 +78,18 @@ html body .opacity-mask {
   position: relative;
   width: 100vw;
   height: 100%;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(0, 11, 16);
   opacity: 0.5;
 }
 
 body > header {
-  position: fixed;
-  top: 0;
-  left: 0;
   width: calc(100vw - 1rem);
   height: 80px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr 50vh;
   padding: 0.5rem;
-  background: linear-gradient(rgb(88, 0, 34) -10%, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 90%, rgba(255, 255, 255, 0.1) 100%);
+  background-color: black;
   z-index: 3;
 }
 body > header > a {
@@ -82,47 +107,28 @@ body > header > a div.mark span {
   position: relative;
   top: calc(50px - 0.5rem);
   height: 1.5rem;
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
   font-weight: bold;
   font-size: 1.25rem;
-  text-shadow: 5px 5px rgba(38, 39, 79, 0.3);
-}
-body > header button {
-  border-radius: 50%;
-  border: solid 2px rgb(88, 0, 34);
-  background-color: rgb(255, 255, 255);
-  box-shadow: 1px 1px 2px 2px rgb(38, 39, 79);
-  color: rgb(38, 39, 79);
-  width: 50px;
-  height: 50px;
-  margin: auto;
-  font-weight: bold;
-  font-size: 0.75rem;
-  grid-column: 4/5;
-}
-body > header button:active {
-  width: 45px;
-  height: 45px;
-  font-size: 0.6rem;
-  box-shadow: none;
 }
 body > header nav {
   height: 0;
   grid-row: 2/3;
   grid-column: 3/5;
+  z-index: 2;
 }
 body > header nav ul {
   list-style-type: none;
   height: fit-content;
-  background-color: white;
-  border-left: 2px solid rgb(88, 0, 34);
+  background-color: rgb(0, 11, 16);
+  border-left: 2px solid rgb(48, 141, 177);
 }
 body > header nav ul li {
   margin: 2rem 2rem;
   text-align: center;
 }
 body > header nav ul li a {
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
@@ -166,7 +172,7 @@ body > header nav ul.scaleY-down {
   }
 }
 html body > footer {
-  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 40%, rgb(88, 0, 34) 60%, rgb(88, 0, 34) 110%);
+  background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgb(48, 141, 177) 60%, rgb(48, 141, 177) 110%);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
@@ -185,15 +191,20 @@ html body > footer div#contacts-footer div.contacts-container {
 html body > footer div.scroll-up-button {
   grid-row: 1/2;
   grid-column: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 html body > footer div.scroll-up-button div {
   text-align: center;
+  animation: 2s up-down 2s infinite;
 }
 html body > footer div.scroll-up-button div a {
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
   text-decoration: none;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
 }
 html body > footer div#footer-text {
   grid-row: 2/3;
@@ -210,55 +221,89 @@ html body > footer div#footer-text p {
   color: white;
 }
 
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 html body main h1 {
-  margin: 9rem auto 2rem auto;
   text-align: center;
-  color: rgb(88, 0, 34);
+  color: rgb(255, 255, 255);
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
 }
 html body main h2 {
-  margin: 2rem auto;
+  margin: 2rem auto 0 auto;
   text-align: center;
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
 }
 html body main h3 {
   margin: 0.75rem auto;
-  text-align: start;
-  color: rgb(88, 0, 34);
-  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(48, 141, 177);
+  text-shadow: 1px 1px 1px rgba(48, 141, 177, 0.8);
+  font-size: 1.3rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
+}
+html body main h4 {
+  margin: 0.75rem auto;
+  text-align: start;
+  color: rgb(200, 100, 16);
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 1px 1px 1px rgba(200, 100, 16, 0.8);
 }
 html body main label {
   margin-left: 5px;
   font-family: "Lato", sans-serif;
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
   font-size: 1.15rem;
 }
 html body main a {
   font-family: "Lato", sans-serif;
-  color: rgb(38, 39, 79);
+  color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 1px #C45A10;
   font-weight: bold;
 }
 html body main a:active {
-  color: rgb(220, 110, 0);
+  color: rgb(200, 100, 16);
 }
 html body main p {
   font-family: "Lato", sans-serif;
   text-align: center;
   line-height: 1.4rem;
+  color: rgb(255, 255, 255);
+}
+html body main ul > li {
+  font-family: "Lato", sans-serif;
+  text-align: start;
+  line-height: 1.4rem;
+  color: rgb(255, 255, 255);
 }
 
 form {
   margin: 2rem auto;
   padding: 0 1rem;
-  border-left: 2px solid rgb(88, 0, 34);
-  border-right: 2px solid rgb(88, 0, 34);
+  border-left: 2px solid rgb(48, 141, 177);
+  border-right: 2px solid rgb(48, 141, 177);
 }
 form fieldset {
   display: flex;
@@ -267,24 +312,19 @@ form fieldset {
 }
 form fieldset label {
   margin-bottom: 0.5rem;
+  width: fit-content;
 }
 form fieldset input, form fieldset textarea {
-  outline: 3px solid rgb(88, 0, 34);
+  padding: 0.15rem;
   border: none;
+  border-bottom: 1px solid rgb(255, 255, 255);
   border-radius: 9px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: rgb(255, 255, 255);
 }
 form fieldset input:focus, form fieldset textarea:focus {
-  outline: 3px solid rgb(220, 110, 0);
+  border: 2px solid rgb(200, 100, 16);
   border-radius: 7px;
-}
-form fieldset button {
-  outline: 3px solid rgb(88, 0, 34);
-  border-radius: 9px;
-  min-width: 150px;
-  max-width: 250px;
-  color: rgb(38, 39, 79);
-  font-weight: bold;
-  margin: auto;
 }
 form fieldset p {
   margin-top: 0.75rem;
@@ -317,10 +357,43 @@ form div.notation:hover {
     transform: translateY(0);
   }
 }
+form > fieldset > button {
+  border: none;
+  border-bottom: 2px solid rgb(48, 141, 177);
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 9px;
+  min-width: 150px;
+  max-width: 250px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  margin: 1rem auto;
+}
+
+body > header > button {
+  border-radius: 50%;
+  border: solid 2px rgb(255, 255, 255);
+  background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(48, 141, 177), rgb(48, 141, 177));
+  box-shadow: 1px 1px 2px 2px grey;
+  color: rgb(255, 255, 255);
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 0.75rem;
+  grid-column: 4/5;
+}
+
+body > header > button:active {
+  width: 45px;
+  height: 45px;
+  font-size: 0.6rem;
+  box-shadow: none;
+}
+
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 62.5vw;
-  background-image: url("../../../../assets/medias/images/backgrounds/developer-homepage.webp");
+  background-image: url("../../../../assets/medias/images/backgrounds/back4.webp");
   background-size: contain;
   background-repeat: no-repeat;
   display: flex;
@@ -341,14 +414,25 @@ main#homepage-main-container header div#homepage-slide-background div.text-slide
   font-size: 1.75rem;
   font-weight: normal;
 }
+main#homepage-main-container header div#homepage-slide-background div.text-slide p span {
+  color: black;
+  opacity: 0;
+}
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span:first-child {
-  animation: 6s textSlideAnim 8s infinite;
+  animation: 2s textSlideAnim 6s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
-  animation: 6s textSlideAnim 2s infinite;
+  animation: 2s textSlideAnim 0s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
-  animation: 10s textSlideAnim 5s infinite;
+  animation: 2s textSlideAnim 3s forwards;
+}
+main#homepage-main-container header div#homepage-slide-background svg {
+  position: absolute;
+  left: 50vw;
+  top: 25vw;
+  width: 100px;
+  transform: rotateZ(240deg);
 }
 main#homepage-main-container section#home-presentation-section div#presentation-links {
   display: flex;
@@ -360,23 +444,39 @@ main#homepage-main-container section#home-presentation-section div#presentation-
   text-align: center;
   font-size: 1.25rem;
 }
+main#homepage-main-container section#reviews-section {
+  display: none;
+}
 @keyframes textSlideAnim {
   0% {
     text-shadow: none;
     color: black;
+    opacity: 0;
   }
   33% {
-    text-shadow: 2px 2px 2px rgb(38, 39, 79);
-    color: white;
-  }
-  66% {
-    text-shadow: 2px 2px 2px rgb(38, 39, 79);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(255, 255, 255);
+    color: rgb(48, 141, 177);
+    opacity: 1;
   }
   100% {
-    text-shadow: none;
-    color: black;
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: white;
+    opacity: 1;
   }
+}
+main#prices-main-container section ul li strong, main#services-main-container section ul li strong {
+  color: rgb(200, 100, 16);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+main#prices-main-container section ul.list-checks, main#services-main-container section ul.list-checks {
+  list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
+}
+main#prices-main-container section ul.list-depends, main#services-main-container section ul.list-depends {
+  list-style: url("../../../../assets/medias/images/sprites/arrow-drop-right.svg") inside;
+}
+main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
+  color: rgb(48, 141, 177);
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 /*# sourceMappingURL=style.css.map */

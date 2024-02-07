@@ -14,29 +14,25 @@ form
         label
         {
             margin-bottom: 0.5rem;
+            width: fit-content;
         }
         input, textarea
         {
-            outline: 3px solid $secondary-color;
+            //outline: 1px solid $secondary-color;
+            padding: 0.15rem;
             border: none;
+            border-bottom: 1px solid $primary-color;
             border-radius: 9px;
+            background-color: rgba($primary-color, 0.1);
+            color: $primary-color;
         }
         input:focus, textarea:focus
         {
-            outline: 3px solid $alt-color;
+            border: 2px solid $alt-color;
             border-radius: 7px;
         }
 
-        button
-        {
-            outline: 3px solid $secondary-color;
-            border-radius: 9px;
-            min-width: 150px;
-            max-width: 250px;
-            color: $primary-color;
-            font-weight: bold;
-            margin: auto;
-        }
+
         p
         {
             margin-top: 0.75rem;

@@ -166,6 +166,12 @@
       <path value="$PROJECT_DIR$/vendor/amphp/amp" />
     </include_path>
   </component>
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="127.0.0.1" id="e9e00210-3648-4f13-8315-6bd951561c38" name="SymfonyServer" port="8000" />
+      <server host="localhost" id="48665351-4770-47a1-8094-a9b19971fbd0" name="Localhost" />
+    </servers>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.1" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />

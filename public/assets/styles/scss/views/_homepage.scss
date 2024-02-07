@@ -8,7 +8,7 @@ main#homepage-main-container
         {
             width: 100vw;
             height: calc(100vw * 10 / 16);
-            background-image: url("../../../../assets/medias/images/backgrounds/developer-homepage.webp");
+            background-image: url("../../../../assets/medias/images/backgrounds/back4.webp");
             background-size: contain;
             background-repeat: no-repeat;
             display: flex;
@@ -19,7 +19,6 @@ main#homepage-main-container
                 display: flex;
                 justify-content: center;
                 align-items: center;
-
             }
             div.text-slide
             {
@@ -30,20 +29,33 @@ main#homepage-main-container
                     font-family: $font-text;
                     font-size: 1.75rem;
                     font-weight: normal;
+                    span
+                    {
+                        color: black;
+                        opacity: 0;
+                    }
                     span:first-child
                     {
-                        animation: 6s textSlideAnim 8s infinite;
+                        animation: 2s textSlideAnim 6s forwards;
                     }
                     >span:nth-child(2)
                     {
-                        animation: 6s textSlideAnim 2s infinite;
+                        animation: 2s textSlideAnim 0s forwards;
                     }
                     >span:last-child
                     {
-                        animation: 10s textSlideAnim 5s infinite;
+                        animation: 2s textSlideAnim 3s forwards;
                     }
                 }
 
+            }
+            svg
+            {
+                position: absolute;
+                left: 50vw;
+                top: 25vw;
+                width: 100px;
+                transform: rotateZ(240deg);
             }
         }
     }
@@ -62,6 +74,11 @@ main#homepage-main-container
                 font-size: 1.25rem;
             }
         }
+    }
+
+    section#reviews-section
+    {
+        display: none;
     }
 
     section#make-review-section
@@ -87,20 +104,24 @@ main#homepage-main-container
     {
         text-shadow: none;
         color: black;
+        opacity: 0;
     }
     33%
     {
         text-shadow: 2px 2px 2px $primary-color;
-        color: white;
-    }
-    66%
-    {
-        text-shadow: 2px 2px 2px $primary-color;
-        color: white;
+        color: $secondary-color;
+        opacity: 1;
     }
     100%
     {
-        text-shadow: none;
-        color: black;
+        text-shadow: 2px 2px 2px $alt-color;
+        color: white;
+        opacity: 1;
     }
+    //100%
+    //{
+    //    text-shadow: none;
+    //    color: black;
+    //    opacity: 0;
+    //}
 }

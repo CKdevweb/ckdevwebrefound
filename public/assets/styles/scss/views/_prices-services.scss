@@ -1,0 +1,32 @@
+@import '../mains/vars';
+
+main#prices-main-container, main#services-main-container
+{
+    section
+    {
+        ul
+        {
+            li
+            {
+                strong
+                {
+                    color: $alt-color;
+                    text-shadow: 1px 1px 1px rgba($primary-color, 0.5);
+                }
+            }
+        }
+        ul.list-checks
+        {
+            list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
+        }
+        ul.list-depends
+        {
+            list-style: url("../../../../assets/medias/images/sprites/arrow-drop-right.svg") inside;
+        }
+        div.includes>h4
+        {
+            color: $secondary-color;
+            text-shadow: 1px 1px 1px rgba($primary-color, 0.5);
+        }
+    }
+}

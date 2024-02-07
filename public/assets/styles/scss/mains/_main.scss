@@ -10,6 +10,7 @@ html
     {
         margin: 0;
         padding: 0;
+        background: $background-color;
         >div.contacts-container
         {
             width: 6rem;
@@ -32,29 +33,67 @@ html
 
         main
         {
-            >header
+            p
             {
-                margin: calc($header-height + $padding-header * 2) 0 2rem 0;
+                margin: 0 1rem;
+            }
+            .main-header
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
             }
             >section
             {
-                margin: 2rem 0 0 0;
-                padding: 0 10% 2rem 10%;
-                text-align: justify;
-                background-color: $background-color;
+                margin: 0;
+                padding: 2rem 10% 2rem 10%;
+                text-align: center;
+
+                header{
+                    margin-bottom: 1.5rem;
+                }
+                img.title-underline
+                {
+                    width: 80%;
+                    max-width: 370px;
+                }
+
                 article
                 {
                     margin: 2rem auto;
                 }
+                ul
+                {
+                    margin: 1.5rem auto;
+                }
             }
             >div.separator
             {
-                height: calc(100vw / 8);
-                box-shadow: 1px 1px 2px 2px $secondary-color;
-                background-image: url("../../../../assets/medias/images/backgrounds/separator-sections.png");
-                background-size: cover;
+                height: 20vw;
+                background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+                background-repeat: no-repeat;
+                background-size: contain;
                 background-position: center;
             }
+        }
+        main:not(#homepage-main-container)
+        {
+            .main-header
+            {
+                background-image: url("../../../../assets/medias/images/horizontal-header.webp");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                width: 100%;
+                height: calc(100vw / 1.75);
+
+            }
+        }
+
+        li{
+            color: $primary-color;
+            text-align: start;
         }
 
         .hidden
