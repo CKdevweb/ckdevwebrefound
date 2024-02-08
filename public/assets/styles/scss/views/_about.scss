@@ -1,5 +1,14 @@
 main#about-main-container
 {
+    section:first-of-type{
+        article:last-of-type{
+            img
+            {
+                height: 10%;
+                margin-bottom: -6rem;
+            }
+        }
+    }
     section>img, section>article>img
     {
         width: calc(70vw - 4rem);

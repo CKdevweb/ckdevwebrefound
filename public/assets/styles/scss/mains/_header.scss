@@ -15,7 +15,7 @@ body > header
         width: fit-content;
         grid-column: 1/3;
         text-decoration: none;
-        margin: auto 0;
+        margin: auto 0.5rem;
         div.mark
         {
             display: flex;
@@ -28,6 +28,7 @@ body > header
                 height: 1.5rem;
                 color: $primary-color;
                 font-weight:bold;
+                font-family: $font-source;
                 font-size: 1.25rem;
             }
         }
@@ -52,13 +53,13 @@ body > header
                 {
                     color: $primary-color;
                     text-decoration: none;
-                    font-family: $font-text;
+                    font-family: $font-source;
                     font-weight: bold;
                 }
                 a.active, a.a-hover
                 {
                     animation: 0.5s navTranslateY forwards;
-                    color: rgba($alt-color, 0.55);
+                    color: rgba($secondary-color, 0.55);
                     text-shadow: 1px 1px 1px $primary-color;
                     text-decoration: underline;
                 }
@@ -141,7 +142,7 @@ body > header
                     a.active, a.a-hover
                     {
                         animation: 0.5s navTranslateY forwards;
-                        color: rgba($alt-color, 0.55);
+                        color: rgba($secondary-color, 0.55);
                         text-shadow: 1px 1px 1px $primary-color;
                         text-decoration: underline;
                     }

@@ -1,4 +1,44 @@
 @charset "UTF-8";
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 html {
   font-size: 16px;
   scroll-behavior: smooth;
@@ -20,7 +60,7 @@ html div#message div span.success-modal, html div#message div span.error-modal {
   text-shadow: 1px 1px 1px rgb(0, 11, 16);
 }
 html div#message div span.success-modal {
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
 }
 html div#message div span.error-modal {
   color: rgb(200, 100, 16);
@@ -37,7 +77,8 @@ html body > div.contacts-container {
   width: 6rem;
   z-index: 2;
   position: absolute;
-  top: calc(80px + 2rem);
+  left: 0.5rem;
+  top: calc(80px + 3rem);
   display: flex;
   justify-content: space-evenly;
 }
@@ -65,9 +106,9 @@ html body main > section {
 html body main > section header {
   margin-bottom: 1.5rem;
 }
-html body main > section img.title-underline {
+html body main > section object {
+  max-width: 500px;
   width: 80%;
-  max-width: 370px;
 }
 html body main > section > article, html body main > section > div.includes {
   margin: 1rem auto 0 auto;
@@ -94,7 +135,7 @@ html body main:not(#homepage-main-container) .main-header {
   height: 57.1428571429vw;
 }
 html body li {
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   text-align: start;
 }
 html body .hidden {
@@ -134,6 +175,10 @@ html body .opacity-mask {
   html > body > main {
     display: grid;
     grid-template-columns: 25% 50% 25%;
+  }
+  html > body > main object {
+    max-width: 500px;
+    width: 80%;
   }
   html > body > main > header {
     grid-column: 1/4;
@@ -176,6 +221,26 @@ html body .opacity-mask {
     display: none;
   }
 }
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 body > header {
   width: calc(100% - 1rem);
   height: 80px;
@@ -190,7 +255,7 @@ body > header > a {
   width: fit-content;
   grid-column: 1/3;
   text-decoration: none;
-  margin: auto 0;
+  margin: auto 0.5rem;
 }
 body > header > a div.mark {
   display: flex;
@@ -201,8 +266,9 @@ body > header > a div.mark span {
   position: relative;
   top: calc(50px - 0.5rem);
   height: 1.5rem;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 1.25rem;
 }
 body > header nav {
@@ -222,15 +288,15 @@ body > header nav ul li {
   text-align: center;
 }
 body > header nav ul li a {
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
 body > header nav ul li a.active, body > header nav ul li a.a-hover {
   animation: 0.5s navTranslateY forwards;
-  color: rgba(200, 100, 16, 0.55);
-  text-shadow: 1px 1px 1px rgb(240, 240, 240);
+  color: rgba(48, 141, 177, 0.55);
+  text-shadow: 1px 1px 1px rgb(225, 225, 225);
   text-decoration: underline;
 }
 body > header nav ul li:first-of-type {
@@ -294,13 +360,13 @@ body > header nav ul.scaleY-down {
   }
   body > header > nav > ul.scaleY-down li a.active, body > header > nav > ul.scaleY-down li a.a-hover {
     animation: 0.5s navTranslateY forwards;
-    color: rgba(200, 100, 16, 0.55);
-    text-shadow: 1px 1px 1px rgb(240, 240, 240);
+    color: rgba(48, 141, 177, 0.55);
+    text-shadow: 1px 1px 1px rgb(225, 225, 225);
     text-decoration: underline;
   }
   body > header > nav > ul.scaleY-down li a.a-leave {
     animation: 0.5s navTranslateY-reverse forwards;
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
     text-decoration: none;
   }
   body > header > nav > ul.scaleY-down li .fix-a-hover {
@@ -345,6 +411,26 @@ body > header nav ul.scaleY-down {
     top: 0;
   }
 }
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 html body > footer {
   background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgba(48, 141, 177, 0.5) 60%, rgba(48, 141, 177, 0.5) 110%);
   display: grid;
@@ -365,6 +451,7 @@ html body > footer div#contacts-footer div.contacts-container {
   width: 6rem;
   z-index: 2;
   top: 100px;
+  margin-left: 0.5rem;
 }
 html body > footer div#contacts-footer div.contacts-container a {
   margin-left: 0.5rem;
@@ -382,7 +469,7 @@ html body > footer div.scroll-up-button div {
   animation: 2s up-down 2s infinite;
 }
 html body > footer div.scroll-up-button div a {
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   text-decoration: none;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -420,6 +507,26 @@ html body > footer div#footer-text p {
     transform: translateY(0);
   }
 }
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 html a:active, html a:hover,
 html i:hover, html i:active,
 html a:active > i, html a:hover > i {
@@ -428,7 +535,7 @@ html a:active > i, html a:hover > i {
 }
 html body main h1 {
   text-align: center;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -436,7 +543,7 @@ html body main h1 {
 html body main h2 {
   margin: 2rem auto 0 auto;
   text-align: center;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   font-size: 2rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -462,12 +569,12 @@ html body main h4 {
 html body main label {
   margin-left: 5px;
   font-family: "Lato", sans-serif;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   font-size: 1.15rem;
 }
 html body main a {
   font-family: "Lato", sans-serif;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   text-shadow: 1px 1px 1px #C45A10;
   font-weight: bold;
 }
@@ -475,26 +582,46 @@ html body main p {
   font-family: "Lato", sans-serif;
   text-align: center;
   line-height: 1.4rem;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
 }
 html body main ul > li {
   font-family: "Lato", sans-serif;
   text-align: start;
   line-height: 1.4rem;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
 }
 
 @media (min-width: 768px) {
   body > header a:hover,
   body > header a:active {
     transform: scale(1.1);
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
   }
   div.contacts-container a:hover,
   div.contacts-container a:active {
     transform: scale(1.1);
-    color: rgb(240, 240, 240);
+    color: rgb(200, 100, 16) !important;
   }
+}
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 form {
   margin: 2rem auto;
@@ -515,10 +642,10 @@ form fieldset label {
 form fieldset input, form fieldset textarea {
   padding: 0.15rem;
   border: none;
-  border-bottom: 1px solid rgb(240, 240, 240);
+  border-bottom: 1px solid rgb(225, 225, 225);
   border-radius: 9px;
-  background-color: rgba(240, 240, 240, 0.1);
-  color: rgb(240, 240, 240);
+  background-color: rgba(225, 225, 225, 0.1);
+  color: rgb(225, 225, 225);
 }
 form fieldset input:focus, form fieldset textarea:focus {
   border: 2px solid rgb(200, 100, 16);
@@ -570,6 +697,26 @@ form div.notation:hover {
     transform: translateY(0);
   }
 }
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 button {
   cursor: pointer;
 }
@@ -581,7 +728,7 @@ button {
   width: 9rem;
   height: 1.5rem;
   transform: rotateZ(270deg);
-  background-color: rgba(240, 240, 240, 0.5);
+  background-color: rgba(225, 225, 225, 0.8);
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -597,42 +744,43 @@ button {
 
 #flying-button:hover {
   background-color: #000b10;
-  border: 1px solid rgb(240, 240, 240);
+  border: 1px solid rgb(225, 225, 225);
   opacity: 1;
 }
 #flying-button:hover a:hover, #flying-button:hover a {
   padding: 0.5rem;
-  color: rgb(240, 240, 240) !important;
+  color: rgb(225, 225, 225) !important;
 }
 
 form > fieldset > button {
   border: none;
   border-bottom: 2px solid rgb(48, 141, 177);
-  background-color: rgba(240, 240, 240, 0.15);
-  border-radius: 9px;
+  background-color: rgba(225, 225, 225, 0.15);
+  border-radius: 12px;
   min-width: 150px;
   max-width: 250px;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   font-weight: bold;
   margin: 1rem auto;
+  height: 1.35rem;
 }
 
 form > fieldset > button:hover {
-  background-color: rgba(240, 240, 240, 0.45);
+  background-color: rgba(225, 225, 225, 0.45);
 }
 
 form > fieldset > button:active {
   border: none;
-  background-color: rgb(240, 240, 240);
+  background-color: rgb(225, 225, 225);
   color: rgb(48, 141, 177);
 }
 
 body > header > button {
   border-radius: 50%;
-  border: solid 2px rgb(240, 240, 240);
+  border: solid 2px rgb(225, 225, 225);
   background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(48, 141, 177), rgb(48, 141, 177));
   box-shadow: 1px 1px 2px 2px grey;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   width: 50px;
   height: 50px;
   margin: auto;
@@ -664,6 +812,26 @@ body > header > button:active, body > header > button:hover {
  *
  *  Merci de choisir C.K devweb pour votre projet numérique.
  */
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 div.carousel {
   position: relative;
   width: 80%;
@@ -696,9 +864,9 @@ div.carousel div.carousel-articles article {
 div.carousel div.carousel-articles article .review-name {
   grid-area: name;
   height: 2rem;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
   text-shadow: 3px 3px 1px rgb(48, 141, 177);
-  font-family: "Caveat", sans-serif;
+  font-family: "Caveat", cursive;
   font-size: 1.75rem;
   overflow-x: clip;
 }
@@ -712,7 +880,7 @@ div.carousel div.carousel-articles article .review-content::-webkit-scrollbar {
   height: 8px; /* Hauteur de la barre de défilement horizontale */
 }
 div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-thumb {
-  background-color: rgb(200, 100, 16); /* Couleur de la poignée de la barre de défilement */
+  background: radial-gradient(rgb(0, 11, 16), rgb(200, 100, 16)); /* Couleur de la poignée de la barre de défilement */
   border-radius: 6px; /* Coins arrondis de la poignée */
 }
 div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-track {
@@ -753,6 +921,26 @@ div.carousel div.carousel-articles article.slideRight {
     transform: translateX(calc(96% + 1.5rem));
   }
 }
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 58.8235294118vw;
@@ -783,24 +971,21 @@ main#homepage-main-container header div#homepage-slide-background div.text-slide
   line-height: 2rem;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span:first-child {
-  animation: 2s textSlideAnim 4.9s forwards;
+  animation: 2s textSlideAnimOne 4.8s forwards;
   font-family: "Dancing Script", cursive;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
-  animation: 8s textSlideAnimRemake 0s forwards;
+  animation: 8s textSlideAnimTwo 0s forwards;
   font-size: 2.5rem;
   font-family: "Caveat", cursive;
 }
-main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
-  animation: 4.5s textSlideAnimRemake 2s forwards;
+main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(3) {
+  animation: 4.5s textSlideAnimThree 2s forwards;
   font-family: "VT323", monospace;
 }
-main#homepage-main-container header div#homepage-slide-background svg {
-  position: absolute;
-  left: 50vw;
-  top: 25vw;
-  width: 100px;
-  transform: rotateZ(240deg);
+main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
+  animation: 2s textSlideAnimOne 4.8s forwards;
+  font-family: "VT323", monospace;
 }
 main#homepage-main-container section#home-presentation-section div#presentation-links {
   display: flex;
@@ -822,11 +1007,11 @@ main#homepage-main-container section#reviews-section article.reviews-main {
 }
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button {
   background: linear-gradient(transparent, rgba(48, 141, 177, 0.25));
-  border-color: rgb(240, 240, 240);
+  border-color: rgb(225, 225, 225);
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  color: rgb(240, 240, 240);
+  color: rgb(225, 225, 225);
 }
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover, main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:active {
   border-color: rgb(200, 100, 16);
@@ -839,58 +1024,53 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
   margin-left: 1rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 1200px) {
   html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span:nth-of-type(2) {
     font-size: 3.5rem;
     line-height: 3.5rem;
   }
-  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span:nth-of-type(2) {
-    font-size: 4rem;
-    line-height: 4rem;
+}
+@media (min-width: 1200px) {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
+    font-size: 4rem !important;
+    line-height: 4rem !important;
   }
 }
-@media (min-width: 1024px) {
-  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p {
-    font-size: 3.75rem;
-    line-height: 3.75rem;
-  }
-}
-@keyframes textSlideAnim {
+@keyframes textSlideAnimOne {
   0% {
     text-shadow: none;
     color: black;
     opacity: 0;
   }
   50% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: rgb(240, 240, 240);
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
   100% {
     text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
 }
-@keyframes textSlideAnimRemake {
+@keyframes textSlideAnimTwo {
   0% {
     text-shadow: none;
     color: black;
     opacity: 0;
   }
   15% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: rgb(240, 240, 240);
-    opacity: 1;
-  }
-  30% {
     text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
   45% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: rgb(240, 240, 240);
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
   60% {
@@ -899,24 +1079,76 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   72% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: rgb(240, 240, 240);
-    opacity: 1;
-  }
-  92% {
     text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
   100% {
     text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(240, 240, 240);
+    color: rgb(225, 225, 225);
     opacity: 1;
   }
 }
+@keyframes textSlideAnimThree {
+  0% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  15% {
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
+    opacity: 1;
+  }
+  38% {
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
+    opacity: 1;
+  }
+  42% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  60% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  85% {
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(225, 225, 225);
+    opacity: 1;
+  }
+}
+@font-face {
+  font-family: "source Sans Pro";
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {
   color: rgb(200, 100, 16);
-  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
+  text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.5);
 }
 main#prices-main-container section ul.list-checks, main#services-main-container section ul.list-checks {
   list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
@@ -926,9 +1158,13 @@ main#prices-main-container section ul.list-depends, main#services-main-container
 }
 main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
   color: rgb(48, 141, 177);
-  text-shadow: 1px 1px 1px rgba(240, 240, 240, 0.5);
+  text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.5);
 }
 
+main#about-main-container section:first-of-type article:last-of-type img {
+  height: 10%;
+  margin-bottom: -6rem;
+}
 main#about-main-container section > img, main#about-main-container section > article > img {
   width: calc(70vw - 4rem);
 }

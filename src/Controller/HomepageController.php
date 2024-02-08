@@ -132,4 +132,9 @@ class HomepageController extends AbstractController
         }
         return $reviewsArray;
     }
+
+    protected function textEchap(string $text) : string
+    {
+        return htmlspecialchars($text, ENT_NOQUOTES | ENT_HTML401, 'UTF-8');
+    }
 }

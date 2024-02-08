@@ -10,7 +10,7 @@ html
         position: absolute;
         margin: auto;
         font-size: 2rem;
-        font-family: "Caveat", cursive;
+        font-family: $font-caveat;
         z-index:2;
         div span.success-modal, div span.error-modal
         {
@@ -41,7 +41,8 @@ html
             width: 6rem;
             z-index: 2;
             position: absolute;
-            top: calc($header-height + 2rem);
+            left: 0.5rem;
+            top: calc($header-height + 3rem);
             display: flex;
             justify-content: space-evenly;
             a
@@ -77,10 +78,10 @@ html
                 header{
                     margin-bottom: 1.5rem;
                 }
-                img.title-underline
+                object
                 {
+                    max-width: 500px;
                     width: 80%;
-                    max-width: 370px;
                 }
 
                 >article , >div.includes
@@ -184,6 +185,11 @@ html
     {
         display: grid;
         grid-template-columns: 25% 50% 25%;
+        object
+        {
+            max-width: 500px;
+            width: 80%;
+        }
         >header
         {
             grid-column: 1/4;
@@ -220,6 +226,16 @@ html
                 margin: 2rem auto 0 auto;
                 padding-bottom: 2rem;
             }
+            //>article:not(article:first-of-type):before
+            //{
+            //    content: "o-------o";
+            //    font-size: 1rem;
+            //    color: $alt-color;
+            //}
+            //>article:not(article:first-of-type)>h3
+            //{
+            //    margin-top: 4rem;
+            //}
         }
     }
 }

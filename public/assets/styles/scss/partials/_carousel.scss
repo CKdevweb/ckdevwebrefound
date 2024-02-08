@@ -51,7 +51,7 @@ div.carousel {
                 height:2rem;
                 color: $primary-color;
                 text-shadow: 3px 3px 1px $secondary-color;
-                font-family: "Caveat", sans-serif;
+                font-family: $font-caveat;
                 font-size: 1.75rem;
                 overflow-x: clip;
             }
@@ -67,7 +67,7 @@ div.carousel {
             }
 
             .review-content::-webkit-scrollbar-thumb {
-                background-color: $alt-color; /* Couleur de la poignée de la barre de défilement */
+                background: radial-gradient($background-color, $alt-color); /* Couleur de la poignée de la barre de défilement */
                 border-radius: 6px; /* Coins arrondis de la poignée */
             }
 

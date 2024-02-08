@@ -14,7 +14,7 @@ button
     width: 9rem;
     height: 1.5rem;
     transform: rotateZ(270deg);
-    background-color: rgba($primary-color, 0.5);
+    background-color: rgba($primary-color, 0.8);
     border-radius: 6px;
     display: flex;
     justify-content: center;
@@ -25,7 +25,7 @@ button
     {
         color: black;
         text-decoration: none;
-        font-family: "Lato", sans-serif;
+        font-family: $font-lato;
     }
 }
 #flying-button:hover
@@ -45,12 +45,13 @@ form>fieldset>button
     border: none;
     border-bottom: 2px solid $secondary-color;
     background-color: rgba($primary-color, 0.15);
-    border-radius: 9px;
+    border-radius: 12px;
     min-width: 150px;
     max-width: 250px;
     color: $primary-color;
     font-weight: bold;
     margin: 1rem auto;
+    height: 1.35rem;
 }
 
 form>fieldset>button:hover

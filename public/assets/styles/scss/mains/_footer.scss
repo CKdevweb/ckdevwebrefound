@@ -26,6 +26,7 @@ html
                     width: 6rem;
                     z-index: 2;
                     top: $header-height + 20px;
+                    margin-left: 0.5rem;
                     a
                     {
                         margin-left: 0.5rem;
@@ -49,7 +50,7 @@ html
                         color: $primary-color;
                         text-decoration: none;
                         font-weight: bold;
-                        font-family: $font-text;
+                        font-family: $font-source;
                         font-size: 0.75rem;
 
                     }

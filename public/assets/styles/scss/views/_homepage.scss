@@ -27,7 +27,7 @@ main#homepage-main-container
                 text-align: center;
                 p
                 {
-                    font-family: $font-text;
+                    font-family: $font-source;
                     font-size: 1.75rem;
                     font-weight: normal;
                     span
@@ -38,30 +38,27 @@ main#homepage-main-container
                     }
                     span:first-child
                     {
-                        animation: 2s textSlideAnim 4.9s forwards;
-                        font-family: 'Dancing Script', cursive;
+                        animation: 2s textSlideAnimOne 4.8s forwards;
+                        font-family: $font-dancing;
                     }
                     >span:nth-child(2)
                     {
-                        animation: 8s textSlideAnimRemake 0s forwards;
+                        animation: 8s textSlideAnimTwo 0s forwards;
                         font-size: 2.5rem;
-                        font-family: "Caveat", cursive;
+                        font-family: $font-caveat;
+                    }
+                    >span:nth-child(3)
+                    {
+                        animation: 4.5s textSlideAnimThree 2s forwards;
+                        font-family: $font-vt323;
                     }
                     >span:last-child
                     {
-                        animation: 4.5s textSlideAnimRemake 2s forwards;
-                        font-family: "VT323", monospace;
+                        animation: 2s textSlideAnimOne 4.8s forwards;
+                        font-family: $font-vt323;
                     }
                 }
 
-            }
-            svg
-            {
-                position: absolute;
-                left: 50vw;
-                top: 25vw;
-                width: 100px;
-                transform: rotateZ(240deg);
             }
         }
     }
@@ -120,7 +117,7 @@ main#homepage-main-container
     }
 }
 
-@media (min-width: 768px)
+@media (min-width: 768px) and (max-width: 1200px)
 {
     html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide
     {
@@ -128,13 +125,13 @@ main#homepage-main-container
         {
             > span
             {
-                font-size: 3.5rem;
-                line-height: 3.5rem;
+                font-size: 2.5rem;
+                line-height: 2.5rem;
             }
             >span:nth-of-type(2)
             {
-                font-size: 4rem;
-                line-height: 4rem;
+                font-size: 3.5rem;
+                line-height: 3.5rem;
             }
         }
 
@@ -142,17 +139,16 @@ main#homepage-main-container
 
 }
 
-@media (min-width: 1024px)
+@media (min-width: 1200px)
 {
-    html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p
+    html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span
     {
-        font-size: 3.75rem;
-        line-height: 3.75rem;
+        font-size: 4rem !important;
+        line-height: 4rem !important;
     }
 }
 
-
-@keyframes textSlideAnim
+@keyframes textSlideAnimOne
 {
     0%
     {
@@ -162,7 +158,7 @@ main#homepage-main-container
     }
     50%
     {
-        text-shadow: 2px 2px 2px $alt-color;
+        text-shadow: 2px 2px 2px $secondary-color;
         color: $primary-color;
         opacity: 1;
     }
@@ -174,7 +170,7 @@ main#homepage-main-container
     }
 }
 
-@keyframes textSlideAnimRemake
+@keyframes textSlideAnimTwo
 {
     0%
     {
@@ -184,19 +180,13 @@ main#homepage-main-container
     }
     15%
     {
-        text-shadow: 2px 2px 2px $alt-color;
-        color: $primary-color;
-        opacity: 1;
-    }
-    30%
-    {
         text-shadow: 2px 2px 2px $secondary-color;
         color: $primary-color;
         opacity: 1;
     }
     45%
     {
-        text-shadow: 2px 2px 2px $alt-color;
+        text-shadow: 2px 2px 2px $secondary-color;
         color: $primary-color;
         opacity: 1;
     }
@@ -208,11 +198,51 @@ main#homepage-main-container
     }
     72%
     {
-        text-shadow: 2px 2px 2px $alt-color;
+        text-shadow: 2px 2px 2px $secondary-color;
         color: $primary-color;
         opacity: 1;
     }
-    92%
+    100%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+}
+
+@keyframes textSlideAnimThree
+{
+    0%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    15%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    38%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    42%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    60%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    85%
     {
         text-shadow: 2px 2px 2px $secondary-color;
         color: $primary-color;
