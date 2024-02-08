@@ -54,7 +54,7 @@ class HomepageController extends AbstractController
         if (!$this->isCsrfTokenValid('review-submit', $submittedToken)) {
             return $this->redirectToRoute('app_homepage', [
                 'controller_name' => 'HomepageController',
-                'message' => "Un problème est survenu, veuillez réessayer plus tard CSRF",
+                'message' => "Un problème est survenu, veuillez réessayer plus tard",
                 'success' => 'false',
                 'reviews' => $this->getReviews()
             ]);
@@ -65,7 +65,7 @@ class HomepageController extends AbstractController
         if ($limiter->consume()->isAccepted() === false) {
             return $this->redirectToRoute('app_homepage', [
                 'controller_name' => 'HomepageController',
-                'message' => "Un problème est survenu, veuillez réessayer plus tard RATE",
+                'message' => "Un problème est survenu, veuillez réessayer plus tard",
                 'success' => 'false',
                 'reviews' => $this->getReviews()
             ]);

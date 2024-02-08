@@ -17,7 +17,6 @@ export function carousel()
 
     if(container)
     {
-        let facticeSlide = null;
         let slides = null;
         if(container === document.querySelector('.carousel-articles'))
         {
@@ -26,17 +25,9 @@ export function carousel()
 
         let slidesTab = Array.from(slides);
 
-        if(slidesTab.length % 2 === 0) //paires
-        {
-            facticeSlide = document.createElement("article");
-            container.appendChild(facticeSlide);
-            slidesTab.unshift(facticeSlide);
-            facticeSlide.classList.add("review");
-            facticeSlide.style.backgroundColor = "transparent";
-        }
-
         const leftBtn = document.getElementById("slideLeft");
         const rightBtn = document.getElementById("slideRight");
+
         let side = "left";
 
         if(leftBtn && rightBtn)

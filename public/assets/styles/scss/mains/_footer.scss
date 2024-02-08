@@ -7,7 +7,7 @@ html
     {
         >footer
         {
-            background: linear-gradient(rgba($background-color, 0.1) 0%, $background-color 40%, $secondary-color 60%, $secondary-color 110%);
+            background: linear-gradient(rgba($background-color, 0.1) 0%, $background-color 40%, rgba($secondary-color, 0.5) 60%, rgba($secondary-color, 0.5) 110%);
             display: grid;
             grid-template-rows: repeat(2, 1fr);
             grid-template-columns: repeat(3, 1fr);

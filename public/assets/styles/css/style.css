@@ -5,6 +5,29 @@ html {
   margin: 0;
   padding: 0;
 }
+html div#message {
+  position: absolute;
+  margin: auto;
+  font-size: 2rem;
+  font-family: "Caveat", cursive;
+  z-index: 2;
+}
+html div#message div span.success-modal, html div#message div span.error-modal {
+  background: linear-gradient(rgba(0, 11, 16, 0.8), rgba(48, 141, 177, 0.8));
+  padding: 1.2rem;
+  border: solid 2px rgb(0, 11, 16);
+  border-radius: 36px;
+  text-shadow: 1px 1px 1px rgb(0, 11, 16);
+}
+html div#message div span.success-modal {
+  color: rgb(240, 240, 240);
+}
+html div#message div span.error-modal {
+  color: rgb(200, 100, 16);
+}
+html .remove-fade-out {
+  animation: 2s remove-fade-out forwards;
+}
 html body {
   margin: 0;
   padding: 0;
@@ -141,6 +164,16 @@ html body .opacity-mask {
   html > body > main > section > article, html > body > main > section > div.includes {
     margin: 2rem auto 0 auto;
     padding-bottom: 2rem;
+  }
+}
+@keyframes remove-fade-out {
+  0% {
+    opacity: 100%;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    display: none;
   }
 }
 body > header {
@@ -313,7 +346,7 @@ body > header nav ul.scaleY-down {
   }
 }
 html body > footer {
-  background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgb(48, 141, 177) 60%, rgb(48, 141, 177) 110%);
+  background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgba(48, 141, 177, 0.5) 60%, rgba(48, 141, 177, 0.5) 110%);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
@@ -387,6 +420,12 @@ html body > footer div#footer-text p {
     transform: translateY(0);
   }
 }
+html a:active, html a:hover,
+html i:hover, html i:active,
+html a:active > i, html a:hover > i {
+  color: rgba(200, 100, 16, 0.75) !important;
+  transform: scale(1.1);
+}
 html body main h1 {
   text-align: center;
   color: rgb(240, 240, 240);
@@ -432,10 +471,6 @@ html body main a {
   text-shadow: 1px 1px 1px #C45A10;
   font-weight: bold;
 }
-html body main a:active, html body main a:hover {
-  color: rgba(200, 100, 16, 0.75) !important;
-  transform: scale(1.1);
-}
 html body main p {
   font-family: "Lato", sans-serif;
   text-align: center;
@@ -448,37 +483,17 @@ html body main ul > li {
   line-height: 1.4rem;
   color: rgb(240, 240, 240);
 }
-html body div.scroll-up-button > div > a:hover, html body div.scroll-up-button > div > a:active,
-html body footer a:active, html body footer a:hover {
-  color: rgba(200, 100, 16, 0.75) !important;
-  transform: scale(1.1);
-}
-html body div.scroll-up-button > div > a:hover i, html body div.scroll-up-button > div > a:active i,
-html body footer a:active i, html body footer a:hover i {
-  transform: scale(1.1);
-  color: rgba(200, 100, 16, 0.75) !important;
-}
 
 @media (min-width: 768px) {
   body > header a:hover,
   body > header a:active {
-    transform: scale(1);
-    color: rgb(240, 240, 240);
-  }
-  body > header a:hover i,
-  body > header a:active i {
     transform: scale(1.1);
-    color: rgba(200, 100, 16, 0.35) !important;
+    color: rgb(240, 240, 240);
   }
   div.contacts-container a:hover,
   div.contacts-container a:active {
-    transform: scale(1);
-    color: rgb(240, 240, 240);
-  }
-  div.contacts-container a:hover i,
-  div.contacts-container a:active i {
     transform: scale(1.1);
-    color: rgba(200, 100, 16, 0.75) !important;
+    color: rgb(240, 240, 240);
   }
 }
 form {
@@ -557,6 +572,37 @@ form div.notation:hover {
 }
 button {
   cursor: pointer;
+}
+
+#flying-button {
+  position: fixed;
+  right: -3.75rem;
+  top: 50vh;
+  width: 9rem;
+  height: 1.5rem;
+  transform: rotateZ(270deg);
+  background-color: rgba(240, 240, 240, 0.5);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.75;
+  z-index: 2;
+}
+#flying-button a {
+  color: black;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+#flying-button:hover {
+  background-color: #000b10;
+  border: 1px solid rgb(240, 240, 240);
+  opacity: 1;
+}
+#flying-button:hover a:hover, #flying-button:hover a {
+  padding: 0.5rem;
+  color: rgb(240, 240, 240) !important;
 }
 
 form > fieldset > button {
@@ -661,6 +707,17 @@ div.carousel div.carousel-articles article .review-content {
   overflow-y: scroll;
   overflow-x: clip;
 }
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar {
+  width: 8px; /* Largeur de la barre de défilement verticale */
+  height: 8px; /* Hauteur de la barre de défilement horizontale */
+}
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-thumb {
+  background-color: rgb(200, 100, 16); /* Couleur de la poignée de la barre de défilement */
+  border-radius: 6px; /* Coins arrondis de la poignée */
+}
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-track {
+  background-color: rgba(48, 141, 177, 0.35); /* Couleur de la piste de la barre de défilement */
+}
 div.carousel div.carousel-articles article footer {
   grid-area: footer;
   display: flex;
@@ -680,6 +737,22 @@ div.carousel div.carousel-articles article.slideRight {
   animation: 0.75s slideRight linear;
 }
 
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-96% - 1.5rem));
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(96% + 1.5rem));
+  }
+}
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 58.8235294118vw;
@@ -711,14 +784,16 @@ main#homepage-main-container header div#homepage-slide-background div.text-slide
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span:first-child {
   animation: 2s textSlideAnim 4.9s forwards;
+  font-family: "Dancing Script", cursive;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
   animation: 8s textSlideAnimRemake 0s forwards;
   font-size: 2.5rem;
-  font-family: "Caveat", sans-serif;
+  font-family: "Caveat", cursive;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
   animation: 4.5s textSlideAnimRemake 2s forwards;
+  font-family: "VT323", monospace;
 }
 main#homepage-main-container header div#homepage-slide-background svg {
   position: absolute;
@@ -753,6 +828,10 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
   border-radius: 50%;
   color: rgb(240, 240, 240);
 }
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover, main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:active {
+  border-color: rgb(200, 100, 16);
+  color: rgb(200, 100, 16);
+}
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:first-child {
   margin-right: 1rem;
 }
@@ -762,8 +841,8 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
 
 @media (min-width: 768px) {
   html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
-    font-size: 2.75rem;
-    line-height: 2.75rem;
+    font-size: 3.5rem;
+    line-height: 3.5rem;
   }
   html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span:nth-of-type(2) {
     font-size: 4rem;
@@ -833,28 +912,6 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     text-shadow: 2px 2px 2px rgb(48, 141, 177);
     color: rgb(240, 240, 240);
     opacity: 1;
-  }
-}
-@keyframes slide-border {
-  0% {
-    border-color: red;
-    border-top-color: transparent;
-  }
-  25% {
-    border-color: red;
-    border-right-color: transparent;
-  }
-  50% {
-    border-color: red;
-    border-bottom-color: transparent;
-  }
-  75% {
-    border-color: red;
-    border-left-color: transparent;
-  }
-  100% {
-    border-color: red;
-    border-top-color: transparent;
   }
 }
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {

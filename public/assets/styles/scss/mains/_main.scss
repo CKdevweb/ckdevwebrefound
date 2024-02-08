@@ -6,6 +6,31 @@ html
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    div#message{
+        position: absolute;
+        margin: auto;
+        font-size: 2rem;
+        font-family: "Caveat", cursive;
+        z-index:2;
+        div span.success-modal, div span.error-modal
+        {
+            background: linear-gradient(rgba($background-color, 0.8), rgba($secondary-color, 0.8));
+            padding: 1.2rem;
+            border: solid 2px $background-color;
+            border-radius: 36px;
+            text-shadow: 1px 1px 1px $background-color;
+        }
+        div span.success-modal {
+            color: $primary-color;
+        }
+        div span.error-modal {
+            color: $alt-color;
+        }
+    }
+
+    .remove-fade-out {
+        animation: 2s remove-fade-out forwards;
+    }
     body
     {
         margin: 0;
@@ -196,5 +221,19 @@ html
                 padding-bottom: 2rem;
             }
         }
+    }
+}
+
+@keyframes remove-fade-out
+{
+    0%
+    {
+        opacity: 100%;
+        display: flex;
+    }
+    100%
+    {
+        opacity: 0;
+        display: none;
     }
 }

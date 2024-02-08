@@ -61,6 +61,19 @@ div.carousel {
                 overflow-y: scroll;
                 overflow-x: clip;
             }
+            .review-content::-webkit-scrollbar {
+                width: 8px; /* Largeur de la barre de défilement verticale */
+                height: 8px; /* Hauteur de la barre de défilement horizontale */
+            }
+
+            .review-content::-webkit-scrollbar-thumb {
+                background-color: $alt-color; /* Couleur de la poignée de la barre de défilement */
+                border-radius: 6px; /* Coins arrondis de la poignée */
+            }
+
+            .review-content::-webkit-scrollbar-track {
+                background-color: rgba($secondary-color, 0.35); /* Couleur de la piste de la barre de défilement */
+            }
             footer
             {
                 grid-area: footer;
@@ -89,5 +102,27 @@ div.carousel {
         {
             animation: 0.75s slideRight linear;
         }
+    }
+}
+
+@keyframes slideLeft{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(calc(-96% - 1.5rem));
+    }
+}
+
+@keyframes slideRight{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(calc(96% + 1.5rem));
     }
 }

@@ -7,6 +7,14 @@
     <main id="contact-main-container">
         <header class="main-header">
             <h1>Contact</h1>
+            {% if app.request.query.get('message') is defined %}
+                <div id="message" class="hidden">
+                    <div>
+                        <span>{{ app.request.query.get('message') }}</span>
+                        <input type="hidden" value="{{ app.request.query.get('success') }}"/>
+                    </div>
+                </div>
+            {% endif %}
         </header>
         <section class="presentation">
             <p>
@@ -24,4 +32,5 @@
         </section>
         <div class="right-side-sprite"></div>
     </main>
+    <script type="module" src="{{ asset('assets/js/views/contact.js') }}"></script>
 {% endblock %}

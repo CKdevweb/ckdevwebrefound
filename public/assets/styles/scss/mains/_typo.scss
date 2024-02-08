@@ -2,6 +2,13 @@
 
 html
 {
+    a:active, a:hover,
+    i:hover, i:active,
+    a:active > i, a:hover > i
+    {
+        color: rgba($alt-color, 0.75) !important;
+        transform: scale(1.1);
+    }
     body
     {
         main
@@ -58,12 +65,6 @@ html
                 text-shadow: 1px 1px 1px #C45A10;
                 font-weight: bold;
             }
-
-            a:active, a:hover
-            {
-                color: rgba($alt-color, 0.75) !important;
-                transform: scale(1.1);
-            }
             p
             {
                 font-family: $font-text2;
@@ -79,18 +80,6 @@ html
                 color: $primary-color
             }
         }
-        div.scroll-up-button>div>a:hover, div.scroll-up-button>div>a:active,
-        footer a:active, footer a:hover
-        {
-            color: rgba($alt-color, 0.75) !important;
-            transform: scale(1.1);
-            i
-            {
-
-                transform: scale(1.1);
-                color: rgba($alt-color, 0.75) !important;
-            }
-        }
     }
 }
 
@@ -99,25 +88,13 @@ html
     body>header a:hover,
     body>header a:active
     {
-        transform: scale(1);
+        transform: scale(1.1);
         color: $primary-color;
-        i
-        {
-
-            transform: scale(1.1);
-            color: rgba($alt-color, 0.35) !important;
-        }
     }
     div.contacts-container a:hover,
     div.contacts-container a:active
     {
-        transform: scale(1);
+        transform: scale(1.1);
         color: $primary-color;
-        i
-        {
-
-            transform: scale(1.1);
-            color: rgba($alt-color, 0.75) !important;
-        }
     }
 }
