@@ -1,0 +1,22 @@
+main#gnu-main-container
+{
+    h1
+    {
+        margin-top: 2rem;
+    }
+    section
+    {
+            p
+            {
+                text-align: start;
+
+            }
+        grid-column: 1/4;
+        margin:auto;
+        width: 70vw;
+    }
+    ul
+    {
+        margin-left: 4rem;
+    }
+}

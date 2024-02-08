@@ -943,5 +943,19 @@ main#about-main-container section > img, main#about-main-container section > art
     width: calc(20vw - 4rem);
   }
 }
+main#gnu-main-container h1 {
+  margin-top: 2rem;
+}
+main#gnu-main-container section {
+  grid-column: 1/4;
+  margin: auto;
+  width: 70vw;
+}
+main#gnu-main-container section p {
+  text-align: start;
+}
+main#gnu-main-container ul {
+  margin-left: 4rem;
+}
 
 /*# sourceMappingURL=style.css.map */
