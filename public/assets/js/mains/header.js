@@ -12,10 +12,12 @@
  */
 
 import { burgerMenu } from "../components/burgerMenu.js";
+import { navbarAnimations } from "../components/navbarAnimation.js";
 
 
 
 document.addEventListener('DOMContentLoaded', () =>
 {
     burgerMenu();
+    navbarAnimations();
 });

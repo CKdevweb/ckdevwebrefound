@@ -26,14 +26,6 @@ html
                     width: 6rem;
                     z-index: 2;
                     top: $header-height + 20px;
-                    a:hover
-                    {
-                        i
-                        {
-                            transform: scale(1.1);
-                            color: $alt-color;
-                        }
-                    }
                     a
                     {
                         margin-left: 0.5rem;

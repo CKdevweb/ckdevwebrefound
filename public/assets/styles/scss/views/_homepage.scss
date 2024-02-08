@@ -14,6 +14,7 @@ main#homepage-main-container
             display: flex;
             justify-content: center;
             align-items: center;
+
             div.opacity-mask
             {
                 display: flex;
@@ -33,6 +34,7 @@ main#homepage-main-container
                     {
                         color: black;
                         opacity: 0;
+                        line-height: 2rem;
                     }
                     span:first-child
                     {
@@ -41,10 +43,12 @@ main#homepage-main-container
                     >span:nth-child(2)
                     {
                         animation: 8s textSlideAnimRemake 0s forwards;
+                        font-size: 2.5rem;
+                        font-family: "Caveat", sans-serif;
                     }
                     >span:last-child
                     {
-                        animation: 8s textSlideAnimRemake 0s forwards;
+                        animation: 4.5s textSlideAnimRemake 2s forwards;
                     }
                 }
 
@@ -78,22 +82,32 @@ main#homepage-main-container
 
     section#reviews-section
     {
-        display: none;
-    }
-
-    section#make-review-section
-    {
-        header
+        padding: 2rem 0;
+        article.reviews-main
         {
-
-        }
-        p
-        {
-
-        }
-        div#review-form-container
-        {
-
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .commands-carousel
+            {
+                button
+                {
+                    background: linear-gradient(transparent, rgba($secondary-color, 0.25));
+                    border-color: $primary-color;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    color: $primary-color;
+                }
+                button:first-child
+                {
+                    margin-right:1rem;
+                }
+                button:last-child
+                {
+                    margin-left:1rem;
+                }
+            }
         }
     }
 }
@@ -104,9 +118,18 @@ main#homepage-main-container
     {
         > p
         {
-            font-size: 2.75rem;
-            line-height: 2.75rem;
+            > span
+            {
+                font-size: 2.75rem;
+                line-height: 2.75rem;
+            }
+            >span:nth-of-type(2)
+            {
+                font-size: 4rem;
+                line-height: 4rem;
+            }
         }
+
     }
 
 }
@@ -131,14 +154,14 @@ main#homepage-main-container
     }
     50%
     {
-        text-shadow: 2px 2px 2px $primary-color;
-        color: $secondary-color;
+        text-shadow: 2px 2px 2px $alt-color;
+        color: $primary-color;
         opacity: 1;
     }
     100%
     {
-        text-shadow: 2px 2px 2px $alt-color;
-        color: white;
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
         opacity: 1;
     }
 }
@@ -153,20 +176,20 @@ main#homepage-main-container
     }
     15%
     {
-        text-shadow: 2px 2px 2px $primary-color;
-        color: $secondary-color;
+        text-shadow: 2px 2px 2px $alt-color;
+        color: $primary-color;
         opacity: 1;
     }
     30%
     {
-        text-shadow: 2px 2px 2px $alt-color;
-        color: white;
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
         opacity: 1;
     }
     45%
     {
-        text-shadow: 2px 2px 2px $primary-color;
-        color: $secondary-color;
+        text-shadow: 2px 2px 2px $alt-color;
+        color: $primary-color;
         opacity: 1;
     }
     60%
@@ -177,20 +200,43 @@ main#homepage-main-container
     }
     72%
     {
-        text-shadow: 2px 2px 2px $primary-color;
-        color: $secondary-color;
+        text-shadow: 2px 2px 2px $alt-color;
+        color: $primary-color;
         opacity: 1;
     }
     92%
     {
-        text-shadow: 2px 2px 2px $alt-color;
-        color: white;
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
         opacity: 1;
     }
     100%
     {
-        text-shadow: 2px 2px 2px $alt-color;
-        color: white;
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
         opacity: 1;
+    }
+}
+
+@keyframes slide-border {
+    0% {
+        border-color: red;
+        border-top-color: transparent;
+    }
+    25% {
+        border-color: red;
+        border-right-color: transparent;
+    }
+    50% {
+        border-color: red;
+        border-bottom-color: transparent;
+    }
+    75% {
+        border-color: red;
+        border-left-color: transparent;
+    }
+    100% {
+        border-color: red;
+        border-top-color: transparent;
     }
 }

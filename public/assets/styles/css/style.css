@@ -1,16 +1,9 @@
+@charset "UTF-8";
 html {
   font-size: 16px;
   scroll-behavior: smooth;
   margin: 0;
   padding: 0;
-}
-html a:hover {
-  transform: scale(1.1) !important;
-  color: rgb(200, 100, 16) !important;
-}
-html a:hover i {
-  transform: scale(1.1) !important;
-  color: rgb(200, 100, 16) !important;
 }
 html body {
   margin: 0;
@@ -24,10 +17,6 @@ html body > div.contacts-container {
   top: calc(80px + 2rem);
   display: flex;
   justify-content: space-evenly;
-}
-html body > div.contacts-container a:hover i {
-  transform: scale(1.1);
-  color: rgb(200, 100, 16);
 }
 html body > div.contacts-container a {
   margin-left: 0.5rem;
@@ -47,7 +36,7 @@ html body main div.left-side-sprite, html body main div.right-side-sprite {
 }
 html body main > section {
   margin: 0;
-  padding: 2rem 10% 2rem 10%;
+  padding: 2rem 5% 2rem 5%;
   text-align: center;
 }
 html body main > section header {
@@ -57,7 +46,7 @@ html body main > section img.title-underline {
   width: 80%;
   max-width: 370px;
 }
-html body main > section article, html body main > section > div.includes {
+html body main > section > article, html body main > section > div.includes {
   margin: 1rem auto 0 auto;
   padding-bottom: 1rem;
   max-width: 800px;
@@ -100,13 +89,13 @@ html body .opacity-mask {
   html {
     font-size: 18px;
   }
+  html main > section {
+    padding: 2rem 10% 2rem 10%;
+  }
 }
 @media (min-width: 768px) {
   html {
     font-size: 20px;
-  }
-  html body a:hover, html body i:hover {
-    color: rgb(200, 100, 16);
   }
   html body main:not(#homepage-main-container) .main-header {
     background-size: cover;
@@ -121,7 +110,7 @@ html body .opacity-mask {
 @media (min-width: 1024px) {
   html > body > main {
     display: grid;
-    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-columns: 25% 50% 25%;
   }
   html > body > main > header {
     grid-column: 1/4;
@@ -134,7 +123,7 @@ html body .opacity-mask {
     background-image: url("../../../../assets/medias/images/sprites/side-effect.webp");
     background-size: contain;
     background-position: center;
-    background-repeat: repeat-y;
+    background-repeat: no-repeat;
     margin: 30%;
     width: 40%;
     opacity: 30%;
@@ -149,13 +138,13 @@ html body .opacity-mask {
   html > body > main > section {
     grid-column: 2/3;
   }
-  html > body > main > section article, html > body > main > section > div.includes {
+  html > body > main > section > article, html > body > main > section > div.includes {
     margin: 2rem auto 0 auto;
     padding-bottom: 2rem;
   }
 }
 body > header {
-  width: calc(100vw - 1rem);
+  width: calc(100% - 1rem);
   height: 80px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -205,6 +194,12 @@ body > header nav ul li a {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
+body > header nav ul li a.active, body > header nav ul li a.a-hover {
+  animation: 0.5s navTranslateY forwards;
+  color: rgba(200, 100, 16, 0.55);
+  text-shadow: 1px 1px 1px rgb(240, 240, 240);
+  text-decoration: underline;
+}
 body > header nav ul li:first-of-type {
   margin-top: 0;
   padding-top: 1rem;
@@ -227,23 +222,59 @@ body > header nav ul.scaleY-down {
   animation: 0.5s close-burger 0s forwards;
 }
 
+@media (min-width: 1024px) {
+  body > header > nav > ul.scaleY-down li {
+    margin: 1rem 0 0 5vw !important;
+  }
+}
 @media (min-width: 768px) {
   body > header {
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 80px;
+    grid-template-rows: repeat(2, 53.3333333333px);
+  }
+  body > header > a {
+    grid-row: 1/2;
+    grid-column: 1/2;
   }
   body > header > nav {
-    grid-row: 1/2;
+    grid-row: 1/3;
     grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
   }
   body > header > nav > ul.scaleY-down {
     transform: scaleY(1);
     display: flex;
     background-color: inherit;
     border: none;
+    height: 80px;
   }
   body > header > nav > ul.scaleY-down li {
-    margin: 1rem 0 0 5vw;
+    margin: 1rem 0 0 3vw;
+  }
+  body > header > nav > ul.scaleY-down li a {
+    position: relative;
+    padding: 1rem 0;
+  }
+  body > header > nav > ul.scaleY-down li a.active, body > header > nav > ul.scaleY-down li a.a-hover {
+    animation: 0.5s navTranslateY forwards;
+    color: rgba(200, 100, 16, 0.55);
+    text-shadow: 1px 1px 1px rgb(240, 240, 240);
+    text-decoration: underline;
+  }
+  body > header > nav > ul.scaleY-down li a.a-leave {
+    animation: 0.5s navTranslateY-reverse forwards;
+    color: rgb(240, 240, 240);
+    text-decoration: none;
+  }
+  body > header > nav > ul.scaleY-down li .fix-a-hover {
+    margin-top: 0;
+  }
+  body > header > nav > ul.scaleY-down li .fix-a-leave {
+    margin-top: 1rem;
   }
   body > header > nav > ul.scaleY-down li:first-of-type {
     padding: 0;
@@ -263,6 +294,22 @@ body > header nav ul.scaleY-down {
   }
   to {
     transform: scaleY(0);
+  }
+}
+@keyframes navTranslateY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 1rem;
+  }
+}
+@keyframes navTranslateY-reverse {
+  from {
+    top: 1rem;
+  }
+  to {
+    top: 0;
   }
 }
 html body > footer {
@@ -285,10 +332,6 @@ html body > footer div#contacts-footer div.contacts-container {
   width: 6rem;
   z-index: 2;
   top: 100px;
-}
-html body > footer div#contacts-footer div.contacts-container a:hover i {
-  transform: scale(1.1);
-  color: rgb(200, 100, 16);
 }
 html body > footer div#contacts-footer div.contacts-container a {
   margin-left: 0.5rem;
@@ -390,7 +433,8 @@ html body main a {
   font-weight: bold;
 }
 html body main a:active, html body main a:hover {
-  color: rgb(200, 100, 16);
+  color: rgba(200, 100, 16, 0.75) !important;
+  transform: scale(1.1);
 }
 html body main p {
   font-family: "Lato", sans-serif;
@@ -404,7 +448,39 @@ html body main ul > li {
   line-height: 1.4rem;
   color: rgb(240, 240, 240);
 }
+html body div.scroll-up-button > div > a:hover, html body div.scroll-up-button > div > a:active,
+html body footer a:active, html body footer a:hover {
+  color: rgba(200, 100, 16, 0.75) !important;
+  transform: scale(1.1);
+}
+html body div.scroll-up-button > div > a:hover i, html body div.scroll-up-button > div > a:active i,
+html body footer a:active i, html body footer a:hover i {
+  transform: scale(1.1);
+  color: rgba(200, 100, 16, 0.75) !important;
+}
 
+@media (min-width: 768px) {
+  body > header a:hover,
+  body > header a:active {
+    transform: scale(1);
+    color: rgb(240, 240, 240);
+  }
+  body > header a:hover i,
+  body > header a:active i {
+    transform: scale(1.1);
+    color: rgba(200, 100, 16, 0.35) !important;
+  }
+  div.contacts-container a:hover,
+  div.contacts-container a:active {
+    transform: scale(1);
+    color: rgb(240, 240, 240);
+  }
+  div.contacts-container a:hover i,
+  div.contacts-container a:active i {
+    transform: scale(1.1);
+    color: rgba(200, 100, 16, 0.75) !important;
+  }
+}
 form {
   margin: 2rem auto;
   padding: 0 1rem;
@@ -453,6 +529,21 @@ form div.notation:hover {
   cursor: pointer;
 }
 
+@media (min-width: 425px) {
+  form {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  form {
+    width: 40%;
+  }
+}
+@media (min-width: 1024px) {
+  form {
+    width: 60%;
+  }
+}
 @keyframes stars-shake {
   0% {
     transform: translateY(0);
@@ -515,6 +606,80 @@ body > header > button:active, body > header > button:hover {
     display: none;
   }
 }
+/*!
+ * Copyright (c) 2024.
+ * /
+ *   Droit d'auteur (c) 2024 par Kévin Corvaisier, fondateur de C.K devweb. Tous droits réservés.
+ *
+ *  Pour en savoir plus sur mes services et découvrir mes réalisations, visitez mon site web :
+ *   https://www.ckdevweb.fr
+ *
+ *  N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ *
+ *  Merci de choisir C.K devweb pour votre projet numérique.
+ */
+div.carousel {
+  position: relative;
+  width: 80%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 9px;
+  box-shadow: 5px 5px 15px rgb(48, 141, 177);
+  overflow-x: hidden;
+}
+div.carousel div.carousel-articles {
+  position: absolute;
+  width: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 250px;
+}
+div.carousel div.carousel-articles article {
+  display: grid;
+  grid-template-areas: "name name name name" "content content content content" "content content content content" "content content content content" "footer footer footer footer";
+  background: linear-gradient(transparent, rgba(48, 141, 177, 0.25));
+  border-radius: 9px;
+  height: 90%;
+  width: 20%;
+}
+div.carousel div.carousel-articles article .review-name {
+  grid-area: name;
+  height: 2rem;
+  color: rgb(240, 240, 240);
+  text-shadow: 3px 3px 1px rgb(48, 141, 177);
+  font-family: "Caveat", sans-serif;
+  font-size: 1.75rem;
+  overflow-x: clip;
+}
+div.carousel div.carousel-articles article .review-content {
+  grid-area: content;
+  overflow-y: scroll;
+  overflow-x: clip;
+}
+div.carousel div.carousel-articles article footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.carousel div.carousel-articles article footer .notation {
+  margin-left: 0.5rem;
+}
+div.carousel div.carousel-articles article footer .review-date {
+  margin-left: 0;
+}
+div.carousel div.carousel-articles article.slideLeft {
+  animation: 0.75s slideLeft linear;
+}
+div.carousel div.carousel-articles article.slideRight {
+  animation: 0.75s slideRight linear;
+}
+
 main#homepage-main-container header div#homepage-slide-background {
   width: 100vw;
   height: 58.8235294118vw;
@@ -542,15 +707,18 @@ main#homepage-main-container header div#homepage-slide-background div.text-slide
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span {
   color: black;
   opacity: 0;
+  line-height: 2rem;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p span:first-child {
   animation: 2s textSlideAnim 4.9s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
   animation: 8s textSlideAnimRemake 0s forwards;
+  font-size: 2.5rem;
+  font-family: "Caveat", sans-serif;
 }
 main#homepage-main-container header div#homepage-slide-background div.text-slide p > span:last-child {
-  animation: 8s textSlideAnimRemake 0s forwards;
+  animation: 4.5s textSlideAnimRemake 2s forwards;
 }
 main#homepage-main-container header div#homepage-slide-background svg {
   position: absolute;
@@ -570,12 +738,36 @@ main#homepage-main-container section#home-presentation-section div#presentation-
   font-size: 1.25rem;
 }
 main#homepage-main-container section#reviews-section {
-  display: none;
+  padding: 2rem 0;
 }
+main#homepage-main-container section#reviews-section article.reviews-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button {
+  background: linear-gradient(transparent, rgba(48, 141, 177, 0.25));
+  border-color: rgb(240, 240, 240);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: rgb(240, 240, 240);
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:first-child {
+  margin-right: 1rem;
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:last-child {
+  margin-left: 1rem;
+}
+
 @media (min-width: 768px) {
-  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
     font-size: 2.75rem;
     line-height: 2.75rem;
+  }
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span:nth-of-type(2) {
+    font-size: 4rem;
+    line-height: 4rem;
   }
 }
 @media (min-width: 1024px) {
@@ -591,13 +783,13 @@ main#homepage-main-container section#reviews-section {
     opacity: 0;
   }
   50% {
-    text-shadow: 2px 2px 2px rgb(240, 240, 240);
-    color: rgb(48, 141, 177);
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   100% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
 }
@@ -608,18 +800,18 @@ main#homepage-main-container section#reviews-section {
     opacity: 0;
   }
   15% {
-    text-shadow: 2px 2px 2px rgb(240, 240, 240);
-    color: rgb(48, 141, 177);
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   30% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   45% {
-    text-shadow: 2px 2px 2px rgb(240, 240, 240);
-    color: rgb(48, 141, 177);
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   60% {
@@ -628,19 +820,41 @@ main#homepage-main-container section#reviews-section {
     opacity: 0;
   }
   72% {
-    text-shadow: 2px 2px 2px rgb(240, 240, 240);
-    color: rgb(48, 141, 177);
+    text-shadow: 2px 2px 2px rgb(200, 100, 16);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   92% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(240, 240, 240);
     opacity: 1;
   }
   100% {
-    text-shadow: 2px 2px 2px rgb(200, 100, 16);
-    color: white;
+    text-shadow: 2px 2px 2px rgb(48, 141, 177);
+    color: rgb(240, 240, 240);
     opacity: 1;
+  }
+}
+@keyframes slide-border {
+  0% {
+    border-color: red;
+    border-top-color: transparent;
+  }
+  25% {
+    border-color: red;
+    border-right-color: transparent;
+  }
+  50% {
+    border-color: red;
+    border-bottom-color: transparent;
+  }
+  75% {
+    border-color: red;
+    border-left-color: transparent;
+  }
+  100% {
+    border-color: red;
+    border-top-color: transparent;
   }
 }
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {

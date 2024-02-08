@@ -12,8 +12,10 @@
  */
 
 import { notation } from "../components/notation.js";
+import { carousel } from "../components/carousel.js";
 
 document.addEventListener('DOMContentLoaded', () =>
 {
     notation();
+    //carousel();
 });

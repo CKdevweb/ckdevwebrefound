@@ -2,18 +2,6 @@
 
 html
 {
-    a:hover
-    {
-        transform: scale(1.1) !important;
-        color: $alt-color !important;
-        i
-        {
-
-            transform: scale(1.1) !important;
-            color: $alt-color !important;
-        }
-
-    }
     font-size: 16px;
     scroll-behavior: smooth;
     margin: 0;
@@ -31,16 +19,6 @@ html
             top: calc($header-height + 2rem);
             display: flex;
             justify-content: space-evenly;
-            a:hover
-            {
-                i
-                {
-
-                    transform: scale(1.1);
-                    color: $alt-color;
-                }
-
-            }
             a
             {
                 margin-left: 0.5rem;
@@ -68,7 +46,7 @@ html
             >section
             {
                 margin: 0;
-                padding: 2rem 10% 2rem 10%;
+                padding: 2rem 5% 2rem 5%;
                 text-align: center;
 
                 header{
@@ -80,7 +58,7 @@ html
                     max-width: 370px;
                 }
 
-                article , >div.includes
+                >article , >div.includes
                 {
                     margin: 1rem auto 0 auto;
                     padding-bottom: 1rem;
@@ -141,7 +119,9 @@ html
     html
     {
         font-size: 18px;
-
+        main>section{
+            padding: 2rem 10% 2rem 10%;
+        }
     }
 }
 
@@ -152,10 +132,6 @@ html
         font-size: 20px;
         body
         {
-            a:hover, i:hover
-            {
-                color: $alt-color;
-            }
             main:not(#homepage-main-container)
             {
                 .main-header
@@ -182,8 +158,7 @@ html
     html>body>main
     {
         display: grid;
-        grid-template-columns: 25vw 50vw 25vw;
-
+        grid-template-columns: 25% 50% 25%;
         >header
         {
             grid-column: 1/4;
@@ -198,7 +173,7 @@ html
             background-image: url("../../../../assets/medias/images/sprites/side-effect.webp");
             background-size: contain;
             background-position: center;
-            background-repeat: repeat-y;
+            background-repeat: no-repeat;
             margin: 30%;
             width: 40%;
             opacity: 30%;
@@ -215,7 +190,7 @@ html
         >section
         {
             grid-column: 2/3;
-            article , >div.includes
+            >article , >div.includes
             {
                 margin: 2rem auto 0 auto;
                 padding-bottom: 2rem;

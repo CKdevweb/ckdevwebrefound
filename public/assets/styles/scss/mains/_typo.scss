@@ -58,9 +58,11 @@ html
                 text-shadow: 1px 1px 1px #C45A10;
                 font-weight: bold;
             }
+
             a:active, a:hover
             {
-                color: $alt-color;
+                color: rgba($alt-color, 0.75) !important;
+                transform: scale(1.1);
             }
             p
             {
@@ -76,6 +78,46 @@ html
                 line-height: 1.40rem;
                 color: $primary-color
             }
+        }
+        div.scroll-up-button>div>a:hover, div.scroll-up-button>div>a:active,
+        footer a:active, footer a:hover
+        {
+            color: rgba($alt-color, 0.75) !important;
+            transform: scale(1.1);
+            i
+            {
+
+                transform: scale(1.1);
+                color: rgba($alt-color, 0.75) !important;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px)
+{
+    body>header a:hover,
+    body>header a:active
+    {
+        transform: scale(1);
+        color: $primary-color;
+        i
+        {
+
+            transform: scale(1.1);
+            color: rgba($alt-color, 0.35) !important;
+        }
+    }
+    div.contacts-container a:hover,
+    div.contacts-container a:active
+    {
+        transform: scale(1);
+        color: $primary-color;
+        i
+        {
+
+            transform: scale(1.1);
+            color: rgba($alt-color, 0.75) !important;
         }
     }
 }

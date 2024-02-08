@@ -49,5 +49,18 @@ export function burgerMenu()
             menu.classList.add("scaleY-down");
         }
     })
-}
 
+    window.addEventListener("resize", function(){
+        if(window.innerWidth >= 768)
+        {
+            menu.classList.remove("scaleY-up");
+            menu.classList.add("scaleY-down");
+            menu.classList.remove("close-burger");
+            menu.classList.remove("open-burger");
+        }
+        else
+        {
+            menu.classList.add("close-burger");
+        }
+    })
+}
