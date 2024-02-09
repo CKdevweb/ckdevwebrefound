@@ -6,14 +6,6 @@
 <main id="homepage-main-container">
     <header class="main-header">
         <h1 class="hidden">Accueil</h1>
-        {% if app.request.query.get('message') is defined %}
-            <div id="message" class="hidden">
-                <div>
-                    <span>{{ app.request.query.get('message') }}</span>
-                    <input type="hidden" value="{{ app.request.query.get('success') }}"/>
-                </div>
-            </div>
-        {% endif %}
         <div id="homepage-slide-background">
             {#            <div class="opacity-mask"></div>#}
             <div class="text-slide">

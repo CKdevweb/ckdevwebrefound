@@ -78,7 +78,7 @@ class ContactController extends AbstractController
         $email = (new Email())
             ->from($email) // Adresse expéditeur
             ->to("ckdevweb.35@gmail.com") // Adresse destinataire
-            ->subject("CKDEVWEB site message de ".$name." email: ".$email)
+            ->subject("MESSAGE CLIENT SITE C.K DevWeb: message de ".$name." email: ".$email)
             ->text($content);
         try {
             $this->mailer->send($email);
@@ -92,7 +92,7 @@ class ContactController extends AbstractController
 
         return $this->redirectToRoute('app_contact', [
             'controller_name' => 'ContactController',
-            'message' => "L'email à bien été envoyé !",
+            'message' => "L'email à bien été envoyé. Je vous répondrais dans les plus brefs délais.",
             'success' => 'true',
         ]);
     }

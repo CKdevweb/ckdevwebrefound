@@ -2,13 +2,14 @@
 
 main#homepage-main-container
 {
-    header
+    >header
     {
+        background: linear-gradient(to bottom, black, $background-color);
         div#homepage-slide-background
         {
             width: 100vw;
             height: calc(100vw * 10 / 17);
-            background-image: url("../../../../assets/medias/images/backgrounds/back4.webp");
+            background-image: url("../../../../assets/medias/images/backgrounds/back5.webp");
             background-size: contain;
             background-repeat: no-repeat;
             display: flex;

@@ -7,36 +7,42 @@
     <link href="{{ asset('assets/medias/images/logos/Logo-CKdevweb.ico') }}" rel="icon">
     <link href="{{ asset('assets/styles/css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('assets/styles/css/style.css') }}" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a2be3c71ec.js" crossorigin="anonymous"></script>
-    <link href="{{ asset('assets/fontawesome/css/fontawesome.css') }}" rel="stylesheet">#}
-    <link href="{{ asset('assets/fontawesome/css/brands.css') }}" rel="stylesheet">#}
-    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
-    <link href="{{ asset('assets/fontawesome/css/regular.css') }}" rel="stylesheet">#}
-    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">#}
+    <script src="{{ asset('assets/js/components/fontawesome.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/components/solid.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/components/brands.js') }}" crossorigin="anonymous"></script>
+    <link href="{{ asset('assets/fontawesome/css/brands.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fontawesome/css/solid.css') }}" rel="stylesheet">
 </head>
 <body>
-<div id="top-view"></div>
-
-{% include "mains/header.html.twig" %}
-<div id="flying-button">
-    <a href="{{ path('app_contact') }}">Prenons contact !</a>
-</div>
-<div class="contacts-container">
-    <a href="https://github.com/CKdevweb" target="_blank">
-        <i class="fa-brands fa-github" style="color: #FFFFFF; font-size: 1.5rem;"></i>
-    </a>
-    <a href="https://www.linkedin.com/in/k%C3%A9vin-corvaisier-1140b1205/" target="_blank">
-        <i class="fa-brands fa-linkedin" style="color: #FFFFFF; font-size: 1.5rem;"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61556127747077" target="_blank">
-        <i class="fa-brands fa-facebook" style="color: #FFFFFF; font-size: 1.5rem;"></i>
-    </a>
-</div>
-{% block body %}
-    <div class="contact-side-btn">
-        <a href="/app-contact">Contactez-moi</a>
+    <div id="top-view"></div>
+        {% if app.request.query.get('message') is defined %}
+            <div id="message" class="hidden">
+                <div>
+                    <span>{{ app.request.query.get('message') }}</span>
+                    <input type="hidden" value="{{ app.request.query.get('success') }}"/>
+                </div>
+            </div>
+        {% endif %}
+        {% include "mains/header.html.twig" %}
+    <div id="flying-button">
+        <a href="{{ path('app_contact') }}">Prenons contact !</a>
     </div>
-{% endblock %}
-{% include "mains/footer.html.twig" %}
+    <div class="contacts-container">
+        <a href="https://github.com/CKdevweb" target="_blank">
+            <i class="fa-brands fa-github" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/k%C3%A9vin-corvaisier-1140b1205/" target="_blank">
+            <i class="fa-brands fa-linkedin" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61556127747077" target="_blank">
+            <i class="fa-brands fa-facebook" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+    </div>
+    {% block body %}
+        <div class="contact-side-btn">
+            <a href="/app-contact">Contactez-moi</a>
+        </div>
+    {% endblock %}
+    {% include "mains/footer.html.twig" %}
 </body>
 </html>

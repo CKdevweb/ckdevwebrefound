@@ -1,20 +1,12 @@
 {# src/Resources/views/contact/index.html.twig #}
 {% extends 'base.html.twig' %}
 
-{% block title %}Contact{% endblock %}
+{% block title %}C.K DevWeb - Contact{% endblock %}
 
 {% block body %}
     <main id="contact-main-container">
         <header class="main-header">
             <h1>Contact</h1>
-            {% if app.request.query.get('message') is defined %}
-                <div id="message" class="hidden">
-                    <div>
-                        <span>{{ app.request.query.get('message') }}</span>
-                        <input type="hidden" value="{{ app.request.query.get('success') }}"/>
-                    </div>
-                </div>
-            {% endif %}
         </header>
         <section class="presentation">
             <p>

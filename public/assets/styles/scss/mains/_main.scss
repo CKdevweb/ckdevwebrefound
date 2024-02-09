@@ -8,16 +8,27 @@ html
     padding: 0;
     div#message{
         position: absolute;
+        top: calc($header-height * 2);
+        left: 5%;
+        right: 5%;
         margin: auto;
-        font-size: 2rem;
-        font-family: $font-caveat;
         z-index:2;
-        div span.success-modal, div span.error-modal
+        div
         {
             background: linear-gradient(rgba($background-color, 0.8), rgba($secondary-color, 0.8));
-            padding: 1.2rem;
             border: solid 2px $background-color;
             border-radius: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem;
+        }
+        div span.success-modal, div span.error-modal
+        {
+
+            font-size: 1.75rem;
+            text-align: center;
+            font-family: $font-caveat;
             text-shadow: 1px 1px 1px $background-color;
         }
         div span.success-modal {
@@ -42,7 +53,7 @@ html
             z-index: 2;
             position: absolute;
             left: 0.5rem;
-            top: calc($header-height + 3rem);
+            top: calc($header-height + 2rem);
             display: flex;
             justify-content: space-evenly;
             a
