@@ -10,16 +10,15 @@ button
 {
     position: fixed;
     right: calc(-4.5rem + 1.5rem / 2);
-    top: 50vh;
+    top: 70vh;
     width: 9rem;
     height: 1.5rem;
     transform: rotateZ(270deg);
-    background-color: rgba($primary-color, 0.8);
+    background-color: rgba($primary-color, 1);
     border-radius: 6px;
     display: flex;
     justify-content: center;
     align-items: center;
-    opacity: 0.75;
     z-index:2;
     a
     {
@@ -71,10 +70,10 @@ body>header
     >button
     {
         border-radius: 50%;
-        border: solid 2px $primary-color;
+        border: solid 2px white;
         background: linear-gradient(to bottom, rgb(8, 27, 114), $secondary-color, $secondary-color);
         box-shadow: 1px 1px 2px 2px grey;
-        color: $primary-color;
+        color: white;
         width: 50px;
         height: 50px;
         margin: auto;

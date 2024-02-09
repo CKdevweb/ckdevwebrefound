@@ -17,7 +17,8 @@ import { modal } from "../components/modal.js";
 
 document.addEventListener('DOMContentLoaded', () =>
 {
-    notation();
+
     carousel();
     modal();
+    notation();
 });

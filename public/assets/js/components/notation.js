@@ -13,72 +13,76 @@
 
 export function notation()
 {
-    const makeReviewElement = document.getElementById("make-review-section");
-    if(makeReviewElement)
-    {
-
+    window.addEventListener("load", function(){
+        const makeReviewElement = document.getElementById("make-review-section");
         //* Récupération des éléments du DOM
         const starsElements = makeReviewElement.getElementsByClassName("fa-star");
-        const stars = Array.from(starsElements);
-        const rating = document.getElementById("rating");
+        const parent = starsElements[0].parentNode;
+        parent.addEventListener("mouseover", function(){
+            const stars = Array.from(starsElements);
 
-        //* Valeur de la notation
-        let value = null;
+            const rating = document.getElementById("rating");
 
-        //* Pour toutes les étoiles
+            //* Valeur de la notation
+            let value = null;
+
+            //* Pour toutes les étoiles
+            for (let i = 0; i < stars.length; i++)
+            {
+                stars[i].addEventListener("mouseover", function ()
+                {
+                    fillHover(stars, i);
+                });
+                stars[i].addEventListener("mouseleave", function ()
+                {
+                    noFillLeave(stars, value);
+                });
+                stars[i].addEventListener("click", function ()
+                {
+                    value = i;
+                    rating.setAttribute("value", "" + (value + 1));
+                });
+            }
+        })
+
+    })
+
+    function fillHover(stars, index)
+    {
+        //* Remplie toutes les étoiles qui précèdent celle survolée ainsi qu'elle-même
         for (let i = 0; i < stars.length; i++)
         {
-            stars[i].addEventListener("mouseover", function()
+            if (i <= index)
             {
+                stars[i].setAttribute('data-prefix', 'fas');
+            }
+            else
+            {
+                stars[i].setAttribute('data-prefix', 'far');
+            }
+        }
+    }
 
-                //* Remplie toutes les étoiles qui précèdent celle survolée ainsi qu'elle-même
-                for (let j = 0; j < stars.length; j++)
+    function noFillLeave(stars, value)
+    {
+        //*Toutes les étoiles sont vides, sauf si on a sauvegardé un nombre d'étoiles
+        for (let j = 0; j < stars.length; j++)
+        {
+            if (value != null)
+            {
+                if (j <= value)
                 {
-                    if(j <= i)
-                    {
-                        stars[j].classList.remove("fa-regular");
-                        stars[j].classList.add("fa-solid");
-                    }
-                    else
-                    {
-                        stars[j].classList.remove("fa-solid");
-                        stars[j].classList.add("fa-regular");
-                    }
-
+                    stars[j].setAttribute('data-prefix', 'fas');
                 }
-            });
-            stars[i].addEventListener("mouseleave", function()
-            {
-
-                //*Toutes les étoiles sont vides, sauf si on a sauvegardé un nombre d'étoiles
-
-                for (let j = 0; j < stars.length; j++)
+                else
                 {
-                    if(value != null)
-                    {
-                        if(j <= value)
-                        {
-                            stars[j].classList.remove("fa-regular");
-                            stars[j].classList.add("fa-solid");
-                        }
-                        else
-                        {
-                            stars[j].classList.remove("fa-solid");
-                            stars[j].classList.add("fa-regular");
-                        }
-                    }
-                    else
-                    {
-                        stars[j].classList.remove("fa-solid");
-                        stars[j].classList.add("fa-regular");
-                    }
+                    stars[j].setAttribute('data-prefix', 'far');
                 }
-            });
-            stars[i].addEventListener("click", function()
+            }
+            else
             {
-                value = i;
-                rating.setAttribute("value", "" + (value + 1));
-            });
+                stars[j].setAttribute('data-prefix', 'far');
+            }
         }
     }
 }

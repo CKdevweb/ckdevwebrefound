@@ -13,7 +13,7 @@
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -33,7 +33,7 @@
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -244,7 +244,7 @@ html body .opacity-mask {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -275,10 +275,6 @@ body > header > a div.mark span {
   position: relative;
   top: calc(50px - 0.5rem);
   height: 1.5rem;
-  color: rgb(225, 225, 225);
-  font-weight: bold;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.25rem;
 }
 body > header nav {
   height: 0;
@@ -422,7 +418,7 @@ body > header nav ul.scaleY-down {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -466,13 +462,6 @@ html body > footer div.scroll-up-button div {
   animation: 2s up-down 2s infinite;
   display: flex;
 }
-html body > footer div.scroll-up-button div a {
-  color: rgb(225, 225, 225);
-  text-decoration: none;
-  font-weight: bold;
-  font-family: "Source Sans Pro", sans-serif;
-  font-size: 1rem;
-}
 html body > footer div#footer-text {
   grid-row: 2/3;
   grid-column: 1/4;
@@ -514,14 +503,20 @@ html body > footer div#footer-text a {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
+html body header > a {
+  color: white;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25rem;
+}
 html body header nav a {
-  color: rgb(225, 225, 225);
+  color: white;
   text-decoration: none;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
@@ -533,7 +528,7 @@ html body header nav a.active, html body header nav a:active {
 }
 html body main h1 {
   text-align: center;
-  color: rgb(225, 225, 225);
+  color: white;
   font-size: 2.5rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -541,10 +536,11 @@ html body main h1 {
 html body main h2 {
   margin: 2rem auto 0 auto;
   text-align: center;
-  color: rgb(225, 225, 225);
+  color: white;
   font-size: 2rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 2px 2px 20px rgb(48, 141, 177);
 }
 html body main h3 {
   margin: 0.75rem auto;
@@ -572,9 +568,15 @@ html body main label {
 }
 html body main a {
   font-family: "Lato", sans-serif;
-  color: rgb(225, 225, 225);
-  text-shadow: 1px 1px 1px #C45A10;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(200, 100, 16);
   font-weight: bold;
+}
+html body main strong {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(48, 141, 177);
 }
 html body main p {
   font-family: "Lato", sans-serif;
@@ -588,15 +590,24 @@ html body main ul > li {
   line-height: 1.4rem;
   color: rgb(225, 225, 225);
 }
-html body footer p, html body footer a {
-  font-size: 0.75rem;
+html body footer p {
   color: rgb(225, 225, 225);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
 }
-html body a:active:not(body > header a), html body i:active, html body svg:active, html body a:active > i:not(body > header a), html body a:hover > svg:not(body > header a) {
+html body footer a {
+  color: rgb(225, 225, 225);
+  text-shadow: 1px 1px 1px rgb(200, 100, 16);
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
+}
+html body:not(body > header) a:active:not(body > header a), html body:not(body > header) i:active, html body:not(body > header) svg:active, html body:not(body > header) a:active > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
   color: rgb(200, 100, 16) !important;
   transform: scale(1.1);
 }
-html body a:hover:not(body > header a), html body i:hover, html body svg:hover, html body a:hover > i:not(body > header a), html body a:hover > svg:not(body > header a) {
+html body:not(body > header) a:hover:not(body > header a), html body:not(body > header) i:hover, html body:not(body > header) svg:hover, html body:not(body > header) a:hover > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
   color: rgb(200, 100, 16) !important;
   transform: scale(1.1);
 }
@@ -615,7 +626,7 @@ html body a:hover:not(body > header a), html body i:hover, html body svg:hover, 
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -709,7 +720,7 @@ form div.notation:hover {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -722,16 +733,15 @@ button {
 #flying-button {
   position: fixed;
   right: -3.75rem;
-  top: 50vh;
+  top: 70vh;
   width: 9rem;
   height: 1.5rem;
   transform: rotateZ(270deg);
-  background-color: rgba(225, 225, 225, 0.8);
+  background-color: #e1e1e1;
   border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.75;
   z-index: 2;
 }
 #flying-button a {
@@ -775,10 +785,10 @@ form > fieldset > button:active {
 
 body > header > button {
   border-radius: 50%;
-  border: solid 2px rgb(225, 225, 225);
+  border: solid 2px white;
   background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(48, 141, 177), rgb(48, 141, 177));
   box-shadow: 1px 1px 2px 2px grey;
-  color: rgb(225, 225, 225);
+  color: white;
   width: 50px;
   height: 50px;
   margin: auto;
@@ -824,7 +834,7 @@ body > header > button:active, body > header > button:hover {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -933,7 +943,7 @@ div.carousel div.carousel-articles article.slideRight {
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -1014,7 +1024,7 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
   border-radius: 50%;
   color: rgb(225, 225, 225);
 }
-main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover, main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:active {
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover {
   border-color: rgb(200, 100, 16);
   color: rgb(200, 100, 16);
 }
@@ -1141,7 +1151,7 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
 }
 @font-face {
   font-family: "Dancing Script";
-  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Regular.ttf");
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
@@ -1164,7 +1174,7 @@ main#prices-main-container section div.includes > h4, main#services-main-contain
 
 main#about-main-container section:first-of-type article:last-of-type img {
   height: 10%;
-  margin-bottom: -6rem;
+  margin-bottom: -16%;
 }
 main#about-main-container section > img, main#about-main-container section > article > img {
   width: calc(70vw - 4rem);

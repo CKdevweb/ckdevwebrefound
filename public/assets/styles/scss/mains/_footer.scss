@@ -46,15 +46,6 @@ html
                     text-align: center;
                     animation: 2s up-down 2s infinite;
                     display: flex;
-                    a
-                    {
-                        color: $primary-color;
-                        text-decoration: none;
-                        font-weight: bold;
-                        font-family: $font-source;
-                        font-size: 1rem;
-
-                    }
                 }
             }
             div#footer-text

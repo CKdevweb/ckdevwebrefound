@@ -6,11 +6,20 @@ html
     {
         header
         {
+
+            >a
+            {
+                color: white;
+                font-weight:bold;
+                font-family: $font-source;
+                font-size: 1.25rem;
+            }
+
             nav
             {
                 a
                 {
-                    color: $primary-color;
+                    color: white;
                     text-decoration: none;
                     font-family: $font-source;
                     font-weight: bold;
@@ -28,7 +37,7 @@ html
             h1
             {
                 text-align: center;
-                color: $primary-color;
+                color: white;
                 font-size: 2.5rem;
                 font-weight: bold;
                 font-family: $font-source;
@@ -37,10 +46,11 @@ html
             {
                 margin: 2rem auto 0 auto;
                 text-align: center;
-                color: $primary-color;
+                color: white;
                 font-size: 2rem;
                 font-weight: bold;
                 font-family: $font-source;
+                text-shadow: 2px 2px 20px $secondary-color;
             }
             h3
             {
@@ -73,9 +83,16 @@ html
             a
             {
                 font-family: $font-lato;
-                color: $primary-color;
-                text-shadow: 1px 1px 1px #C45A10;
+                color: white;
+                text-shadow: 1px 1px 1px $alt-color;
                 font-weight: bold;
+            }
+            strong
+            {
+                font-family: $font-lato;
+                color: white;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px $secondary-color;
             }
             p
             {
@@ -94,12 +111,27 @@ html
         }
         footer
         {
-            p, a
+            p
             {
-                font-size: 0.75rem;
                 color: $primary-color;
+                font-family: $font-source;
+                font-size: 0.75rem;
             }
+            a
+            {
+                color: $primary-color;
+                text-shadow: 1px 1px 1px $alt-color;
+                text-decoration: underline;
+                font-weight: bold;
+                font-family: $font-source;
+                font-size: 0.75rem;
+            }
+
         }
+
+    }
+    body:not(body>header)
+    {
         a:active:not(body>header a), i:active, svg:active, a:active>i:not(body>header a), a:hover>svg:not(body>header a)
         {
             color: $alt-color !important;
