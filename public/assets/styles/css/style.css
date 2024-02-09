@@ -296,18 +296,6 @@ body > header nav ul li {
   margin: 2rem 2rem;
   text-align: center;
 }
-body > header nav ul li a {
-  color: rgb(225, 225, 225);
-  text-decoration: none;
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: bold;
-}
-body > header nav ul li a.active, body > header nav ul li a.a-hover {
-  animation: 0.5s navTranslateY forwards;
-  color: rgba(48, 141, 177, 0.55);
-  text-shadow: 1px 1px 1px rgb(225, 225, 225);
-  text-decoration: underline;
-}
 body > header nav ul li:first-of-type {
   margin-top: 0;
   padding-top: 1rem;
@@ -468,7 +456,7 @@ html body > footer div#contacts-footer div.contacts-container a {
 }
 html body > footer div.scroll-up-button {
   grid-row: 1/2;
-  grid-column: 2/3;
+  grid-column: 3/4;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -476,13 +464,14 @@ html body > footer div.scroll-up-button {
 html body > footer div.scroll-up-button div {
   text-align: center;
   animation: 2s up-down 2s infinite;
+  display: flex;
 }
 html body > footer div.scroll-up-button div a {
   color: rgb(225, 225, 225);
   text-decoration: none;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 html body > footer div#footer-text {
   grid-row: 2/3;
@@ -491,12 +480,7 @@ html body > footer div#footer-text {
   margin: 1rem auto;
 }
 html body > footer div#footer-text a {
-  color: white;
   margin: 1rem auto;
-}
-html body > footer div#footer-text p {
-  font-size: 1rem;
-  color: white;
 }
 
 @keyframes up-down {
@@ -536,11 +520,16 @@ html body > footer div#footer-text p {
   font-family: "VT323";
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
-html a:active, html a:hover,
-html i:hover, html i:active,
-html a:active > i, html a:hover > i {
-  color: rgba(200, 100, 16, 0.75) !important;
-  transform: scale(1.1);
+html body header nav a {
+  color: rgb(225, 225, 225);
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+html body header nav a.active, html body header nav a:active {
+  color: rgba(48, 141, 177, 0.55);
+  text-shadow: 1px 1px 1px rgb(225, 225, 225);
+  text-decoration: underline;
 }
 html body main h1 {
   text-align: center;
@@ -599,19 +588,19 @@ html body main ul > li {
   line-height: 1.4rem;
   color: rgb(225, 225, 225);
 }
-
-@media (min-width: 768px) {
-  body > header a:hover,
-  body > header a:active {
-    transform: scale(1.1);
-    color: rgb(225, 225, 225);
-  }
-  div.contacts-container a:hover,
-  div.contacts-container a:active {
-    transform: scale(1.1);
-    color: rgb(200, 100, 16) !important;
-  }
+html body footer p, html body footer a {
+  font-size: 0.75rem;
+  color: rgb(225, 225, 225);
 }
+html body a:active:not(body > header a), html body i:active, html body svg:active, html body a:active > i:not(body > header a), html body a:hover > svg:not(body > header a) {
+  color: rgb(200, 100, 16) !important;
+  transform: scale(1.1);
+}
+html body a:hover:not(body > header a), html body i:hover, html body svg:hover, html body a:hover > i:not(body > header a), html body a:hover > svg:not(body > header a) {
+  color: rgb(200, 100, 16) !important;
+  transform: scale(1.1);
+}
+
 @font-face {
   font-family: "source Sans Pro";
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");

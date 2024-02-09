@@ -60,7 +60,8 @@ export function burgerMenu()
         }
         else
         {
-            menu.classList.add("close-burger");
+            menu.classList.remove("scaleY-up");
+            menu.classList.add("scaleY-down");
         }
     })
 }

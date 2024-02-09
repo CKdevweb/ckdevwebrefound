@@ -37,7 +37,7 @@ html
             div.scroll-up-button
             {
                 grid-row: 1/2;
-                grid-column: 2/3;
+                grid-column: 3/4;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -45,13 +45,14 @@ html
                 {
                     text-align: center;
                     animation: 2s up-down 2s infinite;
+                    display: flex;
                     a
                     {
                         color: $primary-color;
                         text-decoration: none;
                         font-weight: bold;
                         font-family: $font-source;
-                        font-size: 0.75rem;
+                        font-size: 1rem;
 
                     }
                 }
@@ -64,14 +65,7 @@ html
                 margin: 1rem auto;
                 a
                 {
-                    color: white;
                     margin: 1rem auto;
-                }
-                p
-                {
-                    font-size: 1rem;
-                    color: white;
-
                 }
             }
         }

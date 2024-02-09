@@ -49,20 +49,6 @@ body > header
             {
                 margin: 2rem 2rem;
                 text-align: center;
-                a
-                {
-                    color: $primary-color;
-                    text-decoration: none;
-                    font-family: $font-source;
-                    font-weight: bold;
-                }
-                a.active, a.a-hover
-                {
-                    animation: 0.5s navTranslateY forwards;
-                    color: rgba($secondary-color, 0.55);
-                    text-shadow: 1px 1px 1px $primary-color;
-                    text-decoration: underline;
-                }
             }
             li:first-of-type
             {
