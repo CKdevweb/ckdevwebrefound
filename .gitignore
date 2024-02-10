@@ -19,3 +19,9 @@
 ###> symfony/asset-mapper ###
 /assets/vendor/
 ###< symfony/asset-mapper ###
+=======
+.env.local
+.idea/
+assets/
+var/
+vendor/
