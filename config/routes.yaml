@@ -28,3 +28,8 @@ app_verify_email:
     path: /verify/email
     controller: App\Controller\RegistrationController::verifyUserEmail
 
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
