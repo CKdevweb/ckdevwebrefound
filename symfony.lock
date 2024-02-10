@@ -110,6 +110,7 @@
             "./src/Kernel.php"
         ]
     },
+
     "symfony/lock": {
         "version": "6.4",
         "recipe": {
@@ -288,6 +289,7 @@
             "./config/routes/web_profiler.yaml"
         ]
     },
+
     "symfonycasts/verify-email-bundle": {
         "version": "v1.16.1"
     },
