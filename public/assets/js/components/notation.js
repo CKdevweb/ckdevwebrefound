@@ -19,15 +19,12 @@ export function notation()
     let value = null;
 
     divStar.forEach(function(star, index){
-        console.log('helo');
         star.addEventListener("mouseover", function ()
         {
-            console.log("mouse over the n°" + (index + 1));
             starHover(index);
         });
         star.addEventListener("mouseleave", function ()
         {
-            console.log("mouse leave the n°" + (index + 1));
             starLeave();
         });
         star.addEventListener("click", function(){
