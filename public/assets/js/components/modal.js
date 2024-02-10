@@ -1,4 +1,4 @@
-+9/*
+/*
  * Copyright (c) 2024.
  * /
  *   Droit d'auteur (c) 2024 par Kévin Corvaisier, fondateur de C.K devweb. Tous droits réservés.

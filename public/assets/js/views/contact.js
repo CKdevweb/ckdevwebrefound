@@ -11,6 +11,7 @@
  *  Merci de choisir C.K devweb pour votre projet numérique.
  */
 
+
 import { modal } from "../components/modal.js";
 
 document.addEventListener('DOMContentLoaded', () =>

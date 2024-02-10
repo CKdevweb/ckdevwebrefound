@@ -15,8 +15,6 @@ import { burgerMenu } from "../components/burgerMenu.js";
 import { navbarAnimations } from "../components/navbarAnimation.js";
 import { underlineScaling } from "../components/underlineScaling.js";
 
-
-
 document.addEventListener('DOMContentLoaded', () =>
 {
     burgerMenu();

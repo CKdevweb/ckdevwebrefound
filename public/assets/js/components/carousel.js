@@ -27,7 +27,6 @@ export function carousel()
 
         const leftBtn = document.getElementById("slideLeft");
         const rightBtn = document.getElementById("slideRight");
-
         let side = "left";
 
         if(leftBtn && rightBtn)
