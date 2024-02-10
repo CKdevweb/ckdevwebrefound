@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /*!
  * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
  * fondateur de C.K DevWeb.
@@ -9,6 +10,7 @@
  * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
  * Merci de choisir C.K DevWeb pour votre projet numérique.
  */
+
 
 @use 'mains/vars';
 @use 'mains/main';
@@ -24,3 +26,6 @@
 @use 'views/prices-services';
 @use 'views/about';
 @use 'views/gnu';
+
+@use 'partials/modal';
+

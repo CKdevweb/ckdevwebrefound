@@ -1486,5 +1486,9 @@ main#gnu-main-container section p {
 main#gnu-main-container ul {
   margin-left: 4rem;
 }
+html body {
+  margin: 0;
+  padding: 0;
+}
 
 /*# sourceMappingURL=style.css.map */
