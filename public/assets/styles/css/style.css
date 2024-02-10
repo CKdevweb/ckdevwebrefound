@@ -1,42 +1,52 @@
 @charset "UTF-8";
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 html {
@@ -115,10 +125,6 @@ html body main > section {
 html body main > section header {
   margin-bottom: 1.5rem;
 }
-html body main > section object {
-  max-width: 500px;
-  width: 80%;
-}
 html body main > section > article, html body main > section > div.includes {
   margin: 1rem auto 0 auto;
   padding-bottom: 1rem;
@@ -156,6 +162,12 @@ html body .opacity-mask {
   height: 100%;
   background-color: rgb(0, 11, 16);
   opacity: 0.5;
+}
+html .faSolid {
+  background-image: url("../../../../assets/medias/images/sprites/fa-star-solid.svg");
+}
+html .faRegular {
+  background-image: url("../../../../assets/medias/images/sprites/fa-star-regular.svg");
 }
 
 @media (min-width: 425px) {
@@ -232,22 +244,27 @@ html body .opacity-mask {
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 body > header {
@@ -406,22 +423,27 @@ body > header nav ul.scaleY-down {
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 html body > footer {
@@ -491,22 +513,27 @@ html body > footer div#footer-text a {
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 html body header > a {
@@ -521,7 +548,7 @@ html body header nav a {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
-html body header nav a.active, html body header nav a:active {
+html body header nav a.active, html body header nav a:hover {
   color: rgba(48, 141, 177, 0.55);
   text-shadow: 1px 1px 1px rgb(225, 225, 225);
   text-decoration: underline;
@@ -536,6 +563,8 @@ html body main h1 {
 html body main h2 {
   margin: 2rem auto 0 auto;
   text-align: center;
+  width: min-content;
+  min-width: 16rem;
   color: white;
   font-size: 2rem;
   font-weight: bold;
@@ -603,10 +632,6 @@ html body footer a {
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.75rem;
 }
-html body:not(body > header) a:active:not(body > header a), html body:not(body > header) i:active, html body:not(body > header) svg:active, html body:not(body > header) a:active > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
-  color: rgb(200, 100, 16) !important;
-  transform: scale(1.1);
-}
 html body:not(body > header) a:hover:not(body > header a), html body:not(body > header) i:hover, html body:not(body > header) svg:hover, html body:not(body > header) a:hover > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
   color: rgb(200, 100, 16) !important;
   transform: scale(1.1);
@@ -614,22 +639,27 @@ html body:not(body > header) a:hover:not(body > header a), html body:not(body > 
 
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 form {
@@ -671,13 +701,17 @@ form fieldset p a {
 form div.notation {
   margin-left: 5px;
   margin-bottom: 1rem;
-  display: flex;
+  display: grid;
+  width: fit-content;
+  z-index: 2;
+  grid-template-columns: repeat(5, 1.25rem);
 }
-form div.notation i:hover {
-  animation: 0.5s stars-shake forwards;
+form div.notation object {
+  width: 1.25rem;
 }
-form div.notation:hover {
+form div.notation .star:hover {
   cursor: pointer;
+  animation: 0.5s stars-shake forwards;
 }
 
 @media (min-width: 425px) {
@@ -708,22 +742,27 @@ form div.notation:hover {
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 button {
@@ -822,22 +861,27 @@ body > header > button:active, body > header > button:hover {
  */
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 div.carousel {
@@ -900,8 +944,11 @@ div.carousel div.carousel-articles article footer {
   justify-content: space-between;
   align-items: center;
 }
-div.carousel div.carousel-articles article footer .notation {
+div.carousel div.carousel-articles article footer .carousel-notation {
   margin-left: 0.5rem;
+}
+div.carousel div.carousel-articles article footer .carousel-notation object {
+  width: 1rem;
 }
 div.carousel div.carousel-articles article footer .review-date {
   margin-left: 0;
@@ -931,22 +978,27 @@ div.carousel div.carousel-articles article.slideRight {
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 main#homepage-main-container > header {
@@ -1139,22 +1191,27 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
 }
 @font-face {
   font-family: "source Sans Pro";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
   font-family: "Lato";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
   font-family: "Caveat";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
   font-family: "Dancing Script";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
   font-family: "VT323";
+  font-display: swap;
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {

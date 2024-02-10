@@ -49,15 +49,19 @@ form
     {
         margin-left: 5px;
         margin-bottom: 1rem;
-        display: flex;
-        i:hover
+        display: grid;
+        width: fit-content;
+        z-index: 2;
+        grid-template-columns: repeat(5, 1.25rem);
+        object
         {
+            width: 1.25rem;
+        }
+        .star:hover
+        {
+            cursor: pointer;
             animation: 0.5s stars-shake forwards;
         }
-    }
-    div.notation:hover
-    {
-        cursor: pointer;
     }
 }
 

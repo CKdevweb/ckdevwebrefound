@@ -32,10 +32,9 @@
         {% if reviews|length > 0 %}
             <div class="separator"></div>
             <section id="reviews-section">
-                <header>
-                    <h2>Commentaires</h2>
-                    {% include "partials/underline-titles.html.twig" %}
-                </header>
+
+                <h2>Commentaires</h2>
+                {% include "partials/underline-titles.html.twig" %}
                 <article class="reviews-main">
                     {% if reviews|length > 1 %}
                         <div class="commands-carousel">
@@ -49,12 +48,12 @@
                                     <span class="review-name">{{ review.name }}</span>
                                     <p class="review-content">{{ review.content }}</p>
                                     <footer>
-                                        <div class="notation">
+                                        <div class="carousel-notation">
                                             {% for i in 1..5 %}
                                                 {% if review.rate >= i %}
-                                                    <i class="fa-solid fa-star" style="font-size: 1rem; color: #C45A10;"></i>
+                                                    <object data="{{ asset('assets/medias/images/sprites/fa-star-solid.svg') }}" type="image/svg+xml"></object>
                                                 {% else %}
-                                                    <i class="fa-regular fa-star" style="font-size: 1rem; color: #C45A10;"></i>
+                                                    <object data="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" type="image/svg+xml"></object>
                                                 {%  endif %}
                                             {% endfor %}
                                         </div>
@@ -82,11 +81,8 @@
 
     <div class="left-side-sprite"></div>
     <section id="make-review-section">
-        <header>
             <h2>Laissez un commentaire</h2>
             {% include "partials/underline-titles.html.twig" %}
-
-        </header>
         <p>
             <strong>Votre avis compte !</strong><br> Partagez vos commentaires pour m'aider à améliorer mes
             services.<br>

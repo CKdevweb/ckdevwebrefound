@@ -24,7 +24,7 @@ html
                     font-family: $font-source;
                     font-weight: bold;
                 }
-                a.active, a:active
+                a.active, a:hover
                 {
                     color: rgba($secondary-color, 0.55);
                     text-shadow: 1px 1px 1px $primary-color;
@@ -46,6 +46,8 @@ html
             {
                 margin: 2rem auto 0 auto;
                 text-align: center;
+                width: min-content;
+                min-width: 16rem;
                 color: white;
                 font-size: 2rem;
                 font-weight: bold;
@@ -132,11 +134,6 @@ html
     }
     body:not(body>header)
     {
-        a:active:not(body>header a), i:active, svg:active, a:active>i:not(body>header a), a:hover>svg:not(body>header a)
-        {
-            color: $alt-color !important;
-            transform: scale(1.1);
-        }
         a:hover:not(body>header a), i:hover, svg:hover, a:hover>i:not(body>header a), a:hover>svg:not(body>header a)
         {
             color: $alt-color !important;

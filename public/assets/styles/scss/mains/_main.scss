@@ -89,11 +89,6 @@ html
                 header{
                     margin-bottom: 1.5rem;
                 }
-                object
-                {
-                    max-width: 500px;
-                    width: 80%;
-                }
 
                 >article , >div.includes
                 {
@@ -148,6 +143,16 @@ html
             background-color: $background-color;
             opacity: 0.5;
         }
+    }
+
+    .faSolid
+    {
+        background-image: url("../../../../assets/medias/images/sprites/fa-star-solid.svg");
+    }
+    .faRegular
+    {
+        background-image: url("../../../../assets/medias/images/sprites/fa-star-regular.svg");
+
     }
 }
 

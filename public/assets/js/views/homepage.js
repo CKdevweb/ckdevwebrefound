@@ -11,7 +11,6 @@
  *  Merci de choisir C.K devweb pour votre projet numérique.
  */
 
-import { notation } from "../components/notation.js";
 import { carousel } from "../components/carousel.js";
 import { modal } from "../components/modal.js";
 
@@ -20,5 +19,5 @@ document.addEventListener('DOMContentLoaded', () =>
 
     carousel();
     modal();
-    notation();
+    // notation();
 });

@@ -10,22 +10,27 @@ $margin-top-main: 2rem;
 
 @font-face {
     font-family: "source Sans Pro";
+    font-display: swap;
     src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
 }
 @font-face {
     font-family: "Lato";
+    font-display: swap;
     src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
 }
 @font-face {
     font-family: "Caveat";
+    font-display: swap;
     src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
 }
 @font-face {
     font-family: "Dancing Script";
+    font-display: swap;
     src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
 }
 @font-face {
     font-family: "VT323";
+    font-display: swap;
     src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 

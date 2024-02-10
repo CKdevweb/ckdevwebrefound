@@ -80,9 +80,12 @@ div.carousel {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                .notation
+                .carousel-notation
                 {
                     margin-left: 0.5rem;
+                    object{
+                        width: 1rem;
+                    }
                 }
                 .review-date
                 {
