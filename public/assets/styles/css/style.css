@@ -1,0 +1,1490 @@
+@charset "UTF-8";
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier, fondateur de C.K DevWeb. Tous droits réservés.
+ * Pour en savoir plus sur mes services et découvrir mes réalisations, visitez mon site web : https://www.ckdevweb.fr
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+}
+html div#message {
+  position: absolute;
+  top: 160px;
+  left: 5%;
+  right: 5%;
+  margin: auto;
+  z-index: 2;
+}
+html div#message div {
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(88, 0, 34, 0.8));
+  border: solid 2px rgb(255, 255, 255);
+  border-radius: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.2rem;
+}
+html div#message div span.success-modal, html div#message div span.error-modal {
+  font-size: 1.75rem;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+html div#message div span.success-modal {
+  color: rgb(38, 39, 79);
+}
+html div#message div span.error-modal {
+  color: rgb(220, 110, 0);
+}
+html .remove-fade-out {
+  animation: 2s remove-fade-out forwards;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  background: rgb(255, 255, 255);
+}
+html body > div.contacts-container {
+  width: 6rem;
+  z-index: 2;
+  position: absolute;
+  left: 0.5rem;
+  top: calc(80px + 2rem);
+  display: flex;
+  justify-content: space-evenly;
+}
+html body > div.contacts-container a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+html body main p {
+  margin: 0 1rem;
+}
+html body main .main-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+html body main div.left-side-sprite, html body main div.right-side-sprite {
+  display: none;
+}
+html body main > section {
+  margin: 0;
+  padding: 2rem 5% 2rem 5%;
+  text-align: center;
+}
+html body main > section header {
+  margin-bottom: 1.5rem;
+}
+html body main > section > article, html body main > section > div.includes {
+  margin: 1rem auto 0 auto;
+  padding-bottom: 1rem;
+  max-width: 800px;
+}
+html body main > section ul {
+  margin: 1.5rem auto;
+}
+html body main > div.separator {
+  height: 20vw;
+  background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.9;
+}
+html body main:not(#homepage-main-container) .main-header {
+  background-image: url("../../../../assets/medias/images/horizontal-header.webp");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  height: 57.1428571429vw;
+}
+html body li {
+  color: rgb(38, 39, 79);
+  text-align: start;
+}
+html body .hidden {
+  display: none;
+}
+html body .opacity-mask {
+  position: relative;
+  width: 100vw;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+html .faSolid {
+  background-image: url("../../../../assets/medias/images/sprites/fa-star-solid.svg");
+}
+html .faRegular {
+  background-image: url("../../../../assets/medias/images/sprites/fa-star-regular.svg");
+}
+
+@media (min-width: 425px) {
+  html {
+    font-size: 18px;
+  }
+  html main > section {
+    padding: 2rem 10% 2rem 10%;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+  html body main:not(#homepage-main-container) .main-header {
+    background-size: cover;
+    height: 16.6666666667vw;
+  }
+  html body main > div.separator {
+    height: 10vw;
+    background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+    background-repeat: repeat-x;
+  }
+}
+@media (min-width: 1024px) {
+  html > body > main {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+  }
+  html > body > main object {
+    max-width: 500px;
+    width: 80%;
+  }
+  html > body > main > header {
+    grid-column: 1/4;
+  }
+  html > body > main div.separator {
+    grid-column: 1/4;
+  }
+  html > body > main div.left-side-sprite, html > body > main div.right-side-sprite {
+    display: block;
+    background-image: url("../../../../assets/medias/images/sprites/side-effect.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 30%;
+    width: 40%;
+    opacity: 30%;
+  }
+  html > body > main div.left-side-sprite {
+    grid-column: 1/2;
+  }
+  html > body > main div.right-side-sprite {
+    grid-column: 3/4;
+    transform: rotateZ(180deg);
+  }
+  html > body > main > section {
+    grid-column: 2/3;
+  }
+  html > body > main > section > article, html > body > main > section > div.includes {
+    margin: 2rem auto 0 auto;
+    padding-bottom: 2rem;
+  }
+}
+@keyframes remove-fade-out {
+  0% {
+    opacity: 100%;
+    display: flex;
+  }
+  100% {
+    opacity: 0;
+    display: none;
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+body > header {
+  width: calc(100% - 1rem);
+  height: 80px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 50vh;
+  padding: 0.5rem;
+  background-color: black;
+  z-index: 3;
+}
+body > header > a {
+  width: fit-content;
+  grid-column: 1/3;
+  text-decoration: none;
+  margin: auto 0.5rem;
+}
+body > header > a div.mark {
+  display: flex;
+  width: fit-content;
+  height: 70px;
+}
+body > header > a div.mark span {
+  position: relative;
+  top: calc(50px - 0.5rem);
+  height: 1.5rem;
+}
+body > header nav {
+  height: 0;
+  grid-row: 2/3;
+  grid-column: 3/5;
+  z-index: 2;
+}
+body > header nav ul {
+  list-style-type: none;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(88, 0, 34);
+}
+body > header nav ul li {
+  margin: 2rem 2rem;
+  text-align: center;
+}
+body > header nav ul li:first-of-type {
+  margin-top: 0;
+  padding-top: 1rem;
+}
+body > header nav ul li:last-of-type {
+  padding-bottom: 2rem;
+}
+body > header nav ul.scaleY-up {
+  transform: scaleY(1);
+}
+body > header nav ul.scaleY-down {
+  transform: scaleY(0);
+}
+
+.open-burger {
+  animation: 0.5s open-burger 0s forwards;
+}
+
+.close-burger {
+  animation: 0.5s close-burger 0s forwards;
+}
+
+@media (min-width: 1024px) {
+  body > header > nav > ul.scaleY-down li {
+    margin: 1rem 0 0 5vw !important;
+  }
+}
+@media (min-width: 768px) {
+  body > header {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 53.3333333333px);
+  }
+  body > header > a {
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+  body > header > nav {
+    grid-row: 1/3;
+    grid-column: 2/5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+  }
+  body > header > nav > ul.scaleY-down {
+    transform: scaleY(1);
+    display: flex;
+    background-color: inherit;
+    border: none;
+    height: 80px;
+  }
+  body > header > nav > ul.scaleY-down li {
+    margin: 1rem 0 0 3vw;
+  }
+  body > header > nav > ul.scaleY-down li a {
+    position: relative;
+    padding: 1rem 0;
+  }
+  body > header > nav > ul.scaleY-down li a.active, body > header > nav > ul.scaleY-down li a.a-hover {
+    animation: 0.5s navTranslateY forwards;
+    color: rgba(88, 0, 34, 0.55);
+    text-shadow: 1px 1px 1px rgb(38, 39, 79);
+    text-decoration: underline;
+  }
+  body > header > nav > ul.scaleY-down li a.a-leave {
+    animation: 0.5s navTranslateY-reverse forwards;
+    color: rgb(38, 39, 79);
+    text-decoration: none;
+  }
+  body > header > nav > ul.scaleY-down li .fix-a-hover {
+    margin-top: 0;
+  }
+  body > header > nav > ul.scaleY-down li .fix-a-leave {
+    margin-top: 1rem;
+  }
+  body > header > nav > ul.scaleY-down li:first-of-type {
+    padding: 0;
+  }
+}
+@keyframes open-burger {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+@keyframes close-burger {
+  from {
+    transform: scaleY(1);
+  }
+  to {
+    transform: scaleY(0);
+  }
+}
+@keyframes navTranslateY {
+  from {
+    top: 0;
+  }
+  to {
+    top: 1rem;
+  }
+}
+@keyframes navTranslateY-reverse {
+  from {
+    top: 1rem;
+  }
+  to {
+    top: 0;
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+html body > footer {
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 40%, rgba(88, 0, 34, 0.5) 60%, rgba(88, 0, 34, 0.5) 110%);
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+}
+html body > footer div#contacts-footer {
+  grid-row: 1/2;
+  grid-column: 1/2;
+  width: 6rem;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+html body > footer div#contacts-footer div.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 6rem;
+  z-index: 2;
+  top: 100px;
+  margin-left: 0.5rem;
+}
+html body > footer div#contacts-footer div.contacts-container a {
+  margin-left: 0.5rem;
+  text-decoration: none;
+}
+html body > footer div.scroll-up-button {
+  grid-row: 1/2;
+  grid-column: 3/4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+html body > footer div.scroll-up-button div {
+  text-align: center;
+  animation: 2s up-down 2s infinite;
+  display: flex;
+}
+html body > footer div#footer-text {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  text-align: center;
+  margin: 1rem auto;
+}
+html body > footer div#footer-text a {
+  margin: 1rem auto;
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-1rem);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+html body header > a {
+  color: white;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.25rem;
+}
+html body header nav a {
+  color: white;
+  text-decoration: none;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+html body header nav a.active, html body header nav a:hover {
+  color: rgba(88, 0, 34, 0.55);
+  text-shadow: 1px 1px 1px rgb(38, 39, 79);
+  text-decoration: underline;
+}
+html body main h1 {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main h2 {
+  margin: 2rem auto 0 auto;
+  text-align: center;
+  width: min-content;
+  min-width: 16rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 2px 2px 20px rgb(88, 0, 34);
+}
+html body main h3 {
+  margin: 0.75rem auto;
+  text-align: center;
+  color: rgb(88, 0, 34);
+  text-shadow: 1px 1px 1px rgba(88, 0, 34, 0.8);
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+}
+html body main h4 {
+  margin: 0.75rem auto 0.15rem auto;
+  text-align: start;
+  color: rgb(220, 110, 0);
+  font-size: 1.15rem;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  text-shadow: 1px 1px 1px rgba(220, 110, 0, 0.8);
+}
+html body main label {
+  margin-left: 5px;
+  font-family: "Lato", sans-serif;
+  color: rgb(38, 39, 79);
+  font-size: 1.15rem;
+}
+html body main a {
+  font-family: "Lato", sans-serif;
+  color: white;
+  text-shadow: 1px 1px 1px rgb(220, 110, 0);
+  font-weight: bold;
+}
+html body main strong {
+  font-family: "Lato", sans-serif;
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px rgb(88, 0, 34);
+}
+html body main p {
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  line-height: 1.4rem;
+  color: rgb(38, 39, 79);
+}
+html body main ul > li {
+  font-family: "Lato", sans-serif;
+  text-align: start;
+  line-height: 1.4rem;
+  color: rgb(38, 39, 79);
+}
+html body footer p {
+  color: rgb(38, 39, 79);
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
+}
+html body footer a {
+  color: rgb(38, 39, 79);
+  text-shadow: 1px 1px 1px rgb(220, 110, 0);
+  text-decoration: underline;
+  font-weight: bold;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 0.75rem;
+}
+html body:not(body > header) a:hover:not(body > header a), html body:not(body > header) i:hover, html body:not(body > header) svg:hover, html body:not(body > header) a:hover > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
+  color: rgb(220, 110, 0) !important;
+  transform: scale(1.1);
+}
+
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+form {
+  margin: 2rem auto;
+  padding: 0 1rem;
+  border-left: 2px solid rgb(88, 0, 34);
+  border-right: 2px solid rgb(88, 0, 34);
+  max-width: 600px;
+}
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+form fieldset label {
+  margin-bottom: 0.5rem;
+  width: fit-content;
+}
+form fieldset input, form fieldset textarea {
+  padding: 0.15rem;
+  border: none;
+  border-bottom: 1px solid rgb(38, 39, 79);
+  border-radius: 9px;
+  background-color: rgba(38, 39, 79, 0.1);
+  color: rgb(38, 39, 79);
+}
+form fieldset input:focus, form fieldset textarea:focus {
+  border: 2px solid rgb(220, 110, 0);
+  border-radius: 7px;
+}
+form fieldset p {
+  margin-top: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 0.75rem !important;
+}
+form fieldset p a {
+  font-size: 0.75rem;
+}
+form div.notation {
+  margin-left: 5px;
+  margin-bottom: 1rem;
+  display: grid;
+  width: fit-content;
+  z-index: 2;
+  grid-template-columns: repeat(5, 1.25rem);
+}
+form div.notation object {
+  width: 1.25rem;
+}
+form div.notation .star:hover {
+  cursor: pointer;
+  animation: 0.5s stars-shake forwards;
+}
+
+@media (min-width: 425px) {
+  form {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  form {
+    width: 40%;
+  }
+}
+@media (min-width: 1024px) {
+  form {
+    width: 60%;
+  }
+}
+@keyframes stars-shake {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+button {
+  cursor: pointer;
+}
+
+#flying-button {
+  position: fixed;
+  right: -3.75rem;
+  top: 70vh;
+  width: 9rem;
+  height: 1.5rem;
+  transform: rotateZ(270deg);
+  background-color: #26274f;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+#flying-button a {
+  color: black;
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+}
+
+#flying-button:hover {
+  background-color: white;
+  border: 1px solid rgb(38, 39, 79);
+  opacity: 1;
+}
+#flying-button:hover a:hover, #flying-button:hover a {
+  padding: 0.5rem;
+  color: rgb(38, 39, 79) !important;
+}
+
+form > fieldset > button {
+  border: none;
+  border-bottom: 2px solid rgb(88, 0, 34);
+  background-color: rgba(38, 39, 79, 0.15);
+  border-radius: 12px;
+  min-width: 150px;
+  max-width: 250px;
+  color: rgb(38, 39, 79);
+  font-weight: bold;
+  margin: 1rem auto;
+  height: 1.35rem;
+}
+
+form > fieldset > button:hover {
+  background-color: rgba(38, 39, 79, 0.45);
+}
+
+form > fieldset > button:active {
+  border: none;
+  background-color: rgb(38, 39, 79);
+  color: rgb(88, 0, 34);
+}
+
+body > header > button {
+  border-radius: 50%;
+  border: solid 2px white;
+  background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(88, 0, 34), rgb(88, 0, 34));
+  box-shadow: 1px 1px 2px 2px grey;
+  color: white;
+  width: 50px;
+  height: 50px;
+  margin: auto;
+  font-weight: bold;
+  font-size: 0.75rem;
+  grid-column: 4/5;
+}
+body > header > button:active, body > header > button:hover {
+  width: 45px;
+  height: 45px;
+  font-size: 0.6rem;
+  box-shadow: none;
+}
+
+@media (min-width: 768px) {
+  body > header > button {
+    display: none;
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+div.carousel {
+  position: relative;
+  width: 80%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-radius: 9px;
+  box-shadow: 5px 5px 15px rgb(88, 0, 34);
+  overflow-x: hidden;
+}
+div.carousel div.carousel-articles {
+  position: absolute;
+  width: 500%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  height: 250px;
+}
+div.carousel div.carousel-articles article {
+  display: grid;
+  grid-template-areas: "name name name name" "content content content content" "content content content content" "content content content content" "footer footer footer footer";
+  background: linear-gradient(transparent, rgba(88, 0, 34, 0.25));
+  border-radius: 9px;
+  height: 90%;
+  width: 20%;
+}
+div.carousel div.carousel-articles article .review-name {
+  grid-area: name;
+  height: 2rem;
+  color: rgb(38, 39, 79);
+  text-shadow: 3px 3px 1px rgb(88, 0, 34);
+  font-family: "Caveat", cursive;
+  font-size: 1.75rem;
+  overflow-x: clip;
+}
+div.carousel div.carousel-articles article .review-content {
+  grid-area: content;
+  overflow-y: scroll;
+  overflow-x: clip;
+}
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-thumb {
+  background: radial-gradient(rgb(255, 255, 255), rgb(220, 110, 0)); /* Couleur de la poignée de la barre de défilement */
+  border-radius: 6px; /* Coins arrondis de la poignée */
+}
+div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-track {
+  background-color: rgba(88, 0, 34, 0.35); /* Couleur de la piste de la barre de défilement */
+}
+div.carousel div.carousel-articles article footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.carousel div.carousel-articles article footer .carousel-notation {
+  margin-left: 0.5rem;
+}
+div.carousel div.carousel-articles article footer .carousel-notation object {
+  width: 1rem;
+}
+div.carousel div.carousel-articles article footer .review-date {
+  margin-left: 0;
+}
+div.carousel div.carousel-articles article.slideLeft {
+  animation: 0.75s slideLeft linear;
+}
+div.carousel div.carousel-articles article.slideRight {
+  animation: 0.75s slideRight linear;
+}
+
+@keyframes slideLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-96% - 1.5rem));
+  }
+}
+@keyframes slideRight {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(96% + 1.5rem));
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+main#homepage-main-container > header {
+  background: linear-gradient(to bottom, black, rgb(255, 255, 255));
+}
+main#homepage-main-container > header div#homepage-slide-background {
+  width: 100vw;
+  height: 58.8235294118vw;
+  background-image: url("../../../../assets/medias/images/backgrounds/back5.webp");
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#homepage-main-container > header div#homepage-slide-background div.opacity-mask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide {
+  position: absolute;
+  text-align: center;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.75rem;
+  font-weight: normal;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p span {
+  color: black;
+  opacity: 0;
+  line-height: 2rem;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p span:first-child {
+  animation: 2s textSlideAnimOne 4.8s forwards;
+  font-family: "Dancing Script", cursive;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p > span:nth-child(2) {
+  animation: 8s textSlideAnimTwo 0s forwards;
+  font-size: 2.5rem;
+  font-family: "Caveat", cursive;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p > span:nth-child(3) {
+  animation: 4.5s textSlideAnimThree 2s forwards;
+  font-family: "VT323", monospace;
+}
+main#homepage-main-container > header div#homepage-slide-background div.text-slide p > span:last-child {
+  animation: 2s textSlideAnimOne 4.8s forwards;
+  font-family: "VT323", monospace;
+}
+main#homepage-main-container section#home-presentation-section div#presentation-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+main#homepage-main-container section#home-presentation-section div#presentation-links a {
+  margin: 1rem;
+  text-align: center;
+  font-size: 1.25rem;
+}
+main#homepage-main-container section#reviews-section {
+  padding: 2rem 0;
+}
+main#homepage-main-container section#reviews-section article.reviews-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button {
+  background: linear-gradient(transparent, rgba(88, 0, 34, 0.25));
+  border-color: rgb(38, 39, 79);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: rgb(38, 39, 79);
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover {
+  border-color: rgb(220, 110, 0);
+  color: rgb(220, 110, 0);
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:first-child {
+  margin-right: 1rem;
+}
+main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:last-child {
+  margin-left: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
+    font-size: 2.5rem;
+    line-height: 2.5rem;
+  }
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span:nth-of-type(2) {
+    font-size: 3.5rem;
+    line-height: 3.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span {
+    font-size: 4rem !important;
+    line-height: 4rem !important;
+  }
+}
+@keyframes textSlideAnimOne {
+  0% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  50% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+}
+@keyframes textSlideAnimTwo {
+  0% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  15% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  45% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  60% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  72% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+}
+@keyframes textSlideAnimThree {
+  0% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  15% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  38% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  42% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  60% {
+    text-shadow: none;
+    color: black;
+    opacity: 0;
+  }
+  85% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+  100% {
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
+    opacity: 1;
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+@font-face {
+  font-family: "source Sans Pro";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Caveat";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+  font-family: "Dancing Script";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+  font-family: "VT323";
+  font-display: swap;
+  src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+main#prices-main-container section ul li strong, main#services-main-container section ul li strong {
+  color: rgb(220, 110, 0);
+  text-shadow: 1px 1px 1px rgba(38, 39, 79, 0.5);
+}
+main#prices-main-container section ul.list-checks, main#services-main-container section ul.list-checks {
+  list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
+}
+main#prices-main-container section ul.list-depends, main#services-main-container section ul.list-depends {
+  list-style: url("../../../../assets/medias/images/sprites/arrow-drop-right.svg") inside;
+}
+main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
+  color: rgb(88, 0, 34);
+  text-shadow: 1px 1px 1px rgba(38, 39, 79, 0.5);
+}
+
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+main#about-main-container section:first-of-type article:last-of-type img {
+  height: 10%;
+  margin-bottom: -16%;
+}
+main#about-main-container section > img, main#about-main-container section > article > img {
+  width: calc(70vw - 4rem);
+}
+
+@media (min-width: 425px) {
+  main#about-main-container section > img, main#about-main-container section > article > img {
+    width: calc(40vw - 4rem);
+  }
+}
+@media (min-width: 1024px) {
+  main#about-main-container section > img, main#about-main-container section > article > img {
+    width: calc(20vw - 4rem);
+  }
+}
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+main#gnu-main-container h1 {
+  margin-top: 2rem;
+}
+main#gnu-main-container section {
+  grid-column: 1/4;
+  margin: auto;
+  width: 70vw;
+}
+main#gnu-main-container section p {
+  text-align: start;
+}
+main#gnu-main-container ul {
+  margin-left: 4rem;
+}
+
+/*# sourceMappingURL=style.css.map */

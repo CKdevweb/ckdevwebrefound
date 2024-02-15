@@ -1,0 +1,128 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import "../mains/vars";
+
+div.carousel {
+    position: relative;
+    width: 80%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 9px;
+    box-shadow: 5px 5px 15px $secondary-color;
+    overflow-x: hidden;
+    div.carousel-articles
+    {
+        position: absolute;
+        width: 500%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: calc($space-articles-carousel / 2);
+        height: 250px;
+        article{
+
+            display: grid;
+            grid-template-areas:"name name name name"
+                                "content content content content"
+                                "content content content content"
+                                "content content content content"
+                                "footer footer footer footer";
+            background: linear-gradient(transparent, rgba($secondary-color, 0.25));
+            border-radius: 9px;
+            height: 90%;
+            width: 20%;
+            .review-name
+            {
+                grid-area: name;
+                height:2rem;
+                color: $primary-color;
+                text-shadow: 3px 3px 1px $secondary-color;
+                font-family: $font-caveat;
+                font-size: 1.75rem;
+                overflow-x: clip;
+            }
+            .review-content
+            {
+                grid-area: content;
+                overflow-y: scroll;
+                overflow-x: clip;
+            }
+            .review-content::-webkit-scrollbar {
+                width: 8px;
+                height: 8px;
+            }
+
+            .review-content::-webkit-scrollbar-thumb {
+                background: radial-gradient($background-color, $alt-color); /* Couleur de la poignée de la barre de défilement */
+                border-radius: 6px; /* Coins arrondis de la poignée */
+            }
+
+            .review-content::-webkit-scrollbar-track {
+                background-color: rgba($secondary-color, 0.35); /* Couleur de la piste de la barre de défilement */
+            }
+            footer
+            {
+                grid-area: footer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .carousel-notation
+                {
+                    margin-left: 0.5rem;
+                    object{
+                        width: 1rem;
+                    }
+                }
+                .review-date
+                {
+                    margin-left: 0;
+                }
+            }
+        }
+
+        article.slideLeft
+        {
+            animation: 0.75s slideLeft linear;
+        }
+
+        article.slideRight
+        {
+            animation: 0.75s slideRight linear;
+        }
+    }
+}
+
+@keyframes slideLeft{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(calc(-96% - 1.5rem));
+    }
+}
+
+@keyframes slideRight{
+    from
+    {
+        transform: translateX(0);
+    }
+    to
+    {
+        transform: translateX(calc(96% + 1.5rem));
+    }
+}

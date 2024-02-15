@@ -1,0 +1,155 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import '../mains/vars';
+
+html
+{
+    body
+    {
+        header
+        {
+
+            >a
+            {
+                color: white;
+                font-weight:bold;
+                font-family: $font-source;
+                font-size: 1.25rem;
+            }
+
+            nav
+            {
+                a
+                {
+                    color: white;
+                    text-decoration: none;
+                    font-family: $font-source;
+                    font-weight: bold;
+                }
+                a.active, a:hover
+                {
+                    color: rgba($secondary-color, 0.55);
+                    text-shadow: 1px 1px 1px $primary-color;
+                    text-decoration: underline;
+                }
+            }
+        }
+        main
+        {
+            h1
+            {
+                text-align: center;
+                color: white;
+                font-size: 2.5rem;
+                font-weight: bold;
+                font-family: $font-source;
+            }
+            h2
+            {
+                margin: 2rem auto 0 auto;
+                text-align: center;
+                width: min-content;
+                min-width: 16rem;
+                color: white;
+                font-size: 2rem;
+                font-weight: bold;
+                font-family: $font-source;
+                text-shadow: 2px 2px 20px $secondary-color;
+            }
+            h3
+            {
+                margin: 0.75rem auto;
+                text-align: center;
+                color: $secondary-color;
+                text-shadow: 1px 1px 1px rgba($secondary-color, 0.8);
+                font-size: 1.3rem;
+                font-weight: bold;
+                font-family: $font-source;
+            }
+            h4
+            {
+                margin: 0.75rem auto 0.15rem auto;
+                text-align: start;
+                color: $alt-color;
+                font-size: 1.15rem;
+                font-weight: bold;
+                font-family: $font-source;
+                text-shadow: 1px 1px 1px rgba($alt-color, 0.8);
+
+            }
+            label
+            {
+                margin-left: 5px;
+                font-family: $font-lato;
+                color: $primary-color;
+                font-size: 1.15rem;
+            }
+            a
+            {
+                font-family: $font-lato;
+                color: white;
+                text-shadow: 1px 1px 1px $alt-color;
+                font-weight: bold;
+            }
+            strong
+            {
+                font-family: $font-lato;
+                color: white;
+                font-weight: bold;
+                text-shadow: 1px 1px 1px $secondary-color;
+            }
+            p
+            {
+                font-family: $font-lato;
+                text-align: center;
+                line-height: 1.40rem;
+                color: $primary-color
+            }
+            ul>li
+            {
+                font-family: $font-lato;
+                text-align: start;
+                line-height: 1.40rem;
+                color: $primary-color
+            }
+        }
+        footer
+        {
+            p
+            {
+                color: $primary-color;
+                font-family: $font-source;
+                font-size: 0.75rem;
+            }
+            a
+            {
+                color: $primary-color;
+                text-shadow: 1px 1px 1px $alt-color;
+                text-decoration: underline;
+                font-weight: bold;
+                font-family: $font-source;
+                font-size: 0.75rem;
+            }
+
+        }
+
+    }
+    body:not(body>header)
+    {
+        a:hover:not(body>header a), i:hover, svg:hover, a:hover>i:not(body>header a), a:hover>svg:not(body>header a)
+        {
+            color: $alt-color !important;
+            transform: scale(1.1);
+        }
+    }
+}

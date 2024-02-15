@@ -1,0 +1,62 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+$primary-color: rgb(225 225 225);
+$secondary-color: rgb(48, 141, 177);
+$alt-color: rgb(200, 100, 16);
+$background-color: rgb(0 11 16);
+
+$padding-header: 0.5rem;
+$header-height: 80px;
+
+$margin-top-main: 2rem;
+
+@font-face {
+    font-family: "source Sans Pro";
+    font-display: swap;
+    src: url("../../../../assets/fonts-ckdevweb/Source_Sans_3/static/SourceSans3-Regular.ttf");
+}
+@font-face {
+    font-family: "Lato";
+    font-display: swap;
+    src: url("../../../../assets/fonts-ckdevweb/Lato/Lato-Regular.ttf");
+}
+@font-face {
+    font-family: "Caveat";
+    font-display: swap;
+    src: url("../../../../assets/fonts-ckdevweb/Caveat_Brush/CaveatBrush-Regular.ttf");
+}
+@font-face {
+    font-family: "Dancing Script";
+    font-display: swap;
+    src: url("../../../../assets/fonts-ckdevweb/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+@font-face {
+    font-family: "VT323";
+    font-display: swap;
+    src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
+}
+
+$font-source: "Source Sans Pro", sans-serif;
+$font-lato: "Lato", sans-serif;
+$font-caveat: "Caveat", cursive;
+$font-dancing: 'Dancing Script', cursive;
+$font-vt323: "VT323", monospace;
+
+
+$space-articles-carousel: 1rem;
+$article-review-width: 8rem;
+
+$primary-color: rgb(38 39 79);
+$secondary-color: rgb(88 0 34);
+$alt-color: rgb(220 110 0);
+$background-color: rgb(255 255 255);

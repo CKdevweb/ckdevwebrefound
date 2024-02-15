@@ -1,0 +1,113 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import '../mains/vars';
+
+button
+{
+    cursor: pointer;
+}
+
+#flying-button
+{
+    position: fixed;
+    right: calc(-4.5rem + 1.5rem / 2);
+    top: 70vh;
+    width: 9rem;
+    height: 1.5rem;
+    transform: rotateZ(270deg);
+    background-color: rgba($primary-color, 1);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index:2;
+    a
+    {
+        color: black;
+        text-decoration: none;
+        font-family: $font-lato;
+    }
+}
+#flying-button:hover
+{
+    background-color: rgba($background-color, 1);
+    border: 1px solid $primary-color;
+    opacity: 1;
+    a:hover, a
+    {
+        padding: 0.5rem;
+        color: $primary-color !important;
+    }
+}
+
+form>fieldset>button
+{
+    border: none;
+    border-bottom: 2px solid $secondary-color;
+    background-color: rgba($primary-color, 0.15);
+    border-radius: 12px;
+    min-width: 150px;
+    max-width: 250px;
+    color: $primary-color;
+    font-weight: bold;
+    margin: 1rem auto;
+    height: 1.35rem;
+}
+
+form>fieldset>button:hover
+{
+    background-color: rgba($primary-color, 0.45);
+}
+
+form>fieldset>button:active
+{
+    border: none;
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+
+body>header
+{
+    >button
+    {
+        border-radius: 50%;
+        border: solid 2px white;
+        background: linear-gradient(to bottom, rgb(8, 27, 114), $secondary-color, $secondary-color);
+        box-shadow: 1px 1px 2px 2px grey;
+        color: white;
+        width: 50px;
+        height: 50px;
+        margin: auto;
+        font-weight: bold;
+        font-size: 0.75rem;
+        grid-column: 4/5;
+    }
+    >button:active, >button:hover
+    {
+        width: 45px;
+        height: 45px;
+        font-size: 0.60rem;
+        box-shadow: none;
+    }
+}
+
+@media (min-width: 768px)
+{
+    body>header
+    {
+        > button
+        {
+            display: none;
+        }
+    }
+}

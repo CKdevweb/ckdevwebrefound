@@ -1,0 +1,176 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}C.K DevWeb - Tarifs{% endblock %}
+
+{% block body %}
+    <main id="prices-main-container">
+        <header class="main-header">
+            <h1>Mes tarifs</h1>
+        </header>
+        <section class="presentation">
+            <p>
+                Chaque projet est unique, c’est pourquoi <strong>mes tarifs sont conçus pour refléter la complexité et la portée
+                de chaque mission.</strong> Voici des fourchettes de prix indicatives de mes services :
+            </p>
+        </section>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Sites web de base</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>Sites Vitrine</h3>
+                <div class="price">
+                    <p><strong>À partir de 1050€</strong></p>
+                </div>
+                <div class="includes">
+                    <h4>Inclut :</h4>
+                    <ul class="list-checks">
+                        <li>La conception et le développement</li>
+                        <li>Une UI/UX et une accessibilité adaptées</li>
+                        <li>Un SEO (référencement) de base (référencement poussé possible)</li>
+                        <li>Un site responsive (qui s'adapte à tous les appareils)</li>
+                        <li>Le design complet</li>
+                    </ul>
+                </div>
+                <div class="depends">
+                    <h4>Dépend :</h4>
+                    <ul class="list-depends">
+                        <li>De la personnalisation de la solution</li>
+                        <li>Du nombre de pages</li>
+                        <li>Du nombre et de la complexité des fonctionnalités</li>
+                        <li>Du contenu partagé par le client (textes, photos et médias)</li>
+                    </ul>
+                </div>
+            </article>
+            <article>
+                <h3>Sites E-commerce</h3>
+                <div class="price">
+                    <p><strong>À partir de 1 950€</strong></p>
+                </div>
+                <div class="includes">
+                    <h4>Inclut :</h4>
+                    <ul class="list-checks">
+                        <li>La conception et le développement</li>
+                        <li>Une UI/UX et une accessibilité adaptées</li>
+                        <li>Une intégration e-commerce</li>
+                        <li>Un SEO (référencement) de base (référencement poussé possible)</li>
+                        <li>Un site responsive (qui s'adapte à tous les appareils)</li>
+                        <li>Le design complet</li>
+                    </ul>
+                </div>
+                <div class="depends">
+                    <h4>Dépend :</h4>
+                    <ul class="list-depends">
+                        <li>De la personnalisation de la solution</li>
+                        <li>De la taille de la boutique et du nombre de pages</li>
+                        <li>Du nombre et de la complexité des fonctionnalités</li>
+                        <li>Du contenu partagé par le client (textes, photos et médias)</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+        <div class="right-side-sprite"></div>
+        <div class="separator"></div>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Développement d'APIs et Solutions de Bases de Données</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>API complexes</h3>
+                <p>Création d’un « Dashboard », de fonctionnalités complexes.</p>
+                <p><strong>À partir de 1 800€</strong></p>
+            </article>
+            <article>
+                <h3>Solutions de bases de données avec API</h3>
+                <p>Gestion de stock, de clients...</p>
+                <p><strong>À partir de 2 500€</strong></p>
+            </article>
+        </section>
+        <div class="right-side-sprite"></div>
+        <div class="separator"></div>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Autres services liés</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>Audit et recommandations</h3>
+                <p>
+                    Réalisation d'un audit complet de votre site, identifiant les améliorations possibles en
+                    performances et SEO. Vous obtiendrez un rapport détaillé avec des recommandations sur mesure pour
+                    booster votre visibilité en ligne.
+                </p>
+                <p><strong>À partir de 50€</strong></p>
+            </article>
+            <article>
+                <h3>Formation aux parties administratives de la solution</h3>
+                <p>
+                    Je propose une formation sur mesure pour vous rendre autonome dans la gestion de votre site et de son
+                    contenu.
+                </p>
+                <p><strong>À partir de 90€</strong></p>
+            </article>
+            <article>
+                <h3>Ajout de fonctionnalités</h3>
+                <p>Création de fonctionnalités standards où complexes</p>
+                <p><strong>À partir de 90€</strong></p>
+            </article>
+            <article>
+                <h3>Optimisation UX/UI</h3>
+                <p>
+                    Amélioration de l'expérience utilisateur et l'interface de votre site, proposant des solutions
+                    variées pour booster l'engagement et la conversion.
+                </p>
+                <p><strong>À partir de 300€</strong></p>
+            </article>
+            <article>
+                <h3>Refonte complète de l'interface</h3>
+                <p>
+                    Modernisation de l'interface de votre site, en m'assurant qu'elle soit à la fois esthétique,
+                    fonctionnelle et optimisée pour convertir et fidéliser.
+                </p>
+                <p><strong>À partir de 500€</strong></p>
+            </article>
+        </section>
+        <div class="right-side-sprite"></div>
+        <div class="separator"></div>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Maintenance et Support</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>Abonnement mensuel</h3>
+                <p><strong>25€/mois</strong></p>
+            </article>
+            <article>
+                <h3>Abonnement annuel</h3>
+                <p><strong>300€/ans</strong></p>
+            </article>
+            <div class="includes">
+                <h4>Inclut :</h4>
+                <ul class="list-checks">
+                    <li>Mise à jour de contenu basic</li>
+                    <li>Mise à jour de sécurité</li>
+                    <li>Hébergement</li>
+                </ul>
+            </div>
+        </section>
+        <div class="right-side-sprite"></div>
+        <section>
+            <p>
+                <strong>
+                    Note : Les prix ci-dessus sont une base indicative, et peuvent varier en fonction des spécificités
+                    de chaque projet.
+                </strong>
+            </p>
+            <br>
+            <p>
+                <strong>Prêt à démarrer votre projet ?</strong>
+                Vous pouvez me joindre via la page
+                <a href="{{ path("app_contact") }}">Contact</a>, ou directement par e-mail à :
+                <a href="mailto:ckdevweb.35@gmail.com">ckdevweb.35@gmail.com</a> pour un devis détaillé qui prendra en compte vos besoins et
+                objectifs spécifiques.<br>
+                <strong>Ensemble, créons l'avenir de votre succès numérique !</strong>
+            </p>
+        </section>
+    </main>
+{% endblock %}

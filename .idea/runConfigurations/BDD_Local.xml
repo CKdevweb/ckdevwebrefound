@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="BDD-Local" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" browser="e0fb40d9-dbe3-40d9-997f-da472d845b14" server_name="Localhost" start_url="/phpmyadmin/index.php">
+    <method v="2" />
+  </configuration>
+</component>

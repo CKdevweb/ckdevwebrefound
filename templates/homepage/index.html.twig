@@ -1,0 +1,99 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}C.K DevWeb - Accueil{% endblock %}
+
+{% block body %}
+<main id="homepage-main-container">
+    <header class="main-header">
+        <h1 class="hidden">Accueil</h1>
+        <div id="homepage-slide-background">
+            <div class="text-slide">
+                <p><span>Créons l'avenir de</span><span> votre succès </span><span> numérique</span><span> !</span></p>
+            </div>
+        </div>
+    </header>
+    <section id="home-presentation-section">
+
+        <p>
+            <strong>Bienvenue sur C.K DevWeb, la solution idéale pour tous vos besoins en développement web.</strong>
+        </p>
+        <br>
+        <p>
+            Développeur freelance diplômé <strong>full-stack RNCP de niveau 5</strong>, je possède une expertise complète en
+            <strong>développement frontend</strong>
+            (la conception et le développement de l'interface utilisateur)
+            <strong>et backend</strong>
+            (la logique serveur et la gestion des bases de données). Animé par une passion constante pour la technologie,
+            <strong>je m'engage à concrétiser vos idées en solutions numériques efficaces et innovantes.</strong>
+        </p>
+    </section>
+
+    {% if reviews is defined %}
+        {% if reviews|length > 0 %}
+            <div class="separator"></div>
+            <section id="reviews-section">
+
+                <h2>Commentaires</h2>
+                {% include "partials/underline-titles.html.twig" %}
+                <article class="reviews-main">
+                    {% if reviews|length > 1 %}
+                        <div class="commands-carousel">
+                            <button class="carousel-button prev" id="slideLeft">&#10094;</button>
+                        </div>
+                    {%  endif %}
+                    <div class="carousel">
+                        <div class="carousel-articles">
+                            {% for review in reviews %}
+                                <article class="review">
+                                    <span class="review-name">{{ review.name }}</span>
+                                    <p class="review-content">{{ review.content }}</p>
+                                    <footer>
+                                        <div class="carousel-notation">
+                                            {% for i in 0..4 %}
+                                                {% if review.rate >= i %}
+                                                    <object data="{{ asset('assets/medias/images/sprites/fa-star-solid.svg') }}" type="image/svg+xml"></object>
+                                                {% else %}
+                                                    <object data="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" type="image/svg+xml"></object>
+                                                {%  endif %}
+                                            {% endfor %}
+                                        </div>
+                                        <p class="review-date">{{ review.date|date('d M Y') }}</p>
+                                    </footer>
+                                </article>
+                            {% endfor %}
+                            {% if reviews|length % 2 == 0 %}
+                                <article class="review">
+
+                                </article>
+                            {% endif %}
+                        </div>
+                    </div>
+                    {% if reviews|length > 1 %}
+                        <div class="commands-carousel">
+                            <button class="carousel-button next" id="slideRight">&#10095;</button>
+                        </div>
+                    {%  endif %}
+                </article>
+            </section>
+            <div class="separator"></div>
+        {%  endif %}
+    {%  endif %}
+
+    <div class="left-side-sprite"></div>
+    <section id="make-review-section">
+            <h2>Laissez un commentaire</h2>
+            {% include "partials/underline-titles.html.twig" %}
+        <p>
+            <strong>Votre avis compte !</strong><br> Partagez vos commentaires pour m'aider à améliorer mes
+            services.<br>
+            Je suis impatient de connaître votre opinion.
+        </p>
+        <div id="review-form-container">
+            {% include 'partials/review-form.html.twig' %}
+        </div>
+    </section>
+    <div class="right-side-sprite"></div>
+</main>
+    <script type="module" src="{{ asset('assets/js/views/homepage.min.js') }}"></script>
+
+{% endblock %}

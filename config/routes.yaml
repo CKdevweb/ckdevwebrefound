@@ -1,0 +1,35 @@
+app_homepage:
+    path: /
+    controller: App\Controller\HomepageController::index
+app_services:
+    path: /services
+    controller: App\Controller\ServicesController::index
+app_prices:
+    path: /prices
+    controller: App\Controller\PricesController::index
+app_contact:
+    path: /contact
+    controller: App\Controller\ContactController::index
+app_about:
+    path: /about
+    controller: App\Controller\AboutController::index
+app_cgu:
+    path: /cgu
+    controller: App\Controller\CguController::index
+app_submitReview:
+    path: /submit-review
+    controller: App\Controller\HomepageController::submitReview
+    methods: [ 'POST' , ' GET' ]
+app_submitContact:
+    path: /submit-contact
+    controller: App\Controller\ContactController::sendEmail
+    methods: [ 'POST' , 'GET' ]
+app_verify_email:
+    path: /verify/email
+    controller: App\Controller\RegistrationController::verifyUserEmail
+
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
