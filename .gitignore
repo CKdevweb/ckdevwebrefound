@@ -10,10 +10,6 @@
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
-<<<<<<< HEAD
-=======
-
->>>>>>> 2dc6e50 (main push)
 
 ###> phpunit/phpunit ###
 /phpunit.xml
@@ -23,20 +19,9 @@
 ###> symfony/asset-mapper ###
 /assets/vendor/
 ###< symfony/asset-mapper ###
-<<<<<<< HEAD
+
 .env.local
 .idea/
 assets/
 var/
 vendor/
-###> symfony/phpunit-bridge ###
-.phpunit.result.cache
-/phpunit.xml
-###< symfony/phpunit-bridge ###
-
-###> symfony/asset-mapper ###
-/public/assets/
-/assets/vendor/
-###< symfony/asset-mapper ###
-=======
->>>>>>> 2dc6e50 (main push)
