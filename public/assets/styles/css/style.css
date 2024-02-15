@@ -103,8 +103,8 @@ html div#message {
   z-index: 2;
 }
 html div#message div {
-  background: linear-gradient(rgba(0, 11, 16, 0.8), rgba(48, 141, 177, 0.8));
-  border: solid 2px rgb(0, 11, 16);
+  background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(88, 0, 34, 0.8));
+  border: solid 2px rgb(255, 255, 255);
   border-radius: 36px;
   display: flex;
   justify-content: center;
@@ -115,13 +115,13 @@ html div#message div span.success-modal, html div#message div span.error-modal {
   font-size: 1.75rem;
   text-align: center;
   font-family: "Caveat", cursive;
-  text-shadow: 1px 1px 1px rgb(0, 11, 16);
+  text-shadow: 1px 1px 1px rgb(255, 255, 255);
 }
 html div#message div span.success-modal {
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
 }
 html div#message div span.error-modal {
-  color: rgb(200, 100, 16);
+  color: rgb(220, 110, 0);
 }
 html .remove-fade-out {
   animation: 2s remove-fade-out forwards;
@@ -129,7 +129,7 @@ html .remove-fade-out {
 html body {
   margin: 0;
   padding: 0;
-  background: rgb(0, 11, 16);
+  background: rgb(255, 255, 255);
 }
 html body > div.contacts-container {
   width: 6rem;
@@ -189,7 +189,7 @@ html body main:not(#homepage-main-container) .main-header {
   height: 57.1428571429vw;
 }
 html body li {
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
   text-align: start;
 }
 html body .hidden {
@@ -199,7 +199,7 @@ html body .opacity-mask {
   position: relative;
   width: 100vw;
   height: 100%;
-  background-color: rgb(0, 11, 16);
+  background-color: rgb(255, 255, 255);
   opacity: 0.5;
 }
 html .faSolid {
@@ -363,8 +363,8 @@ body > header nav {
 body > header nav ul {
   list-style-type: none;
   height: fit-content;
-  background-color: rgb(0, 11, 16);
-  border-left: 2px solid rgb(48, 141, 177);
+  background-color: rgb(255, 255, 255);
+  border-left: 2px solid rgb(88, 0, 34);
 }
 body > header nav ul li {
   margin: 2rem 2rem;
@@ -431,13 +431,13 @@ body > header nav ul.scaleY-down {
   }
   body > header > nav > ul.scaleY-down li a.active, body > header > nav > ul.scaleY-down li a.a-hover {
     animation: 0.5s navTranslateY forwards;
-    color: rgba(48, 141, 177, 0.55);
-    text-shadow: 1px 1px 1px rgb(225, 225, 225);
+    color: rgba(88, 0, 34, 0.55);
+    text-shadow: 1px 1px 1px rgb(38, 39, 79);
     text-decoration: underline;
   }
   body > header > nav > ul.scaleY-down li a.a-leave {
     animation: 0.5s navTranslateY-reverse forwards;
-    color: rgb(225, 225, 225);
+    color: rgb(38, 39, 79);
     text-decoration: none;
   }
   body > header > nav > ul.scaleY-down li .fix-a-hover {
@@ -530,7 +530,7 @@ body > header nav ul.scaleY-down {
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 html body > footer {
-  background: linear-gradient(rgba(0, 11, 16, 0.1) 0%, rgb(0, 11, 16) 40%, rgba(48, 141, 177, 0.5) 60%, rgba(48, 141, 177, 0.5) 110%);
+  background: linear-gradient(rgba(255, 255, 255, 0.1) 0%, rgb(255, 255, 255) 40%, rgba(88, 0, 34, 0.5) 60%, rgba(88, 0, 34, 0.5) 110%);
   display: grid;
   grid-template-rows: repeat(2, 1fr);
   grid-template-columns: repeat(3, 1fr);
@@ -654,8 +654,8 @@ html body header nav a {
   font-weight: bold;
 }
 html body header nav a.active, html body header nav a:hover {
-  color: rgba(48, 141, 177, 0.55);
-  text-shadow: 1px 1px 1px rgb(225, 225, 225);
+  color: rgba(88, 0, 34, 0.55);
+  text-shadow: 1px 1px 1px rgb(38, 39, 79);
   text-decoration: underline;
 }
 html body main h1 {
@@ -674,13 +674,13 @@ html body main h2 {
   font-size: 2rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
-  text-shadow: 2px 2px 20px rgb(48, 141, 177);
+  text-shadow: 2px 2px 20px rgb(88, 0, 34);
 }
 html body main h3 {
   margin: 0.75rem auto;
   text-align: center;
-  color: rgb(48, 141, 177);
-  text-shadow: 1px 1px 1px rgba(48, 141, 177, 0.8);
+  color: rgb(88, 0, 34);
+  text-shadow: 1px 1px 1px rgba(88, 0, 34, 0.8);
   font-size: 1.3rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
@@ -688,57 +688,57 @@ html body main h3 {
 html body main h4 {
   margin: 0.75rem auto 0.15rem auto;
   text-align: start;
-  color: rgb(200, 100, 16);
+  color: rgb(220, 110, 0);
   font-size: 1.15rem;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
-  text-shadow: 1px 1px 1px rgba(200, 100, 16, 0.8);
+  text-shadow: 1px 1px 1px rgba(220, 110, 0, 0.8);
 }
 html body main label {
   margin-left: 5px;
   font-family: "Lato", sans-serif;
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
   font-size: 1.15rem;
 }
 html body main a {
   font-family: "Lato", sans-serif;
   color: white;
-  text-shadow: 1px 1px 1px rgb(200, 100, 16);
+  text-shadow: 1px 1px 1px rgb(220, 110, 0);
   font-weight: bold;
 }
 html body main strong {
   font-family: "Lato", sans-serif;
   color: white;
   font-weight: bold;
-  text-shadow: 1px 1px 1px rgb(48, 141, 177);
+  text-shadow: 1px 1px 1px rgb(88, 0, 34);
 }
 html body main p {
   font-family: "Lato", sans-serif;
   text-align: center;
   line-height: 1.4rem;
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
 }
 html body main ul > li {
   font-family: "Lato", sans-serif;
   text-align: start;
   line-height: 1.4rem;
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
 }
 html body footer p {
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.75rem;
 }
 html body footer a {
-  color: rgb(225, 225, 225);
-  text-shadow: 1px 1px 1px rgb(200, 100, 16);
+  color: rgb(38, 39, 79);
+  text-shadow: 1px 1px 1px rgb(220, 110, 0);
   text-decoration: underline;
   font-weight: bold;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 0.75rem;
 }
 html body:not(body > header) a:hover:not(body > header a), html body:not(body > header) i:hover, html body:not(body > header) svg:hover, html body:not(body > header) a:hover > i:not(body > header a), html body:not(body > header) a:hover > svg:not(body > header a) {
-  color: rgb(200, 100, 16) !important;
+  color: rgb(220, 110, 0) !important;
   transform: scale(1.1);
 }
 
@@ -792,8 +792,8 @@ html body:not(body > header) a:hover:not(body > header a), html body:not(body > 
 form {
   margin: 2rem auto;
   padding: 0 1rem;
-  border-left: 2px solid rgb(48, 141, 177);
-  border-right: 2px solid rgb(48, 141, 177);
+  border-left: 2px solid rgb(88, 0, 34);
+  border-right: 2px solid rgb(88, 0, 34);
   max-width: 600px;
 }
 form fieldset {
@@ -808,13 +808,13 @@ form fieldset label {
 form fieldset input, form fieldset textarea {
   padding: 0.15rem;
   border: none;
-  border-bottom: 1px solid rgb(225, 225, 225);
+  border-bottom: 1px solid rgb(38, 39, 79);
   border-radius: 9px;
-  background-color: rgba(225, 225, 225, 0.1);
-  color: rgb(225, 225, 225);
+  background-color: rgba(38, 39, 79, 0.1);
+  color: rgb(38, 39, 79);
 }
 form fieldset input:focus, form fieldset textarea:focus {
-  border: 2px solid rgb(200, 100, 16);
+  border: 2px solid rgb(220, 110, 0);
   border-radius: 7px;
 }
 form fieldset p {
@@ -925,7 +925,7 @@ button {
   width: 9rem;
   height: 1.5rem;
   transform: rotateZ(270deg);
-  background-color: #e1e1e1;
+  background-color: #26274f;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -939,42 +939,42 @@ button {
 }
 
 #flying-button:hover {
-  background-color: #000b10;
-  border: 1px solid rgb(225, 225, 225);
+  background-color: white;
+  border: 1px solid rgb(38, 39, 79);
   opacity: 1;
 }
 #flying-button:hover a:hover, #flying-button:hover a {
   padding: 0.5rem;
-  color: rgb(225, 225, 225) !important;
+  color: rgb(38, 39, 79) !important;
 }
 
 form > fieldset > button {
   border: none;
-  border-bottom: 2px solid rgb(48, 141, 177);
-  background-color: rgba(225, 225, 225, 0.15);
+  border-bottom: 2px solid rgb(88, 0, 34);
+  background-color: rgba(38, 39, 79, 0.15);
   border-radius: 12px;
   min-width: 150px;
   max-width: 250px;
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
   font-weight: bold;
   margin: 1rem auto;
   height: 1.35rem;
 }
 
 form > fieldset > button:hover {
-  background-color: rgba(225, 225, 225, 0.45);
+  background-color: rgba(38, 39, 79, 0.45);
 }
 
 form > fieldset > button:active {
   border: none;
-  background-color: rgb(225, 225, 225);
-  color: rgb(48, 141, 177);
+  background-color: rgb(38, 39, 79);
+  color: rgb(88, 0, 34);
 }
 
 body > header > button {
   border-radius: 50%;
   border: solid 2px white;
-  background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(48, 141, 177), rgb(48, 141, 177));
+  background: linear-gradient(to bottom, rgb(8, 27, 114), rgb(88, 0, 34), rgb(88, 0, 34));
   box-shadow: 1px 1px 2px 2px grey;
   color: white;
   width: 50px;
@@ -1052,7 +1052,7 @@ div.carousel {
   align-items: center;
   background-color: transparent;
   border-radius: 9px;
-  box-shadow: 5px 5px 15px rgb(48, 141, 177);
+  box-shadow: 5px 5px 15px rgb(88, 0, 34);
   overflow-x: hidden;
 }
 div.carousel div.carousel-articles {
@@ -1067,7 +1067,7 @@ div.carousel div.carousel-articles {
 div.carousel div.carousel-articles article {
   display: grid;
   grid-template-areas: "name name name name" "content content content content" "content content content content" "content content content content" "footer footer footer footer";
-  background: linear-gradient(transparent, rgba(48, 141, 177, 0.25));
+  background: linear-gradient(transparent, rgba(88, 0, 34, 0.25));
   border-radius: 9px;
   height: 90%;
   width: 20%;
@@ -1075,8 +1075,8 @@ div.carousel div.carousel-articles article {
 div.carousel div.carousel-articles article .review-name {
   grid-area: name;
   height: 2rem;
-  color: rgb(225, 225, 225);
-  text-shadow: 3px 3px 1px rgb(48, 141, 177);
+  color: rgb(38, 39, 79);
+  text-shadow: 3px 3px 1px rgb(88, 0, 34);
   font-family: "Caveat", cursive;
   font-size: 1.75rem;
   overflow-x: clip;
@@ -1091,11 +1091,11 @@ div.carousel div.carousel-articles article .review-content::-webkit-scrollbar {
   height: 8px;
 }
 div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-thumb {
-  background: radial-gradient(rgb(0, 11, 16), rgb(200, 100, 16)); /* Couleur de la poignée de la barre de défilement */
+  background: radial-gradient(rgb(255, 255, 255), rgb(220, 110, 0)); /* Couleur de la poignée de la barre de défilement */
   border-radius: 6px; /* Coins arrondis de la poignée */
 }
 div.carousel div.carousel-articles article .review-content::-webkit-scrollbar-track {
-  background-color: rgba(48, 141, 177, 0.35); /* Couleur de la piste de la barre de défilement */
+  background-color: rgba(88, 0, 34, 0.35); /* Couleur de la piste de la barre de défilement */
 }
 div.carousel div.carousel-articles article footer {
   grid-area: footer;
@@ -1183,7 +1183,7 @@ div.carousel div.carousel-articles article.slideRight {
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 main#homepage-main-container > header {
-  background: linear-gradient(to bottom, black, rgb(0, 11, 16));
+  background: linear-gradient(to bottom, black, rgb(255, 255, 255));
 }
 main#homepage-main-container > header div#homepage-slide-background {
   width: 100vw;
@@ -1250,16 +1250,16 @@ main#homepage-main-container section#reviews-section article.reviews-main {
   justify-content: center;
 }
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button {
-  background: linear-gradient(transparent, rgba(48, 141, 177, 0.25));
-  border-color: rgb(225, 225, 225);
+  background: linear-gradient(transparent, rgba(88, 0, 34, 0.25));
+  border-color: rgb(38, 39, 79);
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  color: rgb(225, 225, 225);
+  color: rgb(38, 39, 79);
 }
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:hover {
-  border-color: rgb(200, 100, 16);
-  color: rgb(200, 100, 16);
+  border-color: rgb(220, 110, 0);
+  color: rgb(220, 110, 0);
 }
 main#homepage-main-container section#reviews-section article.reviews-main .commands-carousel button:first-child {
   margin-right: 1rem;
@@ -1291,13 +1291,13 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   50% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   100% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
 }
@@ -1308,13 +1308,13 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   15% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   45% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   60% {
@@ -1323,13 +1323,13 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   72% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   100% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
 }
@@ -1340,13 +1340,13 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   15% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   38% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   42% {
@@ -1360,13 +1360,13 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
     opacity: 0;
   }
   85% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
   100% {
-    text-shadow: 2px 2px 2px rgb(48, 141, 177);
-    color: rgb(225, 225, 225);
+    text-shadow: 2px 2px 2px rgb(88, 0, 34);
+    color: rgb(38, 39, 79);
     opacity: 1;
   }
 }
@@ -1418,8 +1418,8 @@ main#homepage-main-container section#reviews-section article.reviews-main .comma
   src: url("../../../../assets/fonts-ckdevweb/VT323/VT323-Regular.ttf");
 }
 main#prices-main-container section ul li strong, main#services-main-container section ul li strong {
-  color: rgb(200, 100, 16);
-  text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.5);
+  color: rgb(220, 110, 0);
+  text-shadow: 1px 1px 1px rgba(38, 39, 79, 0.5);
 }
 main#prices-main-container section ul.list-checks, main#services-main-container section ul.list-checks {
   list-style: url("../../../../assets/medias/images/sprites/check-svgrepo-com.svg") inside;
@@ -1428,8 +1428,8 @@ main#prices-main-container section ul.list-depends, main#services-main-container
   list-style: url("../../../../assets/medias/images/sprites/arrow-drop-right.svg") inside;
 }
 main#prices-main-container section div.includes > h4, main#services-main-container section div.includes > h4 {
-  color: rgb(48, 141, 177);
-  text-shadow: 1px 1px 1px rgba(225, 225, 225, 0.5);
+  color: rgb(88, 0, 34);
+  text-shadow: 1px 1px 1px rgba(38, 39, 79, 0.5);
 }
 
 /*!
@@ -1485,10 +1485,6 @@ main#gnu-main-container section p {
 }
 main#gnu-main-container ul {
   margin-left: 4rem;
-}
-html body {
-  margin: 0;
-  padding: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

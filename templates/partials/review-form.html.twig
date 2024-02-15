@@ -12,21 +12,11 @@
         <textarea id="content" name="content" rows="4" minlength="10" required></textarea>
     </fieldset>
     <div class="notation">
-        <div class="star">
-            <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
-        </div>
-        <div class="star">
-            <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
-        </div>
-        <div class="star">
-            <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
-        </div>
-        <div class="star">
-            <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
-        </div>
-        <div class="star">
-            <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
-        </div>
+        {% for i in 0..4 %}
+            <div class="star">
+                <img src="{{ asset('assets/medias/images/sprites/fa-star-regular.svg') }}" alt="">
+            </div>
+        {% endfor %}
     </div>
     <fieldset>
         <input type="hidden" name="rating" id="rating"/>

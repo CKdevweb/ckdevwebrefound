@@ -49,7 +49,7 @@
                                     <p class="review-content">{{ review.content }}</p>
                                     <footer>
                                         <div class="carousel-notation">
-                                            {% for i in 1..5 %}
+                                            {% for i in 0..4 %}
                                                 {% if review.rate >= i %}
                                                     <object data="{{ asset('assets/medias/images/sprites/fa-star-solid.svg') }}" type="image/svg+xml"></object>
                                                 {% else %}

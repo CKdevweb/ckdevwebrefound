@@ -15,7 +15,6 @@ export function notation()
 {
     const divStarNodes = document.querySelectorAll(".star");
     const divStar = Array.from(divStarNodes);
-    //* Valeur de la notation
     let value = null;
 
     divStar.forEach(function(star, index){
