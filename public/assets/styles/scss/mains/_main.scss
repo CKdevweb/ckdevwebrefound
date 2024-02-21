@@ -1,0 +1,268 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier, fondateur de C.K DevWeb. Tous droits réservés.
+ * Pour en savoir plus sur mes services et découvrir mes réalisations, visitez mon site web : https://www.ckdevweb.fr
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import '../mains/vars';
+
+html
+{
+    font-size: 16px;
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    div#message{
+        position: absolute;
+        top: calc($header-height * 2);
+        left: 5%;
+        right: 5%;
+        margin: auto;
+        z-index:2;
+        div
+        {
+            background: linear-gradient(rgba($background-color, 0.8), rgba($secondary-color, 0.8));
+            border: solid 2px $background-color;
+            border-radius: 36px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1.2rem;
+        }
+        div span.success-modal, div span.error-modal
+        {
+
+            font-size: 1.75rem;
+            text-align: center;
+            font-family: $font-caveat;
+            text-shadow: 1px 1px 1px $background-color;
+        }
+        div span.success-modal {
+            color: $primary-color;
+        }
+        div span.error-modal {
+            color: $alt-color;
+        }
+    }
+
+    .remove-fade-out {
+        animation: 2s remove-fade-out forwards;
+    }
+    body
+    {
+        margin: 0;
+        padding: 0;
+        background: $background-color;
+        >div.contacts-container
+        {
+            width: 6rem;
+            z-index: 2;
+            position: absolute;
+            left: 0.5rem;
+            top: calc($header-height + 2rem);
+            display: flex;
+            justify-content: space-evenly;
+            a
+            {
+                margin-left: 0.5rem;
+                text-decoration: none;
+            }
+        }
+
+        main
+        {
+            p
+            {
+                margin: 0 1rem;
+            }
+            .main-header
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+            }
+            div.left-side-sprite, div.right-side-sprite
+            {
+                display: none;
+            }
+            >section
+            {
+                margin: 0;
+                padding: 2rem 5% 2rem 5%;
+                text-align: center;
+
+                header{
+                    margin-bottom: 1.5rem;
+                }
+
+                >article , >div.includes
+                {
+                    margin: 1rem auto 0 auto;
+                    padding-bottom: 1rem;
+                    max-width: 800px;
+                }
+                ul
+                {
+                    margin: 1.5rem auto;
+                }
+            }
+            >div.separator
+            {
+                height: 20vw;
+                background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                opacity: 0.9;
+            }
+        }
+        main:not(#homepage-main-container)
+        {
+            .main-header
+            {
+                background-image: url("../../../../assets/medias/images/horizontal-header.webp");
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-position: center;
+                width: 100%;
+                height: calc(100vw / 1.75);
+
+            }
+        }
+
+        li{
+            color: $primary-color;
+            text-align: start;
+        }
+
+        .hidden
+        {
+            display: none;
+        }
+
+        .opacity-mask
+        {
+            position: relative;
+            width: 100vw;
+            height: 100%;
+            background-color: $background-color;
+            opacity: 0.5;
+        }
+    }
+
+    .faSolid
+    {
+        background-image: url("../../../../assets/medias/images/sprites/fa-star-solid.svg");
+    }
+    .faRegular
+    {
+        background-image: url("../../../../assets/medias/images/sprites/fa-star-regular.svg");
+
+    }
+}
+
+@media (min-width: 425px)
+{
+    html
+    {
+        font-size: 18px;
+        main>section{
+            padding: 2rem 10% 2rem 10%;
+        }
+    }
+}
+
+@media (min-width: 768px)
+{
+    html
+    {
+        font-size: 20px;
+        body
+        {
+            main:not(#homepage-main-container)
+            {
+                .main-header
+                {
+                    background-size: cover;
+                    height: calc(100vw / 6);
+                }
+            }
+            main
+            {
+                >div.separator
+                {
+                    height: 10vw;
+                    background-image: url("../../../../assets/medias/images/bandeau-2.webp");
+                    background-repeat: repeat-x;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px)
+{
+    html>body>main
+    {
+        display: grid;
+        grid-template-columns: 25% 50% 25%;
+        object
+        {
+            max-width: 500px;
+            width: 80%;
+        }
+        >header
+        {
+            grid-column: 1/4;
+        }
+        div.separator
+        {
+            grid-column: 1/4;
+        }
+        div.left-side-sprite, div.right-side-sprite
+        {
+            display: block;
+            background-image: url("../../../../assets/medias/images/sprites/side-effect.webp");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 30%;
+            width: 40%;
+            opacity: 30%;
+        }
+        div.left-side-sprite
+        {
+            grid-column: 1/2;
+        }
+        div.right-side-sprite
+        {
+            grid-column: 3/4;
+            transform: rotateZ(180deg);
+        }
+        >section
+        {
+            grid-column: 2/3;
+            >article , >div.includes
+            {
+                margin: 2rem auto 0 auto;
+                padding-bottom: 2rem;
+            }
+        }
+    }
+}
+
+@keyframes remove-fade-out
+{
+    0%
+    {
+        opacity: 100%;
+        display: flex;
+    }
+    100%
+    {
+        opacity: 0;
+        display: none;
+    }
+}

@@ -1,0 +1,98 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import '../mains/vars.scss';
+
+html
+{
+    body
+    {
+        >footer
+        {
+            background: linear-gradient(rgba($background-color, 0.1) 0%, $background-color 40%, rgba($secondary-color, 0.5) 60%, rgba($secondary-color, 0.5) 110%);
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-template-columns: repeat(3, 1fr);
+            div#contacts-footer
+            {
+                grid-row: 1/2;
+                grid-column: 1/2;
+                width: 6rem;
+                display: flex;
+                justify-content: space-evenly;
+                flex-direction: column;
+                div.contacts-container
+                {
+                    display: flex;
+                    justify-content: space-evenly;
+                    width: 6rem;
+                    z-index: 2;
+                    top: $header-height + 20px;
+                    margin-left: 0.5rem;
+                    a
+                    {
+                        margin-left: 0.5rem;
+                        text-decoration: none;
+                    }
+                }
+            }
+            div.scroll-up-button
+            {
+                grid-row: 1/2;
+                grid-column: 3/4;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                div
+                {
+                    text-align: center;
+                    animation: 2s up-down 2s infinite;
+                    display: flex;
+                }
+            }
+            div#footer-text
+            {
+                grid-row: 2/3;
+                grid-column: 1/4;
+                text-align: center;
+                margin: 1rem auto;
+                a
+                {
+                    margin: 1rem auto;
+                }
+            }
+        }
+    }
+}
+
+@keyframes up-down{
+    0%
+    {
+        transform: translateY(0);
+    }
+    25%
+    {
+        transform: translateY(-1rem);
+    }
+    50%
+    {
+        transform: translateY(0);
+    }
+    100%
+    {
+        transform: translateY(-1rem);
+    }
+    100%
+    {
+        transform: translateY(0);
+    }
+}

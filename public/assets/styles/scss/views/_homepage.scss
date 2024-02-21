@@ -1,0 +1,270 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+@import '../mains/vars';
+
+main#homepage-main-container
+{
+    >header
+    {
+        background: linear-gradient(to bottom, black, $background-color);
+        div#homepage-slide-background
+        {
+            width: 100vw;
+            height: calc(100vw * 10 / 17);
+            background-image: url("../../../../assets/medias/images/backgrounds/back5.webp");
+            background-size: contain;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div.opacity-mask
+            {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            div.text-slide
+            {
+                position: absolute;
+                text-align: center;
+                p
+                {
+                    font-family: $font-source;
+                    font-size: 1.75rem;
+                    font-weight: normal;
+                    span
+                    {
+                        color: black;
+                        opacity: 0;
+                        line-height: 2rem;
+                    }
+                    span:first-child
+                    {
+                        animation: 2s textSlideAnimOne 4.8s forwards;
+                        font-family: $font-dancing;
+                    }
+                    >span:nth-child(2)
+                    {
+                        animation: 8s textSlideAnimTwo 0s forwards;
+                        font-size: 2.5rem;
+                        font-family: $font-caveat;
+                    }
+                    >span:nth-child(3)
+                    {
+                        animation: 4.5s textSlideAnimThree 2s forwards;
+                        font-family: $font-vt323;
+                    }
+                    >span:last-child
+                    {
+                        animation: 2s textSlideAnimOne 4.8s forwards;
+                        font-family: $font-vt323;
+                    }
+                }
+
+            }
+        }
+    }
+
+    section#home-presentation-section
+    {
+        div#presentation-links
+        {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            a
+            {
+                margin: 1rem;
+                text-align: center;
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    section#reviews-section
+    {
+        padding: 2rem 0;
+        article.reviews-main
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .commands-carousel
+            {
+                button
+                {
+                    background: linear-gradient(transparent, rgba($secondary-color, 0.25));
+                    border-color: $primary-color;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    color: $primary-color;
+                }
+                button:hover
+                {
+                    border-color: $alt-color;
+                    color: $alt-color;
+                }
+                button:first-child
+                {
+                    margin-right:1rem;
+                }
+                button:last-child
+                {
+                    margin-left:1rem;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1200px)
+{
+    html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide
+    {
+        > p
+        {
+            > span
+            {
+                font-size: 2.5rem;
+                line-height: 2.5rem;
+            }
+            >span:nth-of-type(2)
+            {
+                font-size: 3.5rem;
+                line-height: 3.5rem;
+            }
+        }
+
+    }
+
+}
+
+@media (min-width: 1200px)
+{
+    html > body > main#homepage-main-container > .main-header > div#homepage-slide-background > div.text-slide > p > span
+    {
+        font-size: 4rem !important;
+        line-height: 4rem !important;
+    }
+}
+
+@keyframes textSlideAnimOne
+{
+    0%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    50%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    100%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+}
+
+@keyframes textSlideAnimTwo
+{
+    0%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    15%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    45%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    60%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    72%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    100%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+}
+
+@keyframes textSlideAnimThree
+{
+    0%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    15%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    38%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    42%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    60%
+    {
+        text-shadow: none;
+        color: black;
+        opacity: 0;
+    }
+    85%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+    100%
+    {
+        text-shadow: 2px 2px 2px $secondary-color;
+        color: $primary-color;
+        opacity: 1;
+    }
+}

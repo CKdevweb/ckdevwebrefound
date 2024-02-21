@@ -1,0 +1,50 @@
+/*!
+ * Copyright (c) 2024. Droit d'auteur (c) 2024 par Kévin Corvaisier,
+ * fondateur de C.K DevWeb.
+ * Tous droits réservés.
+ *
+ * Pour en savoir plus sur mes services et découvrir mes réalisations,
+ * visitez mon site web : https://www.ckdevweb.fr
+ *
+ * N'hésitez pas à me contacter pour discuter de vos besoins en développement web et logiciel.
+ * Merci de choisir C.K DevWeb pour votre projet numérique.
+ */
+
+main#about-main-container
+{
+    section:first-of-type{
+        article:last-of-type{
+            img
+            {
+                height: 10%;
+                margin-bottom: -16%;
+            }
+        }
+    }
+    section>img, section>article>img
+    {
+        width: calc(70vw - 4rem);
+    }
+}
+
+@media (min-width: 425px)
+{
+    main#about-main-container
+    {
+        section>img, section>article>img
+        {
+            width: calc(40vw - 4rem);
+        }
+    }
+}
+
+@media (min-width: 1024px)
+{
+    main#about-main-container
+    {
+        section>img, section>article>img
+        {
+            width: calc(20vw - 4rem);
+        }
+    }
+}

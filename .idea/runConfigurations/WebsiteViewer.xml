@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="WebsiteViewer" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" singleton="false" browser="e0fb40d9-dbe3-40d9-997f-da472d845b14" server_name="SymfonyServer">
+    <method v="2" />
+  </configuration>
+</component>

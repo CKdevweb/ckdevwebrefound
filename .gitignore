@@ -1,9 +1,8 @@
-.idea/
-assets/
-
-
 ###> symfony/framework-bundle ###
+.idea
+.env.*
 /.env.local
+/.env.prod
 /.env.local.php
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
@@ -11,3 +10,14 @@ assets/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> symfony/asset-mapper ###
+/assets/vendor/
+###< symfony/asset-mapper ###
+
+assets/

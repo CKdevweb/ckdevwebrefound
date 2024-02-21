@@ -1,0 +1,10 @@
+framework:
+  rate_limiter:
+    submission_review:
+      policy: 'fixed_window'
+      limit: 1
+      interval: '50 minutes'
+    submission_email:
+      policy: 'fixed_window'
+      limit: 1
+      interval: '50 minutes'

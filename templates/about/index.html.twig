@@ -1,0 +1,141 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}C.K DevWeb - À propos{% endblock %}
+
+{% block body %}
+    <main id="about-main-container">
+        <header class="main-header">
+            <h1>À propos</h1>
+        </header>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Mon parcours</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>Explorations multiples</h3>
+                <img src="{{ asset('assets/medias/images/languages.webp') }}" alt="L'image représente des noms de langages de programmation (C++, Ruby, C#, Visual Basic, JavaScript, PHP, C, SQL, HTML, CSS, Python) en transparence et superposés en bandes horizontales sur un fond de couleur bleutée.">
+                <br>
+                <br>
+                <p>
+                    Mon cheminement dans le domaine du développement web est marqué par <strong>une exploration variée et
+                        approfondie de multiples langages informatiques</strong> et la création de diverses applications.
+                    Cette exploration, menée avec curiosité et détermination, m'a permis de forger <strong>un socle solide de
+                        compétences techniques et de créativité.</strong> Aujourd'hui, en tant que professionnel du web, je canalise
+                    cette riche expérience pour me <strong>spécialiser dans la création de solutions web innovantes et sur mesure</strong>,
+                    répondant aux besoins spécifiques de chaque projet.
+                </p>
+            </article>
+            <article>
+                <h3>Diplômé full-stack</h3>
+                <p>
+                    Ayant obtenu un diplôme de <strong>développeur full-stack de niveau 5</strong>, j'ai très vite affiné mes compétences en développement web, acquérant une solide maîtrise des langages clés comme <strong>HTML, CSS, PHP, JavaScript, ainsi que la
+                        gestion des bases de données avec SQL</strong>. Cette formation m'a également permis de développer une
+                    compréhension approfondie des aspects techniques et créatifs du développement web, tout en renforçant
+                    mes <strong>compétences en responsive design et en création d'API's</strong>.
+                </p>
+            </article>
+            <article>
+                <h3>Gestion de base de données</h3>
+                <img src="{{ asset('assets/medias/images/bdd-gestion-a.webp') }}" alt="L'image représente une illustration stylisée et complexe de serveurs de données et d'infrastructures réseau en tons sombres avec des accents de couleurs vives, illustrant un thème technologique de cybersécurité ou de centre de données.">
+                <p>
+                    De plus, pour mon examen de fin de formation, j'ai créé un site professionnel fictif intégrant la
+                    <strong>gestion de base de données</strong> et des aspects de <strong>sécurité</strong>, illustrant ainsi ma capacité à gérer des <strong>projets
+                        complexes</strong> et à assurer leur <strong>fonctionnement optimal</strong> sur divers appareils et plateformes.
+                </p>
+            </article>
+            <article>
+                <h3>Utilisation de CMS, amélioration UX/UI</h3>
+                <p>
+                    Un exemple concret de mon travail est <strong>la refonte du site de la naturopathe Émilie Morel</strong>, accessible ici
+                    : <a target="_blank" href="https://emiliemorelnaturopathe.fr">www.emiliemorelnaturopathe.fr</a>. Ce projet a impliqué la
+                    migration du site depuis WordPress.com vers <strong>WordPress.org</strong>, l'<strong>amélioration de l'expérience utilisateur
+                        (UX) et de l'interface utilisateur (UI), l'optimisation du référencement, ainsi que l'ajout de
+                        fonctionnalités</strong> pour faciliter la prise de rendez-vous et le contact. Ce fut une expérience
+                    enrichissante qui a renforcé ma capacité à transformer les besoins des clients en solutions web
+                    efficaces et élégantes.
+                </p>
+            </article>
+            <article>
+                <h3>Pour conclure</h3>
+                <img src="{{ asset('assets/medias/images/moi-buste-little.webp') }}" alt="Photo de Kévin Corvaisier, fondateur de C.K DevWeb, portant une chemise beige à col boutonné, les bras croisés, exprimant une attitude confiante et professionnelle. Il pose sur un fond transparent.">
+                <p>
+                    En somme, mon parcours est celui d'un développeur web dévoué, <strong>toujours en quête de nouvelles façons
+                        d'innover et de répondre aux défis technologiques actuels</strong>. Ma mission est de fournir des solutions web
+                    qui ne sont pas seulement fonctionnelles, mais aussi esthétiquement plaisantes et intuitives pour
+                    l'utilisateur final.
+                </p>
+            </article>
+        </section>
+        <div class="right-side-sprite"></div>
+        <div class="separator"></div>
+        <div class="left-side-sprite"></div>
+        <section>
+            <h2>Ma philosophie en développement web</h2>
+            {% include "partials/underline-titles.html.twig" %}
+            <article>
+                <h3>Présentation</h3>
+                <p>
+                    <strong>Ma philosophie en développement web</strong> repose sur des principes clés qui guident chacun de mes projets : la
+                    sécurité, l'accessibilité, le responsive design, ainsi qu'une attention particulière portée à
+                    l'expérience utilisateur (UX), l'interface utilisateur (UI) et l'esthétique globale.
+                </p>
+            </article>
+            <article>
+                <h3>La sécurité</h3>
+                <img src="{{ asset('assets/medias/images/security-shield.webp') }}" alt="Bouclier de sécurité symbolique avec un motif de circuit électronique intégré et un cadenas au centre, évoquant des thèmes de cybersécurité et de protection des données dans un style graphique moderne avec des teintes bleues et argentées.">
+                <p>
+                    La sécurité est au cœur de ma démarche de développement. Dans un environnement numérique où
+                    les menaces évoluent constamment, garantir la sécurité des données et la protection des utilisateurs est
+                    une priorité absolue. Je m'engage à construire des sites robustes et sécurisés, où la confidentialité et
+                    l'intégrité des données sont préservées.
+                </p>
+            </article>
+            <article>
+                <h3>L'accessibilité</h3>
+                <p>
+                    Je crois fermement qu'un site web de qualité doit être accessible à tous, quelles que
+                    soient les capacités ou les technologies utilisées par les internautes. Mon objectif est de créer des
+                    expériences web inclusives, où chaque utilisateur peut naviguer facilement et obtenir l'information ou
+                    le service recherché.
+                </p>
+            </article>
+            <article>
+                <h3>Le responsive Design</h3>
+                <img src="{{ asset('assets/medias/images/responsive-design-a.webp') }}" alt="L'image représente un poste de travail informatique moderne avec un écran d'ordinateur large, un clavier et une webcam au centre, ainsi qu'un smartphone vertical à gauche, le tout sur un fond noir avec des reflets bleutés suggérant un design responsive, épuré et technologique.">
+                <p>
+                    Un site doit être esthétiquement attrayant et fonctionnel sur tous les appareils. Je
+                    m'attache à développer des sites qui offrent une expérience utilisateur fluide et cohérente, que ce soit
+                    sur un ordinateur de bureau, une tablette ou un smartphone.
+                </p>
+            </article>
+            <article>
+                <h3>L'UX et l'UI</h3>
+                <img src="{{ asset('assets/medias/images/UIUX.webp') }}" alt="L'image montre une main interagissant avec une interface utilisateur futuriste, avec des icônes et des graphiques holographiques, symbolisant la conception avancée d'interface et l'interaction utilisateur dans un contexte de technologie haute définition.">
+                <p>
+                    L'expérience et l'interface utilisateur sont au centre de ma conception. Un design attrayant
+                    doit aller de pair avec une navigation intuitive. Je m'efforce de créer des interfaces qui non seulement
+                    captivent visuellement, mais facilitent également l'interaction et améliorent l'expérience globale de
+                    l'utilisateur.
+                </p>
+            </article>
+            <article>
+                <h3>Le design</h3>
+                <p>
+                    L'esthétique n'est pas qu'une question de beauté, c'est un élément clé de la fonctionnalité. Un
+                    bon design communique, engage et simplifie l'expérience utilisateur. Je suis passionné par la création
+                    de designs qui ne sont pas seulement beaux, mais qui renforcent également l'identité de la marque et la
+                    narration du site.
+                </p>
+            </article>
+            <article>
+                <h3>Pour conclure</h3>
+                <p>
+                    Cette approche globale, centrée sur la sécurité, l'accessibilité, le responsive design, l'UX/UI et
+                    le design, me permet de créer des solutions web qui sont non seulement poussées techniquement, mais
+                    aussi agréables à utiliser.
+                </p>
+            </article>
+        </section>
+        <div class="right-side-sprite"></div>
+    </main>
+{% endblock %}

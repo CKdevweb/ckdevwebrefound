@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}C.K DevWeb - Services{% endblock %}
+
+{% block body %}
+<main id="services-main-container">
+    <header class="main-header">
+        <h1>Mes services</h1>
+    </header>
+    <section class="presentation">
+        <p>
+            Ici, je combine expertise technique et créativité pour <strong>augmenter la visibilité de votre entreprise en ligne.</strong>
+            Mes services comprennent :
+        </p>
+    </section>
+    <div class="left-side-sprite"></div>
+    <section>
+        <h2>Développement</h2>
+        {% include "partials/underline-titles.html.twig" %}
+        <article>
+            <h3>Développement de Sites web Sur Mesure</h3>
+            <ul class="list-checks">
+                <li>Création de sites web responsive et esthétiquement attrayants.</li>
+                <li>Développement frontend et backend avec des technologies de pointe.</li>
+                <li>Réalisation de sites e-commerce, blogs, sites vitrine, et plus.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Sécurité Web et Gestion de Bases de Données</h3>
+            <ul class="list-checks">
+                <li>Mise en place de protocoles de sécurité avancés pour la protection de votre site et des données utilisateur.</li>
+                <li>Gestion et maintenance de bases de données, y compris le développement d'APIs sur mesure.</li>
+            </ul>
+        </article>
+    </section>
+    <div class="right-side-sprite"></div>
+    <div class="separator"></div>
+    <div class="left-side-sprite"></div>
+    <section>
+        <h2>Accessibilité et référencement</h2>
+        {% include "partials/underline-titles.html.twig" %}
+        <article>
+            <h3>Référencement Naturel (SEO)</h3>
+            <ul class="list-checks">
+                <li>Stratégies SEO personnalisées pour améliorer la visibilité de votre site.</li>
+                <li>Contenu optimisé et recherche de mots-clés ciblés pour une audience précise.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Optimisation UX/UI</h3>
+            <ul class="list-checks">
+                <li>Conception d'interfaces utilisateur intuitives et captivantes.</li>
+                <li>Amélioration de l'expérience utilisateur pour renforcer l'engagement des visiteurs.</li>
+            </ul>
+        </article>
+        <article>
+            <h3>Création de Contenu et Génération Visuelle</h3>
+            <ul class="list-checks">
+                <li>Développement de contenu riche et pertinent pour engager vos audiences.</li>
+                <li>Création et intégration de visuels attrayants, y compris des images générées sur mesure, pour améliorer l'impact visuel de votre site.</li>
+            </ul>
+        </article>
+    </section>
+    <div class="right-side-sprite"></div>
+    <div class="separator"></div>
+    <section>
+        <h2>Maintenance</h2>
+        {% include "partials/underline-titles.html.twig" %}
+        <article>
+            <h3>Maintenance, Support et Gestion d'Hébergement</h3>
+            <ul class="list-checks">
+                <li>Maintenance continue pour assurer la performance de votre site.</li>
+                <li>Assistance technique pour toute question ou problème.</li>
+                <li>Gestion fiable de l'hébergement pour une performance optimale.</li>
+            </ul>
+        </article>
+    </section>
+    <section>
+        <p>
+            Chaque projet est une opportunité de mettre en avant votre entreprise sur le web. Je m’engage à développer
+            des solutions web complètes, fonctionnelles et esthétiques. <a href="{{ path("app_contact") }}">Contactez-moi</a> pour découvrir comment démarrer <strong>un
+                projet qui contribuera à la croissance et au succès de votre entreprise en ligne.</strong>
+        </p>
+    </section>
+</main>
+{% endblock %}

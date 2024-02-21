@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}C.K DevWeb{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{{ asset('assets/medias/images/logos/Logo-CKdevweb.ico') }}" rel="icon">
+    <link href="{{ asset('assets/styles/css/reset.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/styles/css/style.min.css') }}" rel="stylesheet">
+    <script src="{{ asset('assets/js/components/fontawesome.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/components/solid.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/components/brands.min.js') }}" crossorigin="anonymous"></script>
+    <script src="{{ asset('assets/js/components/regular.min.js') }}" crossorigin="anonymous"></script>
+    <link href="{{ asset('assets/fontawesome/css/brands.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fontawesome/css/solid.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fontawesome/css/regular.min.css') }}" rel="stylesheet">
+    <script type="module" src="{{ asset('assets/js/components/preloadFunctions.min.js') }}"></script>
+</head>
+<body>
+    <div id="top-view"></div>
+        {% if app.request.query.get('message') is defined %}
+            <div id="message" class="hidden">
+                <div>
+                    <span>{{ app.request.query.get('message') }}</span>
+                    <input type="hidden" value="{{ app.request.query.get('success') }}"/>
+                </div>
+            </div>
+        {% endif %}
+        {% include "mains/header.html.twig" %}
+    <div id="flying-button">
+        <a href="{{ path('app_contact') }}">Prenons contact !</a>
+    </div>
+    <div class="contacts-container">
+        <a href="https://github.com/CKdevweb" target="_blank">
+            <i class="fa-brands fa-github" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/k%C3%A9vin-corvaisier-1140b1205/" target="_blank">
+            <i class="fa-brands fa-linkedin" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=61556127747077" target="_blank">
+            <i class="fa-brands fa-facebook" style="color: #FFFFFF; font-size: 1.5rem;"></i>
+        </a>
+    </div>
+    {% block body %}
+        <div class="contact-side-btn">
+            <a href="/app-contact">Contactez-moi</a>
+        </div>
+    {% endblock %}
+    {% include "mains/footer.html.twig" %}
+</body>
